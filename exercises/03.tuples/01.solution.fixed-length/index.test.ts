@@ -34,6 +34,6 @@ await testStep('getDistance should calculate distance correctly', async () => {
 	const distance = getDistance(nyc, la)
 	expect(distance).toBeGreaterThan(0)
 	expect(typeof distance).toBe('number')
-	// Verify the calculation is correct (approximately 44.27)
-	expect(distance).toBeCloseTo(44.27, 1)
+	// Verify the calculation is correct (approximately 44.74)
+	expect(distance).toBeCloseTo(44.74, 1)
 })
