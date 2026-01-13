@@ -39,7 +39,7 @@ await testStep(
 await testStep(
 	'getMinMax should return correct min and max values',
 	async () => {
-		function getMinMax(nums: number[]): [number, number] {
+		function getMinMax(nums: Array<number>): [number, number] {
 			return [Math.min(...nums), Math.max(...nums)]
 		}
 		const [min, max] = getMinMax([5, 2, 8, 1, 9])
@@ -57,7 +57,7 @@ await testStep(
 await testStep(
 	'getMinMax should work with different number arrays',
 	async () => {
-		function getMinMax(nums: number[]): [number, number] {
+		function getMinMax(nums: Array<number>): [number, number] {
 			return [Math.min(...nums), Math.max(...nums)]
 		}
 		const [min, max] = getMinMax([10, 20, 5, 15])

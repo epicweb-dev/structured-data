@@ -2,7 +2,7 @@
 // Working with basic arrays
 
 // 🐨 Create an array of product names
-// 💰 const products: string[] = ['Laptop', 'Mouse', 'Keyboard']
+// 💰 const products: Array<string> = ['Laptop', 'Mouse', 'Keyboard']
 
 // 🐨 Add a new product 'Monitor' using push
 

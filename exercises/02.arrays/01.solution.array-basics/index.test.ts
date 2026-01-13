@@ -4,7 +4,7 @@ import './index.ts'
 await testStep(
 	'Products array should have correct initial values',
 	async () => {
-		const products: string[] = ['Laptop', 'Mouse', 'Keyboard']
+		const products: Array<string> = ['Laptop', 'Mouse', 'Keyboard']
 		expect(
 			products[0],
 			'🚨 products[0] should be "Laptop" - arrays are zero-indexed, so [0] is the first element',
@@ -44,7 +44,7 @@ await testStep('Products array should support push operation', async () => {
 await testStep(
 	'Products array should access first and last elements correctly',
 	async () => {
-		const products: string[] = ['Laptop', 'Mouse', 'Keyboard', 'Monitor']
+		const products: Array<string> = ['Laptop', 'Mouse', 'Keyboard', 'Monitor']
 		expect(
 			products[0],
 			'🚨 products[0] should be "Laptop" - the first element is at index 0',
