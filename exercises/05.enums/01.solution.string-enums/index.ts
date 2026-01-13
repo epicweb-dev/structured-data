@@ -14,7 +14,7 @@ const order = {
 	customerName: 'Alice Johnson',
 }
 
-function getStatusMessage(status: OrderStatus): string {
+function getStatusMessage(status: OrderStatus) {
 	switch (status) {
 		case OrderStatus.Pending:
 			return 'Your order is pending confirmation'

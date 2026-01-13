@@ -15,9 +15,9 @@ const coordinates: [number, number, number] = [10, 20, 30]
 const [x, y, z] = coordinates
 
 // Function returning tuple, then destructuring result
-function getMinMax(nums: Array<number>): [number, number] {
+function getMinMax(nums: Array<number>) {
 	const sorted = [...nums].sort((a, b) => a - b)
-	return [sorted[0], sorted[sorted.length - 1]]
+	return [sorted[0], sorted[sorted.length - 1]] as const
 }
 
 const [min, max] = getMinMax(scores)

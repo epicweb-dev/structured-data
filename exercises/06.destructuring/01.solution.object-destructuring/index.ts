@@ -26,7 +26,7 @@ const { id: userId } = user
 const { bio = 'No bio provided' } = user
 
 // Function with parameter destructuring
-function formatUserCard({ name, email, role }: User): string {
+function formatUserCard({ name, email, role }: User) {
 	return `${name} (${role}) - ${email}`
 }
 

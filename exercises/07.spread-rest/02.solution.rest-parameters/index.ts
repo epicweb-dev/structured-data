@@ -2,25 +2,25 @@
 // Functions that accept variable numbers of arguments
 
 // Rest parameters collect all arguments into an array
-function multiply(...numbers: Array<number>): number {
+function multiply(...numbers: Array<number>) {
 	if (numbers.length === 0) return 1
 	return numbers.reduce((a, b) => a * b, 1)
 }
 
 // Combining regular parameter with rest
-function logWithPrefix(prefix: string, ...messages: Array<string>): void {
+function logWithPrefix(prefix: string, ...messages: Array<string>) {
 	for (const message of messages) {
 		console.log(`${prefix} ${message}`)
 	}
 }
 
 // Generic rest parameters
-function createArray<T>(...items: Array<T>): Array<T> {
+function createArray<T>(...items: Array<T>) {
 	return items
 }
 
 // Rest + spread combo - collect arrays, spread to merge
-function mergeArrays<T>(...arrays: Array<Array<T>>): Array<T> {
+function mergeArrays<T>(...arrays: Array<Array<T>>) {
 	const result: Array<T> = []
 	for (const arr of arrays) {
 		result.push(...arr)
