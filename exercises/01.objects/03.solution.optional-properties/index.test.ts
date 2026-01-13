@@ -6,10 +6,10 @@ await testStep('User without optional properties should work', async () => {
 		name: 'Alice',
 		email: 'alice@example.com',
 	}
-	expect(alice.name).toBe('Alice')
-	expect(alice.email).toBe('alice@example.com')
-	expect(alice.bio).toBeUndefined()
-	expect(alice.website).toBeUndefined()
+	expect(alice.name, '🚨 alice.name should be "Alice" - make sure you set the required name property').toBe('Alice')
+	expect(alice.email, '🚨 alice.email should be "alice@example.com" - make sure you set the required email property').toBe('alice@example.com')
+	expect(alice.bio, '🚨 alice.bio should be undefined - optional properties can be omitted from the object').toBeUndefined()
+	expect(alice.website, '🚨 alice.website should be undefined - optional properties can be omitted from the object').toBeUndefined()
 })
 
 await testStep('User with optional properties should work', async () => {
@@ -19,10 +19,10 @@ await testStep('User with optional properties should work', async () => {
 		bio: 'Software developer and TypeScript enthusiast',
 		website: 'https://bob.dev',
 	}
-	expect(bob.name).toBe('Bob')
-	expect(bob.email).toBe('bob@example.com')
-	expect(bob.bio).toBe('Software developer and TypeScript enthusiast')
-	expect(bob.website).toBe('https://bob.dev')
+	expect(bob.name, '🚨 bob.name should be "Bob" - make sure you set the required name property').toBe('Bob')
+	expect(bob.email, '🚨 bob.email should be "bob@example.com" - make sure you set the required email property').toBe('bob@example.com')
+	expect(bob.bio, '🚨 bob.bio should be "Software developer and TypeScript enthusiast" - optional properties can be included when provided').toBe('Software developer and TypeScript enthusiast')
+	expect(bob.website, '🚨 bob.website should be "https://bob.dev" - optional properties can be included when provided').toBe('https://bob.dev')
 })
 
 await testStep('displayUserInfo should handle optional properties correctly', async () => {
@@ -33,8 +33,8 @@ await testStep('displayUserInfo should handle optional properties correctly', as
 		website?: string
 	}): void {
 		// Function implementation tested through its behavior
-		expect(user.name).toBeDefined()
-		expect(user.email).toBeDefined()
+		expect(user.name, '🚨 user.name should be defined - required properties must always be present').toBeDefined()
+		expect(user.email, '🚨 user.email should be defined - required properties must always be present').toBeDefined()
 	}
 	const alice = { name: 'Alice', email: 'alice@example.com' }
 	const bob = {
@@ -45,6 +45,6 @@ await testStep('displayUserInfo should handle optional properties correctly', as
 	}
 	displayUserInfo(alice)
 	displayUserInfo(bob)
-	expect(alice.name).toBe('Alice')
-	expect(bob.bio).toBe('Software developer')
+	expect(alice.name, '🚨 alice.name should be "Alice" - verify the name property is set correctly').toBe('Alice')
+	expect(bob.bio, '🚨 bob.bio should be "Software developer" - optional properties can be accessed when they exist').toBe('Software developer')
 })
