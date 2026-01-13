@@ -1,0 +1,31 @@
+# Rest Parameters
+
+👨‍💼 Perfect! You now understand both spread and rest.
+
+🦉 Remember the difference:
+
+- **Spread** (`...arr`) - Expands an array/object into individual elements
+- **Rest** (`...args`) - Collects individual elements into an array
+
+```ts
+// REST: Collecting arguments
+function sum(...nums: Array<number>) {
+	// SPREAD: Expanding back for another call
+	return Math.max(...nums)
+}
+```
+
+Rest parameters are type-safe in TypeScript:
+
+```ts
+// TypeScript knows this is Array<number>
+function add(...numbers: Array<number>): number {
+	return numbers.reduce((a, b) => a + b, 0)
+}
+
+add(1, 2, 3) // ✅
+add(1, 'two') // ❌ Type error!
+```
+
+This completes the spread/rest story—you now have all the tools for immutable
+data manipulation in TypeScript!

@@ -1,0 +1,57 @@
+# Rest Parameters
+
+👨‍💼 Rest parameters let functions accept any number of arguments, collected into
+an array. This is the opposite of spread—instead of expanding, we're collecting.
+
+```ts
+function sum(...numbers: Array<number>): number {
+	return numbers.reduce((a, b) => a + b, 0)
+}
+
+sum(1, 2) // 3
+sum(1, 2, 3, 4, 5) // 15
+```
+
+## Rest vs Spread
+
+The `...` syntax means different things in different contexts:
+
+```ts
+// SPREAD - expanding into individual elements
+const arr = [1, 2, 3]
+console.log(...arr) // 1 2 3 (expanded)
+
+// REST - collecting into an array
+function fn(...args: Array<number>) {
+	// args is an array of all passed numbers
+}
+```
+
+## Combining with Regular Parameters
+
+Rest must be the last parameter:
+
+```ts
+function greetAll(greeting: string, ...names: Array<string>): string {
+	return names.map((name) => `${greeting}, ${name}!`).join(' ')
+}
+
+greetAll('Hello', 'Alice', 'Bob', 'Charlie')
+// "Hello, Alice! Hello, Bob! Hello, Charlie!"
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a function using rest parameters to accept variable arguments
+2. Create a function with both regular and rest parameters
+3. Use rest in combination with spread to transform arguments
+
+💰 Rest parameter syntax:
+
+```ts
+function myFunc(...items: Array<string>): void {
+	// items is Array<string>
+}
+```
+
+📜 [MDN - Rest Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)

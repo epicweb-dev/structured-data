@@ -1,0 +1,29 @@
+# Destructuring
+
+👨‍💼 Fantastic! You now know how to destructure objects and arrays like a pro.
+
+You learned:
+
+- 📦 **Object destructuring** - Extract properties into variables
+- 🏷️ **Renaming** - Give destructured variables new names
+- 🔄 **Default values** - Provide fallbacks for missing properties
+- 📋 **Array destructuring** - Extract elements by position
+- ➡️ **Rest pattern** - Collect remaining elements into an array
+- 🎯 **Parameter destructuring** - Clean function signatures
+
+🦉 Destructuring is everywhere in modern JavaScript:
+
+```ts
+// React hooks return tuples
+const [count, setCount] = useState(0)
+
+// Props destructuring
+function Button({ label, onClick }: ButtonProps) {
+	return <button onClick={onClick}>{label}</button>
+}
+
+// API responses
+const { data, error, isLoading } = useQuery('users')
+```
+
+Next up: Working with spread and rest operators for immutable data patterns!

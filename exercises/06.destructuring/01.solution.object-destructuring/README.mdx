@@ -1,0 +1,23 @@
+# Object Destructuring
+
+👨‍💼 Great work! Object destructuring makes your code much cleaner.
+
+🦉 Key patterns you used:
+
+1. **Basic destructuring**: `const { name, email } = user`
+2. **Renaming**: `const { id: userId } = user`
+3. **Default values**: `const { bio = 'No bio provided' } = user`
+4. **Parameter destructuring**: `function fn({ name, email }: User)`
+
+Parameter destructuring is especially powerful because it:
+
+- Documents what properties the function actually uses
+- Allows default values right in the parameter list
+- Works great with TypeScript's type annotations
+
+```ts
+// This clearly shows what the function needs
+function sendEmail({ email, name }: { email: string; name: string }) {
+	// Only email and name are used
+}
+```

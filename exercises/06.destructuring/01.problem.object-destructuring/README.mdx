@@ -1,0 +1,46 @@
+# Object Destructuring
+
+👨‍💼 We're building a user profile system. Instead of accessing properties one by
+one with `user.name`, `user.email`, etc., let's use destructuring for cleaner
+code.
+
+```ts
+// Instead of this:
+const name = user.name
+const email = user.email
+
+// Do this:
+const { name, email } = user
+```
+
+## Renaming Variables
+
+Sometimes you need a different variable name:
+
+```ts
+const { name: userName, email: userEmail } = user
+// userName = user.name, userEmail = user.email
+```
+
+## Default Values
+
+Provide fallbacks for potentially missing properties:
+
+```ts
+const { nickname = 'Anonymous' } = user
+// Uses 'Anonymous' if user.nickname is undefined
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use object destructuring to extract `name` and `email` from a user object
+2. Rename a property while destructuring (e.g., `id` to `userId`)
+3. Provide a default value for an optional property
+
+💰 Destructuring with rename and default:
+
+```ts
+const { id: productId, description = 'No description' } = product
+```
+
+📜 [MDN - Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

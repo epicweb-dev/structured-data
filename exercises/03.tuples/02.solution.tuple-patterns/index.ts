@@ -6,7 +6,7 @@ function parseNumber(str: string): [number, boolean] {
 	return [num, !isNaN(num)]
 }
 
-function getMinMax(nums: number[]): [number, number] {
+function getMinMax(nums: Array<number>): [number, number] {
 	return [Math.min(...nums), Math.max(...nums)]
 }
 

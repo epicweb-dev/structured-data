@@ -13,21 +13,36 @@ const names: string[] = ['Alice', 'Bob', 'Charlie']
 TypeScript offers two ways to write array types:
 
 ```ts
-// Square bracket syntax (more common)
+// Square bracket syntax (shorter)
 const numbers: number[] = [1, 2, 3]
 
-// Generic syntax
+// Generic syntax (preferred)
 const numbers: Array<number> = [1, 2, 3]
 ```
 
-Both are identical—use whichever you prefer, but be consistent.
+Both are functionally identical. The square bracket syntax is shorter and you'll
+see it frequently in codebases. However, the generic syntax (`Array<Type>`) is
+preferred for several reasons:
+
+- **Readability**: We read left-to-right, so "Array of numbers" reads more
+  naturally than "numbers... array"
+- **Consistency with readonly**: `ReadonlyArray<string>` vs `readonly string[]`
+- **Union types**: `Array<string | number>` vs `(string | number)[]` (no
+  parentheses needed)
+- **Works better with `keyof`**: Avoids confusing operator precedence issues
+
+For a deeper dive into why generic notation is better, check out
+[Array Types in TypeScript](https://tkdodo.eu/blog/array-types-in-type-script)
+by TkDodo.
+
+We'll use the generic syntax going forward in this workshop.
 
 ## Type Safety with Arrays
 
 TypeScript ensures you only put the right types in arrays:
 
 ```ts
-const numbers: number[] = [1, 2, 3]
+const numbers: Array<number> = [1, 2, 3]
 numbers.push(4) // ✅ OK
 numbers.push('five') // ❌ Error: 'string' not assignable to 'number'
 ```
@@ -38,11 +53,11 @@ You can add elements to arrays in two ways:
 
 ```ts
 // Mutation (modifies the original array)
-const numbers: number[] = [1, 2, 3]
+const numbers: Array<number> = [1, 2, 3]
 numbers.push(4)
 
 // Immutable (creates a new array)
-const numbers: number[] = [1, 2, 3]
+const numbers: Array<number> = [1, 2, 3]
 const moreNumbers = [...numbers, 4]
 ```
 
@@ -63,7 +78,7 @@ state.
 Need different types? Use union types:
 
 ```ts
-const mixed: (string | number)[] = [1, 'two', 3, 'four']
+const mixed: Array<string | number> = [1, 'two', 3, 'four']
 ```
 
 In this exercise, you'll create and work with typed arrays.

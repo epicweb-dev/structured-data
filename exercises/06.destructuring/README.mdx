@@ -1,0 +1,55 @@
+# Destructuring
+
+Destructuring lets you extract values from objects and arrays into individual
+variables. It's one of the most useful features in modern JavaScript/TypeScript.
+
+## Object Destructuring
+
+```ts
+const user = { name: 'Alice', age: 30, email: 'alice@example.com' }
+
+// Without destructuring
+const name = user.name
+const age = user.age
+
+// With destructuring
+const { name, age } = user
+```
+
+## Array Destructuring
+
+```ts
+const numbers = [1, 2, 3, 4, 5]
+
+// Extract first two elements
+const [first, second] = numbers // first = 1, second = 2
+
+// Skip elements
+const [, , third] = numbers // third = 3
+
+// Rest pattern
+const [head, ...tail] = numbers // head = 1, tail = [2, 3, 4, 5]
+```
+
+## Why Use Destructuring?
+
+1. **Cleaner code** - No repetitive `object.property` access
+2. **Self-documenting** - Variable names show what you're using
+3. **Default values** - Provide fallbacks for missing properties
+4. **Function parameters** - Extract what you need directly
+
+```ts
+// Destructuring in function parameters
+function greetUser({ name, age }: { name: string; age: number }) {
+	return `Hello ${name}, you are ${age} years old`
+}
+```
+
+<callout-info>
+	Destructuring is everywhere in React. Props destructuring, hook returns like
+	`const [count, setCount] = useState(0)`, and extracting data from API
+	responses.
+</callout-info>
+
+In this exercise, you'll master destructuring for objects, arrays, and function
+parameters.

@@ -2,7 +2,7 @@
 
 👨‍💼 Great work with arrays! You now know how to:
 
-- 📚 Create typed arrays with `Type[]` or `Array<Type>`
+- 📚 Create typed arrays with `Array<Type>` (preferred) or `Type[]`
 - ✅ Get type safety when adding elements
 - 🔄 Iterate over arrays with `for...of`
 - 🎭 Use union types for mixed arrays
@@ -10,7 +10,7 @@
 🦉 Array types shine when combined with object types:
 
 ```ts
-const users: { name: string; age: number }[] = [
+const users: Array<{ name: string; age: number }> = [
 	{ name: 'Alice', age: 30 },
 	{ name: 'Bob', age: 25 },
 ]

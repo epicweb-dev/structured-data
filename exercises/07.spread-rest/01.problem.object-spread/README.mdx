@@ -1,0 +1,49 @@
+# Object Spread
+
+👨‍💼 Object spread is how we update objects without mutation. This is critical
+for React state updates where mutation doesn't trigger re-renders.
+
+```ts
+// Create a new object with updated values
+const original = { name: 'Alice', age: 30 }
+const updated = { ...original, age: 31 }
+// updated = { name: 'Alice', age: 31 }
+// original is unchanged!
+```
+
+## Order Matters
+
+Later properties override earlier ones:
+
+```ts
+const defaults = { theme: 'light', fontSize: 14 }
+const userPrefs = { fontSize: 18 }
+const settings = { ...defaults, ...userPrefs }
+// { theme: 'light', fontSize: 18 }
+```
+
+## Nested Objects
+
+Spread is shallow—nested objects need explicit spreading:
+
+```ts
+const user = { name: 'Alice', address: { city: 'NYC' } }
+const updated = {
+	...user,
+	address: { ...user.address, city: 'LA' },
+}
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use object spread to create an updated user object
+2. Merge two configuration objects with spread
+3. Update a nested object immutably
+
+💰 Spreading with override:
+
+```ts
+const updated = { ...original, propertyToChange: newValue }
+```
+
+📜 [MDN - Spread Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)

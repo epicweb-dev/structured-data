@@ -1,0 +1,23 @@
+# Array Destructuring
+
+👨‍💼 Excellent! You've mastered array destructuring.
+
+🦉 Key patterns:
+
+1. **Position-based extraction**: `const [first, second] = arr`
+2. **Rest pattern**: `const [head, ...tail] = arr`
+3. **Tuple destructuring**: `const [x, y, z] = coordinates`
+4. **Function return destructuring**: `const [min, max] = getMinMax(nums)`
+
+This pattern is foundational for React hooks:
+
+```ts
+// useState returns a tuple!
+const [count, setCount] = useState(0)
+
+// useReducer too
+const [state, dispatch] = useReducer(reducer, initialState)
+```
+
+The rest pattern (`...`) is also the foundation for the spread operator, which
+you'll use extensively for immutable updates.

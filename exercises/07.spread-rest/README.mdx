@@ -1,0 +1,56 @@
+# Spread and Rest Operators
+
+The `...` operator has two uses: **spread** (expanding) and **rest**
+(collecting). They look the same but do opposite things!
+
+## Spread - Expanding Values
+
+Spread expands arrays or objects into individual elements:
+
+```ts
+// Array spread
+const arr1 = [1, 2, 3]
+const arr2 = [...arr1, 4, 5] // [1, 2, 3, 4, 5]
+
+// Object spread
+const base = { a: 1, b: 2 }
+const extended = { ...base, c: 3 } // { a: 1, b: 2, c: 3 }
+```
+
+## Rest - Collecting Values
+
+Rest collects multiple elements into a single array:
+
+```ts
+// Rest in destructuring
+const [first, ...remaining] = [1, 2, 3, 4]
+// first = 1, remaining = [2, 3, 4]
+
+// Rest in function parameters
+function sum(...numbers: Array<number>): number {
+	return numbers.reduce((a, b) => a + b, 0)
+}
+sum(1, 2, 3, 4) // 10
+```
+
+## Immutable Updates
+
+Spread is essential for immutable updates—a core pattern in React:
+
+```ts
+// Update without mutation
+const user = { name: 'Alice', age: 30 }
+const updated = { ...user, age: 31 } // New object, user unchanged
+
+// Add to array without mutation
+const items = [1, 2, 3]
+const moreItems = [...items, 4] // New array, items unchanged
+```
+
+<callout-info>
+	Spread creates **shallow copies**. Nested objects are still references to the
+	original. For deep copies, you need more sophisticated techniques.
+</callout-info>
+
+In this exercise, you'll master spread and rest operators for immutable data
+patterns.

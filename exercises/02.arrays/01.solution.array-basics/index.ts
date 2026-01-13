@@ -1,7 +1,7 @@
 // Inventory System
 // Working with basic arrays
 
-const products: string[] = ['Laptop', 'Mouse', 'Keyboard']
+const products: Array<string> = ['Laptop', 'Mouse', 'Keyboard']
 
 products.push('Monitor')
 

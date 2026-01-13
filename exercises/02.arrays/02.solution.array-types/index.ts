@@ -1,7 +1,7 @@
 // Product Inventory
 // Arrays of objects
 
-const products: { name: string; price: number; inStock: boolean }[] = [
+const products: Array<{ name: string; price: number; inStock: boolean }> = [
 	{ name: 'Laptop', price: 999.99, inStock: true },
 	{ name: 'Mouse', price: 29.99, inStock: true },
 	{ name: 'Keyboard', price: 79.99, inStock: false },
