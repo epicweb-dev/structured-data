@@ -1,0 +1,48 @@
+# Tuples
+
+Tuples are arrays with a **fixed length** and **specific types at each
+position**. They're like arrays, but more structured.
+
+```ts
+// Array: any number of strings
+const names: string[] = ['Alice', 'Bob']
+
+// Tuple: exactly two elements, string then number
+const person: [string, number] = ['Alice', 30]
+```
+
+## When to Use Tuples
+
+Tuples are great for:
+
+- **Returning multiple values** from functions
+- **Coordinates** like `[x, y]` or `[lat, long]`
+- **Key-value pairs** like `[key, value]`
+- **Named positions** where order matters
+
+```ts
+function getNameAndAge(): [string, number] {
+	return ['Alice', 30]
+}
+
+const [name, age] = getNameAndAge() // Destructuring!
+```
+
+## Tuple vs Object
+
+When should you use each?
+
+```ts
+// Tuple - positional, compact
+const point: [number, number] = [10, 20]
+
+// Object - named, self-documenting
+const point = { x: 10, y: 20 }
+```
+
+<callout-info>
+Use tuples when position is meaningful and the data is simple. Use objects when
+you need named properties or the structure is complex.
+</callout-info>
+
+In this exercise, you'll work with tuples for structured return values.

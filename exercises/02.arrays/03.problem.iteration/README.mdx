@@ -1,0 +1,32 @@
+# Array Iteration
+
+👨‍💼 We need to process our inventory data. Let's practice different ways to
+iterate over arrays.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `for...of` to log each product
+2. Find all products that are in stock
+3. Count products over a certain price
+
+💰 `for...of` with type inference:
+
+```ts
+for (const product of products) {
+	// TypeScript knows product is { name: string, price: number, ... }
+	console.log(product.name)
+}
+```
+
+💰 Building a filtered list:
+
+```ts
+const inStock: ProductType[] = []
+for (const product of products) {
+	if (product.inStock) {
+		inStock.push(product)
+	}
+}
+```
+
+📜 [MDN - for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)

@@ -1,0 +1,57 @@
+# Objects
+
+Objects are the fundamental way to group related data in TypeScript. Instead of
+having separate variables, you combine them into a single structure.
+
+```ts
+// Without objects - scattered data
+const userName = 'Alice'
+const userAge = 30
+const userEmail = 'alice@example.com'
+
+// With objects - organized data
+const user = {
+	name: 'Alice',
+	age: 30,
+	email: 'alice@example.com',
+}
+```
+
+## Typing Objects
+
+TypeScript can infer object types, but you can also be explicit:
+
+```ts
+const user: { name: string; age: number; email: string } = {
+	name: 'Alice',
+	age: 30,
+	email: 'alice@example.com',
+}
+```
+
+## Property Access
+
+Access properties with dot notation or bracket notation:
+
+```ts
+console.log(user.name) // "Alice"
+console.log(user['email']) // "alice@example.com"
+```
+
+## Optional Properties
+
+Not every property is always present. Use `?` for optional properties:
+
+```ts
+const user: { name: string; nickname?: string } = {
+	name: 'Alice',
+	// nickname is optional, so we can omit it
+}
+```
+
+<callout-info>
+Objects in TypeScript are the building blocks for modeling real-world entities
+like users, products, orders, and more.
+</callout-info>
+
+In this exercise, you'll create and work with typed objects.

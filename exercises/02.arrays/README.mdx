@@ -1,0 +1,48 @@
+# Arrays
+
+Arrays store ordered collections of values. In TypeScript, arrays are typed—you
+specify what kind of elements they can contain.
+
+```ts
+const numbers: number[] = [1, 2, 3, 4, 5]
+const names: string[] = ['Alice', 'Bob', 'Charlie']
+```
+
+## Two Syntax Options
+
+TypeScript offers two ways to write array types:
+
+```ts
+// Square bracket syntax (more common)
+const numbers: number[] = [1, 2, 3]
+
+// Generic syntax
+const numbers: Array<number> = [1, 2, 3]
+```
+
+Both are identical—use whichever you prefer, but be consistent.
+
+## Type Safety with Arrays
+
+TypeScript ensures you only put the right types in arrays:
+
+```ts
+const numbers: number[] = [1, 2, 3]
+numbers.push(4) // ✅ OK
+numbers.push('five') // ❌ Error: 'string' not assignable to 'number'
+```
+
+## Mixed Arrays
+
+Need different types? Use union types:
+
+```ts
+const mixed: (string | number)[] = [1, 'two', 3, 'four']
+```
+
+<callout-info>
+Arrays are one of the most used data structures. Mastering typed arrays is
+essential for working with lists of data.
+</callout-info>
+
+In this exercise, you'll create and work with typed arrays.

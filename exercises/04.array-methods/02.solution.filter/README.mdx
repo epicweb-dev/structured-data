@@ -1,0 +1,16 @@
+# Filter
+
+👨‍💼 Great filtering! You've seen how to chain methods for complex queries.
+
+🦉 Method chaining is powerful but can get long. For readability, put each
+method on its own line:
+
+```ts
+const result = products
+	.filter((p) => p.inStock)
+	.filter((p) => p.category === 'Electronics')
+	.filter((p) => p.price < 500)
+	.map((p) => p.name)
+```
+
+Each line is one transformation—easy to read and modify.

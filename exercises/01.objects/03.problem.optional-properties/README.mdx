@@ -1,0 +1,32 @@
+# Optional Properties
+
+👨‍💼 Not every user fills out all their profile fields. We need to handle
+optional data gracefully.
+
+Use `?` to mark a property as optional:
+
+```ts
+const user: { name: string; bio?: string } = {
+	name: 'Alice',
+	// bio is optional, so we can omit it
+}
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a `UserProfile` object type with required and optional properties
+2. Create users with and without the optional properties
+3. Safely access optional properties (check before using!)
+
+💰 Safely accessing optional properties:
+
+```ts
+if (user.bio !== undefined) {
+	console.log(user.bio.toUpperCase()) // Safe!
+}
+
+// Or use optional chaining:
+console.log(user.bio?.toUpperCase()) // Returns undefined if bio is undefined
+```
+
+📜 [TypeScript Handbook - Optional Properties](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties)

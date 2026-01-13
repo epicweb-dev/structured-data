@@ -1,0 +1,34 @@
+# Filter
+
+👨‍💼 The `filter` method creates a new array with only elements that pass a
+test.
+
+```ts
+const numbers = [1, 2, 3, 4, 5]
+const evens = numbers.filter((n) => n % 2 === 0)
+// [2, 4]
+```
+
+The callback returns `true` to keep the element or `false` to exclude it.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Filter products by category
+2. Filter products by price range
+3. Chain `filter` with `map`
+
+💰 Filter syntax:
+
+```ts
+const result = array.filter((element) => condition)
+```
+
+💰 Chaining filter and map:
+
+```ts
+const expensiveNames = products
+	.filter((p) => p.price > 100)
+	.map((p) => p.name)
+```
+
+📜 [MDN - Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)

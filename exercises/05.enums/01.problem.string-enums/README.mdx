@@ -1,0 +1,30 @@
+# String Enums
+
+👨‍💼 We're building an order management system. Orders go through different
+statuses, and we want type-safe status values.
+
+```ts
+enum OrderStatus {
+	Pending = 'pending',
+	Processing = 'processing',
+	Shipped = 'shipped',
+	Delivered = 'delivered',
+}
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create an `OrderStatus` enum with the statuses above
+2. Create an order object that uses the enum
+3. Create a function that handles each status
+
+💰 Using enum values:
+
+```ts
+const status = OrderStatus.Pending
+if (status === OrderStatus.Shipped) {
+	// ...
+}
+```
+
+📜 [TypeScript Handbook - Enums](https://www.typescriptlang.org/docs/handbook/enums.html)

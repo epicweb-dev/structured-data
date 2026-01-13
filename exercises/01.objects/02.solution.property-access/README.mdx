@@ -1,0 +1,17 @@
+# Property Access
+
+👨‍💼 You've seen how TypeScript protects you from accessing non-existent
+properties!
+
+When you tried to access `product.rating`, TypeScript said:
+
+```
+Property 'rating' does not exist on type '{ name: string; ... }'
+```
+
+🦉 This is one of TypeScript's core benefits—catching typos and missing
+properties at compile time instead of getting `undefined` at runtime.
+
+Notice how the function parameter uses an inline object type. The function only
+requires `name` and `price`, so it can accept any object that has at least those
+properties.

@@ -1,0 +1,51 @@
+# Array Methods
+
+Array methods let you transform data declaratively. Instead of writing loops,
+you describe _what_ you want to happen.
+
+## The Big Three
+
+### `map` - Transform each element
+
+```ts
+const numbers = [1, 2, 3]
+const doubled = numbers.map((n) => n * 2)
+// [2, 4, 6]
+```
+
+### `filter` - Keep elements that pass a test
+
+```ts
+const numbers = [1, 2, 3, 4, 5]
+const evens = numbers.filter((n) => n % 2 === 0)
+// [2, 4]
+```
+
+### `reduce` - Accumulate into a single value
+
+```ts
+const numbers = [1, 2, 3, 4]
+const sum = numbers.reduce((acc, n) => acc + n, 0)
+// 10
+```
+
+## Why Use Array Methods?
+
+1. **More readable** - Intent is clear
+2. **Less error-prone** - No off-by-one errors
+3. **Chainable** - Combine operations fluently
+4. **Type-safe** - TypeScript infers types through the chain
+
+```ts
+const result = products
+	.filter((p) => p.inStock)
+	.map((p) => p.price)
+	.reduce((sum, price) => sum + price, 0)
+```
+
+<callout-info>
+These methods don't mutate the original array—they return new arrays. This makes
+code easier to reason about.
+</callout-info>
+
+In this exercise, you'll master these essential array methods.

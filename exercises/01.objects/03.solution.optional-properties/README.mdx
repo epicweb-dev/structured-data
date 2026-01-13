@@ -1,0 +1,21 @@
+# Optional Properties
+
+👨‍💼 Excellent! You've handled optional data safely.
+
+🦉 Key techniques for optional properties:
+
+1. **Optional chaining** (`?.`) - Returns `undefined` if property is missing
+2. **Nullish coalescing** (`??`) - Provides a default value
+3. **Type narrowing** - Check with `if` before using
+
+```ts
+// These are all safe ways to handle optional properties:
+user.bio?.toUpperCase() // undefined if no bio
+user.bio ?? 'Default bio' // 'Default bio' if no bio
+if (user.bio) {
+	console.log(user.bio)
+} // Only runs if bio exists
+```
+
+Optional properties are essential for modeling real-world data where not every
+field is always present.

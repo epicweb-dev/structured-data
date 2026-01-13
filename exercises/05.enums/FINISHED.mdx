@@ -1,0 +1,27 @@
+# Enums
+
+👨‍💼 Well done! You understand both enums and their alternatives.
+
+You learned:
+
+- 📝 **String enums** for readable, predictable values
+- 🔢 **Numeric enums** for auto-incrementing numbers
+- 🔀 **Union types** as a lighter-weight alternative
+- ⚖️ **Tradeoffs** between enums and unions
+
+🦉 The TypeScript community trend is toward union types:
+
+```ts
+// Modern TypeScript style
+type Status = 'pending' | 'active' | 'completed'
+type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
+```
+
+But enums still have their place, especially when:
+
+- You need reverse mapping (number to name)
+- Your team prefers the enum pattern
+- You're working with existing enum-heavy codebases
+
+🎉 Congratulations! You've completed the Structured Data workshop. You can now
+model complex data with objects, arrays, tuples, and more!

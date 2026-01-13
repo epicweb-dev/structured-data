@@ -1,0 +1,30 @@
+# Property Access
+
+👨‍💼 We need to read and work with object properties. TypeScript ensures you
+can only access properties that exist on an object.
+
+There are two ways to access properties:
+
+```ts
+// Dot notation - most common
+user.name
+
+// Bracket notation - useful for dynamic keys
+user['name']
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Access properties using dot notation
+2. Create a function that takes a product object and returns a formatted string
+3. Try accessing a property that doesn't exist (see the error!)
+
+💰 Function with object parameter:
+
+```ts
+function describe(product: { name: string; price: number }): string {
+	return `${product.name}: $${product.price}`
+}
+```
+
+📜 [MDN - Property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)

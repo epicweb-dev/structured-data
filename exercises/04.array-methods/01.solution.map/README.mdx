@@ -1,0 +1,21 @@
+# Map
+
+👨‍💼 Perfect! You've used `map` to transform arrays in different ways.
+
+🦉 Notice how TypeScript inferred the types:
+
+- `names` is `string[]`
+- `prices` is `string[]`
+- `summary` is `{ name: string; priceLabel: string }[]`
+
+The parentheses around the object literal in `map` are important:
+
+```ts
+// ✅ Correct - returns an object
+products.map((p) => ({ name: p.name }))
+
+// ❌ Wrong - curly braces interpreted as function body
+products.map((p) => {
+	name: p.name
+}) // Returns undefined!
+```

@@ -1,0 +1,42 @@
+# Reduce
+
+👨‍💼 The `reduce` method accumulates an array into a single value. It's the most
+powerful (and sometimes confusing) array method.
+
+```ts
+const numbers = [1, 2, 3, 4]
+const sum = numbers.reduce((acc, n) => acc + n, 0)
+// 10
+```
+
+Parameters:
+
+- **accumulator** (`acc`) - The running total
+- **current** (`n`) - The current element
+- **initial value** (`0`) - Starting point
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `reduce` to sum all prices
+2. Use `reduce` to find the most expensive product
+3. Use `reduce` to count products by category
+
+💰 Reduce syntax:
+
+```ts
+const result = array.reduce((accumulator, current) => newAccumulator, initial)
+```
+
+💰 Counting by category:
+
+```ts
+const counts = products.reduce(
+	(acc, p) => {
+		acc[p.category] = (acc[p.category] || 0) + 1
+		return acc
+	},
+	{} as Record<string, number>,
+)
+```
+
+📜 [MDN - Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)

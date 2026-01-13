@@ -1,0 +1,26 @@
+# Reduce
+
+👨‍💼 Excellent! You've tackled `reduce`, the most versatile array method.
+
+🦉 `reduce` can do almost anything, but that doesn't mean you should use it for
+everything. Often `map` + `filter` is clearer:
+
+```ts
+// Using reduce (clever but harder to read)
+const total = products.reduce(
+	(sum, p) => (p.inStock ? sum + p.price : sum),
+	0,
+)
+
+// Using filter + reduce (clearer intent)
+const total = products
+	.filter((p) => p.inStock)
+	.reduce((sum, p) => sum + p.price, 0)
+```
+
+Use `reduce` when you need:
+
+- Sums/averages
+- Finding min/max
+- Grouping/counting
+- Building objects from arrays
