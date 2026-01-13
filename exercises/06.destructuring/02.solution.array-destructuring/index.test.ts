@@ -40,11 +40,14 @@ await testStep('coordinates should be destructured into x, y, z', async () => {
 	expect(z, '🚨 z should be 30 - destructure from coordinates').toBe(30)
 })
 
-await testStep('getMinMax should return tuple and be destructured', async () => {
-	expect(min, '🚨 min should be 76 - destructure getMinMax result').toBe(76)
-	expect(max, '🚨 max should be 95 - destructure getMinMax result').toBe(95)
+await testStep(
+	'getMinMax should return tuple and be destructured',
+	async () => {
+		expect(min, '🚨 min should be 76 - destructure getMinMax result').toBe(76)
+		expect(max, '🚨 max should be 95 - destructure getMinMax result').toBe(95)
 
-	const [testMin, testMax] = getMinMax([5, 2, 8, 1, 9])
-	expect(testMin, '🚨 getMinMax([5,2,8,1,9]) should return min 1').toBe(1)
-	expect(testMax, '🚨 getMinMax([5,2,8,1,9]) should return max 9').toBe(9)
-})
+		const [testMin, testMax] = getMinMax([5, 2, 8, 1, 9])
+		expect(testMin, '🚨 getMinMax([5,2,8,1,9]) should return min 1').toBe(1)
+		expect(testMax, '🚨 getMinMax([5,2,8,1,9]) should return max 9').toBe(9)
+	},
+)

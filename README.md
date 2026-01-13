@@ -32,7 +32,8 @@
 
 ## Prerequisites
 
-- [Programming Foundations](https://github.com/epicweb-dev/programming-foundations) workshop (or equivalent knowledge)
+- [Programming Foundations](https://github.com/epicweb-dev/programming-foundations)
+  workshop (or equivalent knowledge)
 - Understanding of primitive types, variables, and functions in TypeScript
 
 ## Pre-workshop Resources

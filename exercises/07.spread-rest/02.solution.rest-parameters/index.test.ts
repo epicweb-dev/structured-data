@@ -2,22 +2,12 @@ import { testStep, expect } from '@epic-web/workshop-utils/test'
 import { multiply, createArray, mergeArrays } from './index.ts'
 
 await testStep('multiply should use rest parameters', async () => {
-	expect(
-		multiply(2, 3, 4),
-		'🚨 multiply(2, 3, 4) should return 24',
-	).toBe(24)
-	expect(
-		multiply(5),
-		'🚨 multiply(5) should return 5',
-	).toBe(5)
-	expect(
-		multiply(),
-		'🚨 multiply() with no args should return 1',
-	).toBe(1)
-	expect(
-		multiply(2, 2, 2, 2),
-		'🚨 multiply(2, 2, 2, 2) should return 16',
-	).toBe(16)
+	expect(multiply(2, 3, 4), '🚨 multiply(2, 3, 4) should return 24').toBe(24)
+	expect(multiply(5), '🚨 multiply(5) should return 5').toBe(5)
+	expect(multiply(), '🚨 multiply() with no args should return 1').toBe(1)
+	expect(multiply(2, 2, 2, 2), '🚨 multiply(2, 2, 2, 2) should return 16').toBe(
+		16,
+	)
 })
 
 await testStep('createArray should collect items via rest', async () => {

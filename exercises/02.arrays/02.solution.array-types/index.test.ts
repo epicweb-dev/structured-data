@@ -28,32 +28,29 @@ await testStep(
 	},
 )
 
-await testStep(
-	'Adding to arrays with spread creates a new array',
-	async () => {
-		const products: { name: string; price: number; inStock: boolean }[] = [
-			{ name: 'Laptop', price: 999.99, inStock: true },
-			{ name: 'Mouse', price: 29.99, inStock: true },
-			{ name: 'Keyboard', price: 79.99, inStock: false },
-		]
-		const allProducts = [
-			...products,
-			{ name: 'Monitor', price: 299.99, inStock: true },
-		]
-		expect(
-			products.length,
-			'🚨 Original products array should still have 3 items - spread creates a new array without modifying the original',
-		).toBe(3)
-		expect(
-			allProducts.length,
-			'🚨 allProducts.length should be 4 - the new array contains the original items plus the new one',
-		).toBe(4)
-		expect(
-			allProducts[3].name,
-			'🚨 allProducts[3].name should be "Monitor" - the new item is at the end of the new array',
-		).toBe('Monitor')
-	},
-)
+await testStep('Adding to arrays with spread creates a new array', async () => {
+	const products: { name: string; price: number; inStock: boolean }[] = [
+		{ name: 'Laptop', price: 999.99, inStock: true },
+		{ name: 'Mouse', price: 29.99, inStock: true },
+		{ name: 'Keyboard', price: 79.99, inStock: false },
+	]
+	const allProducts = [
+		...products,
+		{ name: 'Monitor', price: 299.99, inStock: true },
+	]
+	expect(
+		products.length,
+		'🚨 Original products array should still have 3 items - spread creates a new array without modifying the original',
+	).toBe(3)
+	expect(
+		allProducts.length,
+		'🚨 allProducts.length should be 4 - the new array contains the original items plus the new one',
+	).toBe(4)
+	expect(
+		allProducts[3].name,
+		'🚨 allProducts[3].name should be "Monitor" - the new item is at the end of the new array',
+	).toBe('Monitor')
+})
 
 await testStep('Total inventory value calculation with reduce', async () => {
 	const products: { name: string; price: number; inStock: boolean }[] = [

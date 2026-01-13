@@ -15,31 +15,37 @@ await testStep('original user should be unchanged', async () => {
 	).toBe('alice@example.com')
 })
 
-await testStep('finalConfig should merge with user overriding defaults', async () => {
-	expect(
-		finalConfig.apiUrl,
-		'🚨 finalConfig.apiUrl should come from defaults',
-	).toBe('https://api.example.com')
-	expect(
-		finalConfig.timeout,
-		'🚨 finalConfig.timeout should be 10000 from userConfig (user overrides defaults)',
-	).toBe(10000)
-	expect(
-		finalConfig.retries,
-		'🚨 finalConfig.retries should come from defaults',
-	).toBe(3)
-})
+await testStep(
+	'finalConfig should merge with user overriding defaults',
+	async () => {
+		expect(
+			finalConfig.apiUrl,
+			'🚨 finalConfig.apiUrl should come from defaults',
+		).toBe('https://api.example.com')
+		expect(
+			finalConfig.timeout,
+			'🚨 finalConfig.timeout should be 10000 from userConfig (user overrides defaults)',
+		).toBe(10000)
+		expect(
+			finalConfig.retries,
+			'🚨 finalConfig.retries should come from defaults',
+		).toBe(3)
+	},
+)
 
-await testStep('userWithDarkMode should have updated nested settings', async () => {
-	expect(
-		userWithDarkMode.settings.theme,
-		'🚨 userWithDarkMode.settings.theme should be "dark"',
-	).toBe('dark')
-	expect(
-		userWithDarkMode.settings.notifications,
-		'🚨 notifications should still be true (unchanged)',
-	).toBe(true)
-})
+await testStep(
+	'userWithDarkMode should have updated nested settings',
+	async () => {
+		expect(
+			userWithDarkMode.settings.theme,
+			'🚨 userWithDarkMode.settings.theme should be "dark"',
+		).toBe('dark')
+		expect(
+			userWithDarkMode.settings.notifications,
+			'🚨 notifications should still be true (unchanged)',
+		).toBe(true)
+	},
+)
 
 await testStep('original user settings should be unchanged', async () => {
 	expect(
