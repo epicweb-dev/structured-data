@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.enums_01.solution.string-enums",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

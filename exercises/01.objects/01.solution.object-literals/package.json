@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.objects_01.solution.object-literals",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

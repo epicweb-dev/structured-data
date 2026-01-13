@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.arrays_01.solution.array-basics",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

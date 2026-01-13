@@ -1,0 +1,7 @@
+{
+  "name": "exercises_04.array-methods_02.problem.filter",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

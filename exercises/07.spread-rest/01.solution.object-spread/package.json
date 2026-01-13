@@ -1,0 +1,7 @@
+{
+  "name": "exercises_07.spread-rest_01.solution.object-spread",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

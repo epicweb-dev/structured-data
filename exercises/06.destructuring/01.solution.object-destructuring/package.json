@@ -1,0 +1,7 @@
+{
+  "name": "exercises_06.destructuring_01.solution.object-destructuring",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

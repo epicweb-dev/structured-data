@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.objects_03.problem.optional-properties",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

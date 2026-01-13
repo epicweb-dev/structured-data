@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.arrays_03.solution.iteration",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

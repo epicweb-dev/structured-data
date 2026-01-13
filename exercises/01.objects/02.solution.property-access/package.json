@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.objects_02.solution.property-access",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

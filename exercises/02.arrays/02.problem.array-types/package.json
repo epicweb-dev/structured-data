@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.arrays_02.problem.array-types",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

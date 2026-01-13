@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.enums_02.problem.enum-vs-union",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "exercises_06.destructuring_02.problem.array-destructuring",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}
