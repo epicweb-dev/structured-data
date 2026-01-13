@@ -7,10 +7,7 @@ everything. Often `map` + `filter` is clearer:
 
 ```ts
 // Using reduce (clever but harder to read)
-const total = products.reduce(
-	(sum, p) => (p.inStock ? sum + p.price : sum),
-	0,
-)
+const total = products.reduce((sum, p) => (p.inStock ? sum + p.price : sum), 0)
 
 // Using filter + reduce (clearer intent)
 const total = products

@@ -4,7 +4,12 @@
 const products = [
 	{ name: 'Laptop', price: 999.99, category: 'Electronics', inStock: true },
 	{ name: 'Coffee Maker', price: 79.99, category: 'Kitchen', inStock: true },
-	{ name: 'Headphones', price: 149.99, category: 'Electronics', inStock: false },
+	{
+		name: 'Headphones',
+		price: 149.99,
+		category: 'Electronics',
+		inStock: false,
+	},
 	{ name: 'Blender', price: 49.99, category: 'Kitchen', inStock: true },
 	{ name: 'Monitor', price: 299.99, category: 'Electronics', inStock: true },
 ]
