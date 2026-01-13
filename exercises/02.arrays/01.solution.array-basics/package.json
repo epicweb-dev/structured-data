@@ -2,6 +2,7 @@
   "name": "exercises_02.arrays_01.solution.array-basics",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }
