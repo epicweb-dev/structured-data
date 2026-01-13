@@ -55,9 +55,14 @@ Many TypeScript developers prefer union types because:
 - Works with string literals directly
 
 <callout-info>
-	Choose enums when you need reverse mapping (number → name) or when working
-	with teams that prefer the enum syntax. Otherwise, union types are often the
-	better choice.
+	In functional programming, union types are the standard way to represent a
+	fixed set of possibilities. They work seamlessly with TypeScript's type
+	narrowing and discriminated unions—patterns you'll use extensively in modern
+	React and other functional codebases.
 </callout-info>
+
+Choose enums when you need reverse mapping (number → name) or when working with
+teams that prefer the enum syntax. Otherwise, union types are often the better
+choice.
 
 In this exercise, you'll work with both enums and union types.

@@ -2,12 +2,17 @@
 
 👨‍💼 You've mastered manual array iteration!
 
-🦉 This manual filtering pattern works, but it's verbose. In the Array Methods
-exercise, you'll learn `filter()` which does this in one line:
+🦉 This imperative approach works, but it requires mutation (building up an
+array with `push()`) and is verbose. In the Array Methods exercise, you'll learn
+`filter()` and other functional methods that express the same logic more
+declaratively:
 
 ```ts
+// Functional approach - one line, no mutation
 const inStockProducts = products.filter((p) => p.inStock)
+const expensiveCount = products.filter((p) => p.price > 50).length
 ```
 
 Understanding the manual approach helps you appreciate—and debug—the functional
-methods.
+methods. Both approaches work; the functional style is often clearer for data
+transformation.

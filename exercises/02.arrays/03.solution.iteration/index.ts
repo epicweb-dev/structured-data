@@ -9,11 +9,15 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 	{ name: 'Webcam', price: 49.99, inStock: false },
 ]
 
+// Logging each product - for...of is great for this
 console.log('All products:')
 for (const product of products) {
 	console.log(`  ${product.name}: $${product.price}`)
 }
 
+// Filtering products that are in stock
+// This imperative approach works, but there's a more declarative way
+// using filter() which we'll learn in Exercise 04!
 const inStockProducts: { name: string; price: number; inStock: boolean }[] = []
 for (const product of products) {
 	if (product.inStock) {
@@ -21,6 +25,8 @@ for (const product of products) {
 	}
 }
 
+// Counting expensive products
+// Again, this works, but filter().length is more expressive
 let expensiveCount = 0
 for (const product of products) {
 	if (product.price > 50) {

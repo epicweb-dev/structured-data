@@ -9,13 +9,18 @@ You learned:
 - 🔀 **Union types** as a lighter-weight alternative
 - ⚖️ **Tradeoffs** between enums and unions
 
-🦉 The TypeScript community trend is toward union types:
+🦉 The TypeScript community—especially in functional and React codebases—prefers
+union types:
 
 ```ts
-// Modern TypeScript style
+// Modern TypeScript style (functional approach)
 type Status = 'pending' | 'active' | 'completed'
 type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE'
 ```
+
+Union types work beautifully with TypeScript's type narrowing. When you write
+`if (status === 'pending')`, TypeScript knows exactly which type you're working
+with.
 
 But enums still have their place, especially when:
 
@@ -24,4 +29,5 @@ But enums still have their place, especially when:
 - You're working with existing enum-heavy codebases
 
 🎉 Congratulations! You've completed the Structured Data workshop. You can now
-model complex data with objects, arrays, tuples, and more!
+model complex data with objects, arrays, tuples, and more—using functional
+patterns like immutable updates and declarative array methods!

@@ -29,46 +29,42 @@ await testStep(
 )
 
 await testStep(
-	'Products array should support push with typed objects',
+	'Adding to arrays with spread creates a new array',
 	async () => {
 		const products: { name: string; price: number; inStock: boolean }[] = [
 			{ name: 'Laptop', price: 999.99, inStock: true },
 			{ name: 'Mouse', price: 29.99, inStock: true },
 			{ name: 'Keyboard', price: 79.99, inStock: false },
 		]
-		products.push({ name: 'Monitor', price: 299.99, inStock: true })
+		const allProducts = [
+			...products,
+			{ name: 'Monitor', price: 299.99, inStock: true },
+		]
 		expect(
 			products.length,
-			'🚨 products.length should be 4 after push - push adds a new object to the end of the array',
+			'🚨 Original products array should still have 3 items - spread creates a new array without modifying the original',
+		).toBe(3)
+		expect(
+			allProducts.length,
+			'🚨 allProducts.length should be 4 - the new array contains the original items plus the new one',
 		).toBe(4)
 		expect(
-			products[3].name,
-			'🚨 products[3].name should be "Monitor" - the pushed object should be at index 3',
+			allProducts[3].name,
+			'🚨 allProducts[3].name should be "Monitor" - the new item is at the end of the new array',
 		).toBe('Monitor')
-		expect(
-			products[3].price,
-			'🚨 products[3].price should be 299.99 - verify the price property of the pushed object',
-		).toBe(299.99)
-		expect(
-			products[3].inStock,
-			'🚨 products[3].inStock should be true - verify the inStock property of the pushed object',
-		).toBe(true)
 	},
 )
 
-await testStep('Total inventory value calculation should work', async () => {
+await testStep('Total inventory value calculation with reduce', async () => {
 	const products: { name: string; price: number; inStock: boolean }[] = [
 		{ name: 'Laptop', price: 999.99, inStock: true },
 		{ name: 'Mouse', price: 29.99, inStock: true },
 		{ name: 'Keyboard', price: 79.99, inStock: false },
 		{ name: 'Monitor', price: 299.99, inStock: true },
 	]
-	let totalValue = 0
-	for (const product of products) {
-		totalValue += product.price
-	}
+	const totalValue = products.reduce((sum, product) => sum + product.price, 0)
 	expect(
 		totalValue,
-		'🚨 totalValue should be 1409.96 - sum all product prices using a loop (999.99 + 29.99 + 79.99 + 299.99)',
+		'🚨 totalValue should be 1409.96 - use reduce to sum all product prices (999.99 + 29.99 + 79.99 + 299.99)',
 	).toBe(1409.96)
 })

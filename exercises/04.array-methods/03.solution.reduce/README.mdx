@@ -21,3 +21,11 @@ Use `reduce` when you need:
 - Finding min/max
 - Grouping/counting
 - Building objects from arrays
+
+<callout-info>
+	**Immutable vs mutable accumulators:** We used the spread pattern
+	`({ ...acc, [key]: value })` which creates a new object each iteration. This
+	is easier to reason about and is the functional approach. For very large
+	arrays (thousands of items), mutating the accumulator directly is faster.
+	Pragmatism wins—choose based on your actual data size and readability needs.
+</callout-info>

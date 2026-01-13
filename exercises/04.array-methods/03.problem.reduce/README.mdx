@@ -1,7 +1,8 @@
 # Reduce
 
 👨‍💼 The `reduce` method accumulates an array into a single value. It's the most
-powerful (and sometimes confusing) array method.
+powerful (and sometimes confusing) array method—and a cornerstone of functional
+programming.
 
 ```ts
 const numbers = [1, 2, 3, 4]
@@ -27,16 +28,19 @@ Parameters:
 const result = array.reduce((accumulator, current) => newAccumulator, initial)
 ```
 
-💰 Counting by category:
+💰 Counting by category (immutable pattern using spread):
 
 ```ts
 const counts = products.reduce(
-	(acc, p) => {
-		acc[p.category] = (acc[p.category] || 0) + 1
-		return acc
-	},
+	(acc, p) => ({
+		...acc,
+		[p.category]: (acc[p.category] || 0) + 1,
+	}),
 	{} as Record<string, number>,
 )
 ```
+
+Each iteration returns a new object instead of mutating the accumulator. This
+is the functional approach—easier to reason about and debug.
 
 📜 [MDN - Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)

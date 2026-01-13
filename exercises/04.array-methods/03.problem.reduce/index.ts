@@ -17,11 +17,11 @@ const products = [
 // const mostExpensive = products.reduce((max, p) => p.price > max.price ? p : max, products[0])
 
 // 🐨 Use reduce to count products by category
-// 💰 { Electronics: 3, Kitchen: 2 }
-// const countByCategory = products.reduce((acc, p) => {
-//   acc[p.category] = (acc[p.category] || 0) + 1
-//   return acc
-// }, {} as Record<string, number>)
+// 💰 Use spread to create a new object each iteration (immutable pattern):
+// const countByCategory = products.reduce(
+//   (acc, p) => ({ ...acc, [p.category]: (acc[p.category] || 0) + 1 }),
+//   {} as Record<string, number>
+// )
 
 // console.log('Total:', total)
 // console.log('Most expensive:', mostExpensive.name)

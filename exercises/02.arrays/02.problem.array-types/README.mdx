@@ -13,13 +13,21 @@ const users: { name: string; age: number }[] = [
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create an array of product objects with `name`, `price`, and `inStock`
-2. Add a new product to the array
+2. Add a new product using spread (`...`) to create a new array
 3. Access a property of a specific product
+4. Calculate the total price using `reduce()`
 
-💰 Array of objects:
+💰 Adding to an array (immutable style):
 
 ```ts
 const items: { name: string; price: number }[] = [{ name: 'Item', price: 10 }]
+const moreItems = [...items, { name: 'Another', price: 20 }]
+```
+
+💰 Summing values with reduce:
+
+```ts
+const total = items.reduce((sum, item) => sum + item.price, 0)
 ```
 
 📜 [TypeScript Handbook - Array Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays)
