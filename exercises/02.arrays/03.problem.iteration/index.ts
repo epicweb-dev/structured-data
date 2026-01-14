@@ -20,5 +20,3 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 
 // console.log('In stock:', inStockProducts.length)
 // console.log('Expensive products:', expensiveCount)
-
-export {}

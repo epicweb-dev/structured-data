@@ -22,5 +22,3 @@
 //   console.log(`Email: ${user.email}`)
 //   console.log(`Bio: ${user.bio ?? 'No bio provided'}`)
 // }
-
-export {}

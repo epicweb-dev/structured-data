@@ -26,5 +26,3 @@ const products = [
 // console.log('Total:', total)
 // console.log('Most expensive:', mostExpensive.name)
 // console.log('By category:', countByCategory)
-
-export {}

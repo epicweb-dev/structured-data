@@ -26,5 +26,3 @@ const coordinates: [number, number, number] = [10, 20, 30]
 // console.log(winner, others) // 95 [87, 76, 92, 88]
 // console.log(x, y, z) // 10 20 30
 // console.log(min, max) // 76 95
-
-export {}

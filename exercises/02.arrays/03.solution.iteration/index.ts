@@ -40,5 +40,3 @@ for (const product of products) {
 
 console.log('In stock:', inStockProducts.length)
 console.log('Expensive products (>$50):', expensiveCount)
-
-export {}

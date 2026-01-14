@@ -18,5 +18,3 @@ console.log(`Parsed '42': ${num1}, Success: ${success1}`)
 
 const [num2, success2] = parseNumber('hello')
 console.log(`Parsed 'hello': ${num2}, Success: ${success2}`)
-
-export {}

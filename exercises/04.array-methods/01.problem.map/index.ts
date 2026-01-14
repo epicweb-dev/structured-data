@@ -20,5 +20,3 @@ const products = [
 // console.log('Names:', names)
 // console.log('Prices:', prices)
 // console.log('Summary:', summary)
-
-export {}

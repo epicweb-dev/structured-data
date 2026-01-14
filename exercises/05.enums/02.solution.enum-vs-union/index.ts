@@ -31,5 +31,3 @@ logWithUnion('error', 'Connection failed')
 // Both provide the same type safety:
 // logWithEnum(LogLevel.Unknown)  // ❌ Error
 // logWithUnion('unknown')         // ❌ Error
-
-export {}

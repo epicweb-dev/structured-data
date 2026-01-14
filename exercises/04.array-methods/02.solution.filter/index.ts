@@ -39,5 +39,3 @@ console.log(
 	available.map((p) => p.name),
 )
 console.log('In-stock Electronics under $500:', inStockElectronicsUnder500)
-
-export {}

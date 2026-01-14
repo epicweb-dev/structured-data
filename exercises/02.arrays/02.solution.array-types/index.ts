@@ -18,5 +18,3 @@ console.log('First product:', allProducts[0].name)
 // Calculate total using reduce (we'll cover this in detail in Exercise 04)
 const totalValue = allProducts.reduce((sum, product) => sum + product.price, 0)
 console.log(`Total inventory value: $${totalValue.toFixed(2)}`)
-
-export {}

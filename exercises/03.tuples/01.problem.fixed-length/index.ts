@@ -18,5 +18,3 @@
 // console.log(formatCoordinate(nyc))
 // console.log(formatCoordinate(la))
 // console.log(`Distance: ${getDistance(nyc, la).toFixed(2)}`)
-
-export {}

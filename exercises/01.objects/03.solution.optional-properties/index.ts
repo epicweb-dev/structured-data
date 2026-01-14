@@ -28,5 +28,3 @@ function displayUserInfo(user: {
 
 displayUserInfo(alice)
 displayUserInfo(bob)
-
-export {}

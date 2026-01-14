@@ -35,5 +35,3 @@ const user: User = {
 // console.log(userId) // 'u123'
 // console.log(bio) // 'No bio provided'
 // console.log(formatUserCard(user))
-
-export {}

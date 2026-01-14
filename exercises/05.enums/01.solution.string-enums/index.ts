@@ -33,5 +33,3 @@ console.log(getStatusMessage(order.status))
 // Update status and check again
 order.status = OrderStatus.Shipped
 console.log(getStatusMessage(order.status))
-
-export {}

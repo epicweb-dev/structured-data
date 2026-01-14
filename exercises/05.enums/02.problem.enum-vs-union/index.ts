@@ -18,5 +18,3 @@
 // logWithUnion('info', 'Server started')
 
 // Which do you prefer?
-
-export {}

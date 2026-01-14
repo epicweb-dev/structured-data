@@ -22,5 +22,3 @@ const product = {
 // console.log(product.rating)
 
 // console.log(formatProduct(product))
-
-export {}

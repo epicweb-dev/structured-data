@@ -13,5 +13,3 @@
 // 🐨 Log the total number of products
 
 // console.log('Products:', products)
-
-export {}

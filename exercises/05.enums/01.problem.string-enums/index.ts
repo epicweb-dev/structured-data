@@ -24,5 +24,3 @@
 
 // console.log(order)
 // console.log(getStatusMessage(order.status))
-
-export {}

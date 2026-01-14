@@ -16,5 +16,3 @@
 // 🐨 Use destructuring to get the values
 // const [min, max] = getMinMax([5, 2, 8, 1, 9])
 // const [num, success] = parseNumber('42')
-
-export {}
