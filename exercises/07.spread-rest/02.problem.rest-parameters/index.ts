@@ -32,3 +32,6 @@
 // console.log(createArray(1, 2, 3)) // [1, 2, 3]
 // console.log(createArray('a', 'b')) // ['a', 'b']
 // console.log(mergeArrays([1, 2], [3, 4], [5])) // [1, 2, 3, 4, 5]
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

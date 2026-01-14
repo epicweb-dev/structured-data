@@ -12,3 +12,6 @@ console.log('Last product:', products[products.length - 1])
 console.log('Total products:', products.length)
 
 console.log('Products:', products)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

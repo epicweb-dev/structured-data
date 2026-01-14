@@ -26,3 +26,6 @@ const products = [
 // console.log('Total:', total)
 // console.log('Most expensive:', mostExpensive.name)
 // console.log('By category:', countByCategory)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

@@ -35,3 +35,6 @@ const user: User = {
 // console.log(userId) // 'u123'
 // console.log(bio) // 'No bio provided'
 // console.log(formatUserCard(user))
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

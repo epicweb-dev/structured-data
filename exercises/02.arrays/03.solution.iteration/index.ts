@@ -40,3 +40,6 @@ for (const product of products) {
 
 console.log('In stock:', inStockProducts.length)
 console.log('Expensive products (>$50):', expensiveCount)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

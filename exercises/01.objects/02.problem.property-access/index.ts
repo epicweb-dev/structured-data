@@ -22,3 +22,6 @@ const product = {
 // console.log(product.rating)
 
 // console.log(formatProduct(product))
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

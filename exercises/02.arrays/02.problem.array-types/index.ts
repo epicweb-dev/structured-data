@@ -15,3 +15,6 @@
 
 // 🐨 Calculate the total value of all products (sum of prices)
 // 💰 Use reduce: allProducts.reduce((sum, p) => sum + p.price, 0)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}
