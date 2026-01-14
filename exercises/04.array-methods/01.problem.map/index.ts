@@ -20,6 +20,3 @@ const products = [
 // console.log('Names:', names)
 // console.log('Prices:', prices)
 // console.log('Summary:', summary)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

@@ -31,6 +31,3 @@ const countByCategory = products.reduce(
 console.log(`Total: $${total.toFixed(2)}`)
 console.log(`Most expensive: ${mostExpensive.name} ($${mostExpensive.price})`)
 console.log('By category:', countByCategory)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

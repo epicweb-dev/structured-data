@@ -21,6 +21,3 @@ function formatProduct(p: { name: string; price: number }): string {
 // Property 'rating' does not exist on type '{ name: string; ... }'
 
 console.log(formatProduct(product))
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

@@ -39,6 +39,3 @@ console.log(
 	available.map((p) => p.name),
 )
 console.log('In-stock Electronics under $500:', inStockElectronicsUnder500)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

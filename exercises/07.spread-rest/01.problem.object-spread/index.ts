@@ -53,6 +53,3 @@ const userConfig: Partial<Config> = {
 // console.log(finalConfig.timeout) // 10000
 // console.log(userWithDarkMode.settings.theme) // 'dark'
 // console.log(user.settings.theme) // 'light' (unchanged!)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

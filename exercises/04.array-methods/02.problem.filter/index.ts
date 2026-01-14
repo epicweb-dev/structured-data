@@ -29,6 +29,3 @@ const products = [
 // console.log('Electronics:', electronics)
 // console.log('Affordable:', affordable)
 // console.log('In Stock:', available)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

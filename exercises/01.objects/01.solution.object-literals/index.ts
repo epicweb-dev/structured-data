@@ -15,6 +15,3 @@ const admin: { name: string; age: number; email: string } = {
 
 console.log(`User: ${user.name}, Age: ${user.age}`)
 console.log(`Admin: ${admin.name}, Age: ${admin.age}`)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}
