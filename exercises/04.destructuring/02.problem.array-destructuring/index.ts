@@ -30,7 +30,7 @@ const coordinates: [number, number, number] = [10, 20, 30]
 // 🐨 When you're done, uncomment this:
 // const [testMin, testMax] = getMinMax([5, 2, 8, 1, 9])
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		highest,
 // 		secondHighest,

@@ -23,7 +23,7 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		products,
 // 		inStockProducts,

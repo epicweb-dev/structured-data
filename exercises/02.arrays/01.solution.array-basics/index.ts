@@ -15,7 +15,7 @@ console.log('Total products:', products.length)
 console.log('Products:', products)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		initialProducts,
 		products,

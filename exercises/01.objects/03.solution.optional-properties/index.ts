@@ -30,7 +30,7 @@ displayUserInfo(alice)
 displayUserInfo(bob)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		alice,
 		bob,

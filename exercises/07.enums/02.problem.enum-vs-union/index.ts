@@ -18,7 +18,7 @@
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		logLevel: {
 // 			Debug: LogLevel.Debug,

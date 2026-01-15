@@ -36,7 +36,7 @@ console.log(sum(1, 2, 3, 4)) // 10
 console.log(mergeArrays([1, 2], [3, 4], [5])) // [1, 2, 3, 4, 5]
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		multiply: [
 			multiply(2, 3, 4),

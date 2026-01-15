@@ -23,7 +23,7 @@ function formatProduct(p: { name: string; price: number }): string {
 console.log(formatProduct(product))
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		product,
 		formatted: formatProduct(product),

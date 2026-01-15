@@ -29,7 +29,7 @@ console.log(min, max) // 76 95
 
 const [testMin, testMax] = getMinMax([5, 2, 8, 1, 9])
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		highest,
 		secondHighest,

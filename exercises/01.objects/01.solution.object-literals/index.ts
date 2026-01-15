@@ -17,7 +17,7 @@ console.log(`User: ${user.name}, Age: ${user.age}`)
 console.log(`Admin: ${admin.name}, Age: ${admin.age}`)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		user,
 		admin,

@@ -57,7 +57,7 @@ console.log(userWithDarkMode.settings.theme) // 'dark'
 console.log(user.settings.theme) // 'light' (unchanged!)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		updatedEmail: updatedUser.email,
 		originalEmail: user.email,

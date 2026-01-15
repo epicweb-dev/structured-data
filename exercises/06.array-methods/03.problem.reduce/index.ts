@@ -29,7 +29,7 @@ const products = [
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		total,
 // 		mostExpensive,

@@ -57,7 +57,7 @@ const userConfig: { timeout: number } = {
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		updatedEmail: updatedUser.email,
 // 		originalEmail: user.email,

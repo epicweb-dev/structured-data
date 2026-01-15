@@ -33,7 +33,7 @@ console.log(`Most expensive: ${mostExpensive.name} ($${mostExpensive.price})`)
 console.log('By category:', countByCategory)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		total,
 		mostExpensive,

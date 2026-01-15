@@ -37,7 +37,7 @@ console.log(bio) // 'No bio provided'
 console.log(formatUserCard(user)) // 'Alice Johnson (admin) - alice@example.com'
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		name,
 		email,

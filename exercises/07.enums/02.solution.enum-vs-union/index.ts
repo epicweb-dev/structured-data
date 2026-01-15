@@ -34,7 +34,7 @@ logWithUnion('error', 'Connection failed')
 // logWithUnion('unknown')         // ❌ Error
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		logLevel: {
 			Debug: LogLevel.Debug,

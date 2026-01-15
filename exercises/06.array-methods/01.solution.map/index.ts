@@ -22,7 +22,7 @@ console.log('Prices:', prices)
 console.log('Summary:', summary)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		names,
 		prices,

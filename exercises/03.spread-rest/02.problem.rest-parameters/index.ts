@@ -34,7 +34,7 @@
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		multiply: [multiply(2, 3, 4), multiply(5), multiply(), multiply(2, 2, 2, 2)],
 // 		sum: [sum(1, 2, 3, 4), sum(5), sum()],

@@ -29,7 +29,7 @@ for (let i = 0; i < products.length; i++) {
 console.log(`Total inventory value: $${totalValue.toFixed(2)}`)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		initialProducts,
 		products,

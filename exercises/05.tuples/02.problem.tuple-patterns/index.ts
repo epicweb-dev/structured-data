@@ -24,7 +24,7 @@
 // 🐨 When you're done, uncomment this:
 // const altMinMax = getMinMax([10, 20, 5, 15])
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		parsed: [parsed1, parsed2],
 // 		minMax,

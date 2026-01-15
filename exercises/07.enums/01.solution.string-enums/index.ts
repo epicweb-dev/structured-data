@@ -36,7 +36,7 @@ order.status = OrderStatus.Shipped
 console.log(getStatusMessage(order.status))
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		orderStatus: {
 			Pending: OrderStatus.Pending,

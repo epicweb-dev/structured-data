@@ -32,7 +32,7 @@ const products = [
 
 // 🐨 When you're done, uncomment this:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		electronics: electronics.map((p) => p.name),
 // 		affordable: affordable.map((p) => p.name),

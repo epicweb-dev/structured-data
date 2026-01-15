@@ -23,7 +23,7 @@ console.log(formatCoordinate(la))
 console.log(`Distance: ${getDistance(nyc, la).toFixed(2)}`)
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		nyc,
 		la,
