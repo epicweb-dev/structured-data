@@ -7,14 +7,13 @@ const products: Array<{ name: string; price: number; inStock: boolean }> = [
 	{ name: 'Keyboard', price: 79.99, inStock: false },
 ]
 
-// Adding to an array using spread (immutable - creates a new array)
-const allProducts = [
-	...products,
-	{ name: 'Monitor', price: 299.99, inStock: true },
-]
+products.push({ name: 'Monitor', price: 299.99, inStock: true })
 
-console.log('First product:', allProducts[0].name)
+console.log('First product:', products[0].name)
 
-// Calculate total using reduce (we'll cover this in detail in Exercise 04)
-const totalValue = allProducts.reduce((sum, product) => sum + product.price, 0)
+let totalValue = 0
+for (let i = 0; i < products.length; i++) {
+	const product = products[i]
+	totalValue += product.price
+}
 console.log(`Total inventory value: $${totalValue.toFixed(2)}`)

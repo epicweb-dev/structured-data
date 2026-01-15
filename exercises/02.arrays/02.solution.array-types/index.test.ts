@@ -30,44 +30,40 @@ await test('Products array should have correct typed structure', () => {
 	)
 })
 
-await test('Adding to arrays with spread creates a new array', () => {
+await test('Adding to arrays with push increases length', () => {
 	const products: { name: string; price: number; inStock: boolean }[] = [
 		{ name: 'Laptop', price: 999.99, inStock: true },
 		{ name: 'Mouse', price: 29.99, inStock: true },
 		{ name: 'Keyboard', price: 79.99, inStock: false },
 	]
-	const allProducts = [
-		...products,
-		{ name: 'Monitor', price: 299.99, inStock: true },
-	]
+	products.push({ name: 'Monitor', price: 299.99, inStock: true })
 	assert.strictEqual(
 		products.length,
-		3,
-		'🚨 Original products array should still have 3 items - spread creates a new array without modifying the original',
-	)
-	assert.strictEqual(
-		allProducts.length,
 		4,
-		'🚨 allProducts.length should be 4 - the new array contains the original items plus the new one',
+		'🚨 products.length should be 4 - push adds one item to the array',
 	)
 	assert.strictEqual(
-		allProducts[3].name,
+		products[3].name,
 		'Monitor',
-		'🚨 allProducts[3].name should be "Monitor" - the new item is at the end of the new array',
+		'🚨 products[3].name should be "Monitor" - the new item is at the end of the array',
 	)
 })
 
-await test('Total inventory value calculation with reduce', () => {
+await test('Total inventory value calculation with a loop', () => {
 	const products: { name: string; price: number; inStock: boolean }[] = [
 		{ name: 'Laptop', price: 999.99, inStock: true },
 		{ name: 'Mouse', price: 29.99, inStock: true },
 		{ name: 'Keyboard', price: 79.99, inStock: false },
 		{ name: 'Monitor', price: 299.99, inStock: true },
 	]
-	const totalValue = products.reduce((sum, product) => sum + product.price, 0)
+	let totalValue = 0
+	for (let i = 0; i < products.length; i++) {
+		const product = products[i]
+		totalValue += product.price
+	}
 	assert.strictEqual(
 		totalValue,
 		1409.96,
-		'🚨 totalValue should be 1409.96 - use reduce to sum all product prices (999.99 + 29.99 + 79.99 + 299.99)',
+		'🚨 totalValue should be 1409.96 - use a loop to sum all product prices (999.99 + 29.99 + 79.99 + 299.99)',
 	)
 })

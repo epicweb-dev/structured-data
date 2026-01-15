@@ -8,10 +8,10 @@
 // Start with 2-3 products
 // 💰 const products: { name: string; price: number; inStock: boolean }[] = [...]
 
-// 🐨 Add a new product using spread to create a new array
-// 💰 const allProducts = [...products, { name: 'Monitor', price: 299.99, inStock: true }]
+// 🐨 Add a new product using push
+// 💰 products.push({ name: 'Monitor', price: 299.99, inStock: true })
 
-// 🐨 Log the name of the first product from your new array
+// 🐨 Log the name of the first product from the array
 
 // 🐨 Calculate the total value of all products (sum of prices)
-// 💰 Use reduce: allProducts.reduce((sum, p) => sum + p.price, 0)
+// 💰 Use a loop to add each price to a total

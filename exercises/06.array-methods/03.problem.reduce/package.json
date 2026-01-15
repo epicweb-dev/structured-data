@@ -1,0 +1,8 @@
+{
+  "name": "exercises_04.array-methods_04.problem.reduce",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

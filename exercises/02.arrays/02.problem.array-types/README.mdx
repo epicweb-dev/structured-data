@@ -13,22 +13,31 @@ const users: { name: string; age: number }[] = [
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create an array of product objects with `name`, `price`, and `inStock`
-2. Add a new product using spread (`...`) to create a new array
+2. Add a new product using `push`
 3. Access a property of a specific product
-4. Calculate the total price using `reduce()`
+4. Calculate the total price using a loop
 
-💰 Adding to an array (immutable style):
+💰 Adding to an array:
 
 ```ts
 const items: { name: string; price: number }[] = [{ name: 'Item', price: 10 }]
-const moreItems = [...items, { name: 'Another', price: 20 }]
+items.push({ name: 'Another', price: 20 })
 ```
 
-💰 Summing values with reduce:
+💰 Summing values with a loop:
 
 ```ts
-const total = items.reduce((sum, item) => sum + item.price, 0)
+let total = 0
+for (let i = 0; i < items.length; i++) {
+	const item = items[i]
+	total += item.price
+}
 ```
+
+<callout-info>
+	There's a more concise way to sum arrays with `reduce`, and we'll cover that
+	in the Array Methods exercise later.
+</callout-info>
 
 📜 [TypeScript Handbook - Array Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays)
 
