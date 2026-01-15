@@ -12,6 +12,22 @@ sum(1, 2) // 3
 sum(1, 2, 3, 4, 5) // 15
 ```
 
+<callout-info>
+	The `.reduce()` method shown above is covered later in Exercise 6. For now,
+	you can use a simple `for` loop instead:
+
+```ts
+function sum(...numbers: Array<number>): number {
+	let total = 0
+	for (const n of numbers) {
+		total += n
+	}
+	return total
+}
+```
+
+</callout-info>
+
 ## Rest vs Spread
 
 The `...` syntax means different things in different contexts:

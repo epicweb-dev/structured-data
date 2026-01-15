@@ -5,9 +5,16 @@ of numbers: latitude and longitude.
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `Coordinate` tuple type `[number, number]`
-2. Create several coordinate values
-3. Write a function that calculates distance between coordinates
+1. Create coordinate values typed as `[number, number]` tuples
+2. Write a `formatCoordinate` function that takes a coordinate tuple
+3. Write a `getDistance` function that calculates distance between two coordinates
+
+💰 You can use inline tuple types like `[number, number]` directly, or create a
+type alias if you prefer:
+
+```ts
+type Coordinate = [number, number]
+```
 
 💰 Tuple syntax:
 

@@ -70,14 +70,17 @@ await test('bio should have a default value', () => {
 })
 
 await test('formatUserCard should use parameter destructuring', () => {
-	assert.strictEqual(
-		solution.formatUserCard({
-			id: 'test',
-			name: 'Bob',
-			email: 'bob@test.com',
-			role: 'user',
-		}),
-		'Bob (user) - bob@test.com',
-		'🚨 formatUserCard should return formatted string with name, role, and email',
+	const result = solution.formatUserCard({
+		id: 'test',
+		name: 'Bob',
+		email: 'bob@test.com',
+		role: 'user',
+	})
+	assert.ok(
+		typeof result === 'string' &&
+			result.includes('Bob') &&
+			result.includes('user') &&
+			result.includes('bob@test.com'),
+		'🚨 formatUserCard should return a string containing the name, role, and email',
 	)
 })

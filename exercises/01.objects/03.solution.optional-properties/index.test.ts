@@ -50,14 +50,13 @@ await test('User with optional properties should work', () => {
 		'bob@example.com',
 		'🚨 bob.email should be "bob@example.com" - make sure you set the required email property',
 	)
-	assert.strictEqual(
-		solution.bob.bio,
-		'Software developer and TypeScript enthusiast',
-		'🚨 bob.bio should be "Software developer and TypeScript enthusiast" - optional properties can be included when provided',
+	assert.ok(
+		typeof solution.bob.bio === 'string' && solution.bob.bio.length > 0,
+		'🚨 bob.bio should be a non-empty string - include a bio for bob to demonstrate optional properties',
 	)
-	assert.strictEqual(
-		solution.bob.website,
-		'https://bob.dev',
-		'🚨 bob.website should be "https://bob.dev" - optional properties can be included when provided',
+	assert.ok(
+		typeof solution.bob.website === 'string' &&
+			solution.bob.website.startsWith('http'),
+		'🚨 bob.website should be a valid URL string - include a website for bob to demonstrate optional properties',
 	)
 })

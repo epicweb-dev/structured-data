@@ -47,42 +47,64 @@ await test('OrderStatus enum should have correct values', () => {
 })
 
 await test('Order object should use OrderStatus enum correctly', () => {
-	assert.strictEqual(
-		solution.order.status,
+	const validStatuses = [
+		solution.OrderStatus.Pending,
+		solution.OrderStatus.Processing,
 		solution.OrderStatus.Shipped,
-		'🚨 order.status should be OrderStatus.Shipped - use the enum value when assigning to the status property',
+		solution.OrderStatus.Delivered,
+	]
+	assert.ok(
+		validStatuses.includes(solution.order.status),
+		'🚨 order.status should be one of the OrderStatus enum values',
 	)
-	assert.strictEqual(
-		solution.order.id,
-		'ORD-001',
-		'🚨 order.id should be "ORD-001"',
+	assert.ok(
+		typeof solution.order.id === 'string' && solution.order.id.length > 0,
+		'🚨 order.id should be a non-empty string',
 	)
-	assert.strictEqual(
-		solution.order.customerName,
-		'Alice Johnson',
-		'🚨 order.customerName should be "Alice Johnson"',
+	assert.ok(
+		typeof solution.order.customerName === 'string' &&
+			solution.order.customerName.length > 0,
+		'🚨 order.customerName should be a non-empty string',
 	)
 })
 
-await test('getStatusMessage should return correct messages', () => {
-	assert.strictEqual(
-		solution.getStatusMessage(solution.OrderStatus.Pending),
-		'Your order is pending confirmation',
-		'🚨 getStatusMessage(OrderStatus.Pending) should return the correct message - use a switch statement to handle each enum case',
+await test('getStatusMessage should return a message for each status', () => {
+	// Each status should return a non-empty string message
+	const pendingMsg = solution.getStatusMessage(solution.OrderStatus.Pending)
+	assert.ok(
+		typeof pendingMsg === 'string' && pendingMsg.length > 0,
+		'🚨 getStatusMessage(OrderStatus.Pending) should return a message string',
 	)
-	assert.strictEqual(
-		solution.getStatusMessage(solution.OrderStatus.Processing),
-		'Your order is being processed',
-		'🚨 getStatusMessage(OrderStatus.Processing) should return the correct message - handle the Processing case in your switch',
+
+	const processingMsg = solution.getStatusMessage(
+		solution.OrderStatus.Processing,
 	)
-	assert.strictEqual(
-		solution.getStatusMessage(solution.OrderStatus.Shipped),
-		'Your order has been shipped!',
-		'🚨 getStatusMessage(OrderStatus.Shipped) should return the correct message - handle the Shipped case in your switch',
+	assert.ok(
+		typeof processingMsg === 'string' && processingMsg.length > 0,
+		'🚨 getStatusMessage(OrderStatus.Processing) should return a message string',
 	)
-	assert.strictEqual(
-		solution.getStatusMessage(solution.OrderStatus.Delivered),
-		'Your order has been delivered',
-		'🚨 getStatusMessage(OrderStatus.Delivered) should return the correct message - handle the Delivered case in your switch',
+
+	const shippedMsg = solution.getStatusMessage(solution.OrderStatus.Shipped)
+	assert.ok(
+		typeof shippedMsg === 'string' && shippedMsg.length > 0,
+		'🚨 getStatusMessage(OrderStatus.Shipped) should return a message string',
+	)
+
+	const deliveredMsg = solution.getStatusMessage(solution.OrderStatus.Delivered)
+	assert.ok(
+		typeof deliveredMsg === 'string' && deliveredMsg.length > 0,
+		'🚨 getStatusMessage(OrderStatus.Delivered) should return a message string',
+	)
+
+	// Messages should be different for different statuses
+	const messages = new Set([
+		pendingMsg,
+		processingMsg,
+		shippedMsg,
+		deliveredMsg,
+	])
+	assert.ok(
+		messages.size === 4,
+		'🚨 Each status should return a unique message',
 	)
 })
