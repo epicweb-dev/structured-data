@@ -1,32 +1,61 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const {
-	highest,
-	secondHighest,
-	winner,
-	others,
-	x,
-	y,
-	z,
-	min,
-	max,
-	testMin,
-	testMax,
-} = JSON.parse(jsonLine.replace('Results:', '').trim())
+await test('highest is exported', () => {
+	assert.ok(
+		'highest' in solution,
+		'🚨 Make sure you export "highest" - add: export { highest, ... }',
+	)
+})
+
+await test('secondHighest is exported', () => {
+	assert.ok(
+		'secondHighest' in solution,
+		'🚨 Make sure you export "secondHighest" - add: export { secondHighest, ... }',
+	)
+})
+
+await test('winner is exported', () => {
+	assert.ok(
+		'winner' in solution,
+		'🚨 Make sure you export "winner" - add: export { winner, ... }',
+	)
+})
+
+await test('others is exported', () => {
+	assert.ok(
+		'others' in solution,
+		'🚨 Make sure you export "others" - add: export { others, ... }',
+	)
+})
+
+await test('x, y, z are exported', () => {
+	assert.ok('x' in solution, '🚨 Make sure you export "x"')
+	assert.ok('y' in solution, '🚨 Make sure you export "y"')
+	assert.ok('z' in solution, '🚨 Make sure you export "z"')
+})
+
+await test('min and max are exported', () => {
+	assert.ok('min' in solution, '🚨 Make sure you export "min"')
+	assert.ok('max' in solution, '🚨 Make sure you export "max"')
+})
+
+await test('getMinMax is exported', () => {
+	assert.ok(
+		'getMinMax' in solution,
+		'🚨 Make sure you export "getMinMax" - add: export { getMinMax, ... }',
+	)
+})
 
 await test('highest and secondHighest should be destructured', () => {
 	assert.strictEqual(
-		highest,
+		solution.highest,
 		95,
 		'🚨 highest should be 95 - destructure first element from scores',
 	)
 	assert.strictEqual(
-		secondHighest,
+		solution.secondHighest,
 		87,
 		'🚨 secondHighest should be 87 - destructure second element from scores',
 	)
@@ -34,35 +63,48 @@ await test('highest and secondHighest should be destructured', () => {
 
 await test('winner and others should use rest pattern', () => {
 	assert.strictEqual(
-		winner,
+		solution.winner,
 		95,
 		'🚨 winner should be 95 - use const [winner, ...others] = scores',
 	)
-	assert.strictEqual(
-		JSON.stringify(others),
-		JSON.stringify([87, 76, 92, 88]),
+	assert.deepStrictEqual(
+		solution.others,
+		[87, 76, 92, 88],
 		'🚨 others should be [87, 76, 92, 88] - use rest pattern',
 	)
 })
 
 await test('coordinates should be destructured into x, y, z', () => {
-	assert.strictEqual(x, 10, '🚨 x should be 10 - destructure from coordinates')
-	assert.strictEqual(y, 20, '🚨 y should be 20 - destructure from coordinates')
-	assert.strictEqual(z, 30, '🚨 z should be 30 - destructure from coordinates')
+	assert.strictEqual(
+		solution.x,
+		10,
+		'🚨 x should be 10 - destructure from coordinates',
+	)
+	assert.strictEqual(
+		solution.y,
+		20,
+		'🚨 y should be 20 - destructure from coordinates',
+	)
+	assert.strictEqual(
+		solution.z,
+		30,
+		'🚨 z should be 30 - destructure from coordinates',
+	)
 })
 
 await test('getMinMax should return tuple and be destructured', () => {
 	assert.strictEqual(
-		min,
+		solution.min,
 		76,
 		'🚨 min should be 76 - destructure getMinMax result',
 	)
 	assert.strictEqual(
-		max,
+		solution.max,
 		95,
 		'🚨 max should be 95 - destructure getMinMax result',
 	)
 
+	const [testMin, testMax] = solution.getMinMax([5, 2, 8, 1, 9])
 	assert.strictEqual(
 		testMin,
 		1,

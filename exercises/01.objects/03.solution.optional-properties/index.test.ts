@@ -1,67 +1,63 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { alice, bob } = JSON.parse(jsonLine.replace('Results:', '').trim())
+await test('alice is exported', () => {
+	assert.ok(
+		'alice' in solution,
+		'🚨 Make sure you export "alice" - add: export { alice, ... }',
+	)
+})
 
 await test('User without optional properties should work', () => {
 	assert.strictEqual(
-		alice.name,
+		solution.alice.name,
 		'Alice',
 		'🚨 alice.name should be "Alice" - make sure you set the required name property',
 	)
 	assert.strictEqual(
-		alice.email,
+		solution.alice.email,
 		'alice@example.com',
 		'🚨 alice.email should be "alice@example.com" - make sure you set the required email property',
 	)
 	assert.strictEqual(
-		alice.bio,
+		solution.alice.bio,
 		undefined,
 		'🚨 alice.bio should be undefined - optional properties can be omitted from the object',
 	)
 	assert.strictEqual(
-		alice.website,
+		solution.alice.website,
 		undefined,
 		'🚨 alice.website should be undefined - optional properties can be omitted from the object',
 	)
 })
 
+await test('bob is exported', () => {
+	assert.ok(
+		'bob' in solution,
+		'🚨 Make sure you export "bob" - add: export { alice, bob }',
+	)
+})
+
 await test('User with optional properties should work', () => {
 	assert.strictEqual(
-		bob.name,
+		solution.bob.name,
 		'Bob',
 		'🚨 bob.name should be "Bob" - make sure you set the required name property',
 	)
 	assert.strictEqual(
-		bob.email,
+		solution.bob.email,
 		'bob@example.com',
 		'🚨 bob.email should be "bob@example.com" - make sure you set the required email property',
 	)
 	assert.strictEqual(
-		bob.bio,
+		solution.bob.bio,
 		'Software developer and TypeScript enthusiast',
 		'🚨 bob.bio should be "Software developer and TypeScript enthusiast" - optional properties can be included when provided',
 	)
 	assert.strictEqual(
-		bob.website,
+		solution.bob.website,
 		'https://bob.dev',
 		'🚨 bob.website should be "https://bob.dev" - optional properties can be included when provided',
-	)
-})
-
-await test('displayUserInfo should handle optional properties correctly', () => {
-	assert.strictEqual(
-		alice.name,
-		'Alice',
-		'🚨 alice.name should be "Alice" - verify the name property is set correctly',
-	)
-	assert.strictEqual(
-		bob.bio,
-		'Software developer and TypeScript enthusiast',
-		'🚨 bob.bio should be "Software developer and TypeScript enthusiast" - optional properties can be accessed when they exist',
 	)
 })

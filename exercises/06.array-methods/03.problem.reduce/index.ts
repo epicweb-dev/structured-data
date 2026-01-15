@@ -27,12 +27,5 @@ const products = [
 // console.log('Most expensive:', mostExpensive.name)
 // console.log('By category:', countByCategory)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		total,
-// 		mostExpensive,
-// 		countByCategory,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { total, mostExpensive, countByCategory }

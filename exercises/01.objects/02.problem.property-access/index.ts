@@ -23,11 +23,5 @@ const product = {
 
 // console.log(formatProduct(product))
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		product,
-// 		formatted: formatProduct(product),
-// 	}),
-// )
+// 🐨 Export your variables and functions so we can verify your work
+// 💰 export { product, formatProduct }

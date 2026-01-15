@@ -36,19 +36,4 @@ console.log(userId) // 'u123'
 console.log(bio) // 'No bio provided'
 console.log(formatUserCard(user)) // 'Alice Johnson (admin) - alice@example.com'
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		name,
-		email,
-		userId,
-		bio,
-		userCard: formatUserCard(user),
-		sampleUserCard: formatUserCard({
-			id: 'test',
-			name: 'Bob',
-			email: 'bob@test.com',
-			role: 'user',
-		}),
-	}),
-)
+export { name, email, userId, bio, formatUserCard }

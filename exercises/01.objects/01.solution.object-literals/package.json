@@ -2,7 +2,7 @@
   "name": "exercises_01.objects_01.solution.object-literals",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

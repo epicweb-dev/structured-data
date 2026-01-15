@@ -55,15 +55,5 @@ const userConfig: { timeout: number } = {
 // console.log(userWithDarkMode.settings.theme) // 'dark'
 // console.log(user.settings.theme) // 'light' (unchanged!)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		updatedEmail: updatedUser.email,
-// 		originalEmail: user.email,
-// 		finalConfig,
-// 		darkTheme: userWithDarkMode.settings.theme,
-// 		originalTheme: user.settings.theme,
-// 		notifications: userWithDarkMode.settings.notifications,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { updatedUser, user, finalConfig, userWithDarkMode }

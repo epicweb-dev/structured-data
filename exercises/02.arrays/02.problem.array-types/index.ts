@@ -16,11 +16,5 @@
 // 🐨 Calculate the total value of all products (sum of prices)
 // 💰 Use a loop to add each price to a total
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		products,
-// 		totalValue,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { products, totalValue }

@@ -33,16 +33,4 @@ logWithUnion('error', 'Connection failed')
 // logWithEnum(LogLevel.Unknown)  // ❌ Error
 // logWithUnion('unknown')         // ❌ Error
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		logLevel: {
-			Debug: LogLevel.Debug,
-			Info: LogLevel.Info,
-			Warn: LogLevel.Warn,
-			Error: LogLevel.Error,
-		},
-		unionValues: ['debug', 'info', 'warn', 'error'],
-		messages: ['[INFO] Server started', '[ERROR] Connection failed'],
-	}),
-)
+export { LogLevel, logWithEnum, logWithUnion }

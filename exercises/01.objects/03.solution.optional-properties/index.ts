@@ -29,10 +29,4 @@ function displayUserInfo(user: {
 displayUserInfo(alice)
 displayUserInfo(bob)
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		alice,
-		bob,
-	}),
-)
+export { alice, bob }

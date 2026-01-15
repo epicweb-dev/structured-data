@@ -35,26 +35,4 @@ const initialStatus = order.status
 order.status = OrderStatus.Shipped
 console.log(getStatusMessage(order.status))
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		orderStatus: {
-			Pending: OrderStatus.Pending,
-			Processing: OrderStatus.Processing,
-			Shipped: OrderStatus.Shipped,
-			Delivered: OrderStatus.Delivered,
-		},
-		order: {
-			id: order.id,
-			status: order.status,
-			customerName: order.customerName,
-			initialStatus,
-		},
-		messages: [
-			getStatusMessage(OrderStatus.Pending),
-			getStatusMessage(OrderStatus.Processing),
-			getStatusMessage(OrderStatus.Shipped),
-			getStatusMessage(OrderStatus.Delivered),
-		],
-	}),
-)
+export { OrderStatus, order, getStatusMessage }

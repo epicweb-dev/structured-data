@@ -1,22 +1,38 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const {
-	updatedEmail,
-	originalEmail,
-	finalConfig,
-	darkTheme,
-	originalTheme,
-	notifications,
-} = JSON.parse(jsonLine.replace('Results:', '').trim())
+await test('updatedUser is exported', () => {
+	assert.ok(
+		'updatedUser' in solution,
+		'🚨 Make sure you export "updatedUser" - add: export { updatedUser, ... }',
+	)
+})
+
+await test('user is exported', () => {
+	assert.ok(
+		'user' in solution,
+		'🚨 Make sure you export "user" - add: export { user, ... }',
+	)
+})
+
+await test('finalConfig is exported', () => {
+	assert.ok(
+		'finalConfig' in solution,
+		'🚨 Make sure you export "finalConfig" - add: export { finalConfig, ... }',
+	)
+})
+
+await test('userWithDarkMode is exported', () => {
+	assert.ok(
+		'userWithDarkMode' in solution,
+		'🚨 Make sure you export "userWithDarkMode" - add: export { userWithDarkMode, ... }',
+	)
+})
 
 await test('updatedUser should have new email', () => {
 	assert.strictEqual(
-		updatedEmail,
+		solution.updatedUser.email,
 		'alice.new@example.com',
 		'🚨 updatedUser.email should be "alice.new@example.com"',
 	)
@@ -24,7 +40,7 @@ await test('updatedUser should have new email', () => {
 
 await test('original user should be unchanged', () => {
 	assert.strictEqual(
-		originalEmail,
+		solution.user.email,
 		'alice@example.com',
 		'🚨 original user.email should still be "alice@example.com" - spread creates a new object',
 	)
@@ -32,17 +48,17 @@ await test('original user should be unchanged', () => {
 
 await test('finalConfig should merge with user overriding defaults', () => {
 	assert.strictEqual(
-		finalConfig.apiUrl,
+		solution.finalConfig.apiUrl,
 		'https://api.example.com',
 		'🚨 finalConfig.apiUrl should come from defaults',
 	)
 	assert.strictEqual(
-		finalConfig.timeout,
+		solution.finalConfig.timeout,
 		10000,
 		'🚨 finalConfig.timeout should be 10000 from userConfig (user overrides defaults)',
 	)
 	assert.strictEqual(
-		finalConfig.retries,
+		solution.finalConfig.retries,
 		3,
 		'🚨 finalConfig.retries should come from defaults',
 	)
@@ -50,12 +66,12 @@ await test('finalConfig should merge with user overriding defaults', () => {
 
 await test('userWithDarkMode should have updated nested settings', () => {
 	assert.strictEqual(
-		darkTheme,
+		solution.userWithDarkMode.settings.theme,
 		'dark',
 		'🚨 userWithDarkMode.settings.theme should be "dark"',
 	)
 	assert.strictEqual(
-		notifications,
+		solution.userWithDarkMode.settings.notifications,
 		true,
 		'🚨 notifications should still be true (unchanged)',
 	)
@@ -63,7 +79,7 @@ await test('userWithDarkMode should have updated nested settings', () => {
 
 await test('original user settings should be unchanged', () => {
 	assert.strictEqual(
-		originalTheme,
+		solution.user.settings.theme,
 		'light',
 		'🚨 original user.settings.theme should still be "light" - use nested spread',
 	)

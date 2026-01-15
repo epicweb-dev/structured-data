@@ -1,32 +1,53 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { nyc, la, formatted, distance } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
+await test('nyc is exported', () => {
+	assert.ok(
+		'nyc' in solution,
+		'🚨 Make sure you export "nyc" - add: export { nyc, ... }',
+	)
+})
+
+await test('la is exported', () => {
+	assert.ok(
+		'la' in solution,
+		'🚨 Make sure you export "la" - add: export { la, ... }',
+	)
+})
+
+await test('formatCoordinate is exported', () => {
+	assert.ok(
+		'formatCoordinate' in solution,
+		'🚨 Make sure you export "formatCoordinate" - add: export { formatCoordinate, ... }',
+	)
+})
+
+await test('getDistance is exported', () => {
+	assert.ok(
+		'getDistance' in solution,
+		'🚨 Make sure you export "getDistance" - add: export { getDistance, ... }',
+	)
+})
 
 await test('Coordinate tuples should have correct values', () => {
 	assert.strictEqual(
-		nyc[0],
+		solution.nyc[0],
 		40.7128,
 		'🚨 nyc[0] should be 40.7128 - tuples are accessed by index, [0] is the first element (latitude)',
 	)
 	assert.strictEqual(
-		nyc[1],
+		solution.nyc[1],
 		-74.006,
 		'🚨 nyc[1] should be -74.006 - tuples are accessed by index, [1] is the second element (longitude)',
 	)
 	assert.strictEqual(
-		la[0],
+		solution.la[0],
 		34.0522,
 		'🚨 la[0] should be 34.0522 - access the first element of the tuple (latitude)',
 	)
 	assert.strictEqual(
-		la[1],
+		solution.la[1],
 		-118.2437,
 		'🚨 la[1] should be -118.2437 - access the second element of the tuple (longitude)',
 	)
@@ -34,18 +55,19 @@ await test('Coordinate tuples should have correct values', () => {
 
 await test('formatCoordinate should format coordinates correctly', () => {
 	assert.strictEqual(
-		formatted[0],
+		solution.formatCoordinate(solution.nyc),
 		'Lat: 40.7128, Long: -74.006',
 		'🚨 formatCoordinate should return "Lat: 40.7128, Long: -74.006" - destructure the tuple to access lat and long values',
 	)
 	assert.strictEqual(
-		formatted[1],
+		solution.formatCoordinate(solution.la),
 		'Lat: 34.0522, Long: -118.2437',
 		'🚨 formatCoordinate should return "Lat: 34.0522, Long: -118.2437" - use destructuring to access tuple elements',
 	)
 })
 
 await test('getDistance should calculate distance correctly', () => {
+	const distance = solution.getDistance(solution.nyc, solution.la)
 	assert.ok(
 		distance > 0,
 		'🚨 distance should be greater than 0 - make sure your calculation returns a positive number',

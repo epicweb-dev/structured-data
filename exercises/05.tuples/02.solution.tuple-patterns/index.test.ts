@@ -1,17 +1,25 @@
 import assert from 'node:assert/strict'
-import { execSync } from 'node:child_process'
 import { test } from 'node:test'
+import * as solution from './index.ts'
 
-const output = execSync('npm start --silent', { encoding: 'utf8' })
-const jsonLine = output.split('\n').find((line) => line.startsWith('Results:'))
-assert.ok(jsonLine, '🚨 Missing "Results:" output line')
-const { parsed, parsedIsNaN, minMax, altMinMax } = JSON.parse(
-	jsonLine.replace('Results:', '').trim(),
-)
+await test('parseNumber is exported', () => {
+	assert.ok(
+		'parseNumber' in solution,
+		'🚨 Make sure you export "parseNumber" - add: export { parseNumber, ... }',
+	)
+})
+
+await test('getMinMax is exported', () => {
+	assert.ok(
+		'getMinMax' in solution,
+		'🚨 Make sure you export "getMinMax" - add: export { getMinMax, ... }',
+	)
+})
 
 await test('parseNumber should parse valid numbers correctly', () => {
-	const num1 = parsed[0][0]
-	const success1 = parsed[0][1]
+	const parsed1 = solution.parseNumber('42')
+	const num1 = parsed1[0]
+	const success1 = parsed1[1]
 	assert.strictEqual(
 		num1,
 		42,
@@ -25,11 +33,11 @@ await test('parseNumber should parse valid numbers correctly', () => {
 })
 
 await test('parseNumber should handle invalid numbers correctly', () => {
-	const num2 = parsed[1][0]
-	const success2 = parsed[1][1]
-	assert.strictEqual(
-		parsedIsNaN[1],
-		true,
+	const parsed2 = solution.parseNumber('hello')
+	const num2 = parsed2[0]
+	const success2 = parsed2[1]
+	assert.ok(
+		Number.isNaN(num2),
 		'🚨 num2 should be NaN - when parsing "hello", parseInt returns NaN',
 	)
 	assert.strictEqual(
@@ -40,6 +48,7 @@ await test('parseNumber should handle invalid numbers correctly', () => {
 })
 
 await test('getMinMax should return correct min and max values', () => {
+	const minMax = solution.getMinMax([5, 2, 8, 1, 9])
 	const min = minMax[0]
 	const max = minMax[1]
 	assert.strictEqual(
@@ -55,6 +64,7 @@ await test('getMinMax should return correct min and max values', () => {
 })
 
 await test('getMinMax should work with different number arrays', () => {
+	const altMinMax = solution.getMinMax([10, 20, 5, 15])
 	const min = altMinMax[0]
 	const max = altMinMax[1]
 	assert.strictEqual(

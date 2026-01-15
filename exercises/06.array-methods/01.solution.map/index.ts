@@ -21,11 +21,4 @@ console.log('Names:', names)
 console.log('Prices:', prices)
 console.log('Summary:', summary)
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		names,
-		prices,
-		summary,
-	}),
-)
+export { names, prices, summary }

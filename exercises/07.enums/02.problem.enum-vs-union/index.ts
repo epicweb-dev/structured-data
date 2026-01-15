@@ -16,20 +16,5 @@
 
 // Which do you prefer?
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		logLevel: {
-// 			Debug: LogLevel.Debug,
-// 			Info: LogLevel.Info,
-// 			Warn: LogLevel.Warn,
-// 			Error: LogLevel.Error,
-// 		},
-// 		unionValues: ['debug', 'info', 'warn', 'error'],
-// 		messages: [
-// 			'[INFO] Server started',
-// 			'[ERROR] Connection failed',
-// 		],
-// 	}),
-// )
+// 🐨 Export your enum and functions so we can verify your work
+// 💰 export { LogLevel, logWithEnum, logWithUnion }

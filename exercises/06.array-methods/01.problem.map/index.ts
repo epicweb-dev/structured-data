@@ -21,12 +21,5 @@ const products = [
 // console.log('Prices:', prices)
 // console.log('Summary:', summary)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		names,
-// 		prices,
-// 		summary,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { names, prices, summary }

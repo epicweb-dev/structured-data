@@ -14,13 +14,4 @@ console.log('Total products:', products.length)
 
 console.log('Products:', products)
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		initialProducts,
-		products,
-		first: products[0],
-		last: products[products.length - 1],
-		initialCount: initialProducts.length,
-	}),
-)
+export { products }

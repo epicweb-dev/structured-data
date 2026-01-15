@@ -22,12 +22,4 @@ console.log(formatCoordinate(nyc))
 console.log(formatCoordinate(la))
 console.log(`Distance: ${getDistance(nyc, la).toFixed(2)}`)
 
-console.log(
-	'Results:',
-	JSON.stringify({
-		nyc,
-		la,
-		formatted: [formatCoordinate(nyc), formatCoordinate(la)],
-		distance: getDistance(nyc, la),
-	}),
-)
+export { nyc, la, formatCoordinate, getDistance }

@@ -14,11 +14,5 @@
 // console.log(`User: ${user.name}, Age: ${user.age}`)
 // console.log(`Admin: ${admin.name}, Age: ${admin.age}`)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		user,
-// 		admin,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { user, admin }

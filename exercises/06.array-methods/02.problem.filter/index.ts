@@ -30,13 +30,5 @@ const products = [
 // console.log('Affordable:', affordable)
 // console.log('In Stock:', available)
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		electronics: electronics.map((p) => p.name),
-// 		affordable: affordable.map((p) => p.name),
-// 		available: available.map((p) => p.name),
-// 		inStockElectronicsUnder500,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { electronics, affordable, available, inStockElectronicsUnder500 }

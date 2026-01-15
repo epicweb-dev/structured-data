@@ -23,11 +23,5 @@
 //   console.log(`Bio: ${user.bio ?? 'No bio provided'}`)
 // }
 
-// 🐨 When you're done, uncomment this:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		alice,
-// 		bob,
-// 	}),
-// )
+// 🐨 Export your variables so we can verify your work
+// 💰 export { alice, bob }
