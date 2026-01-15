@@ -1,14 +1,17 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { product, formatted } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('Product object should have correct properties', () => {
-	const product = {
-		name: 'TypeScript Handbook',
-		price: 29.99,
-		inStock: true,
-		category: 'Books',
-	}
 	assert.strictEqual(
 		product.name,
 		'TypeScript Handbook',
@@ -32,15 +35,8 @@ await test('Product object should have correct properties', () => {
 })
 
 await test('formatProduct should format product correctly', () => {
-	function formatProduct(p: { name: string; price: number }): string {
-		return `${p.name} - $${p.price}`
-	}
-	const product = {
-		name: 'TypeScript Handbook',
-		price: 29.99,
-	}
 	assert.strictEqual(
-		formatProduct(product),
+		formatted,
 		'TypeScript Handbook - $29.99',
 		'🚨 formatProduct should return "TypeScript Handbook - $29.99" - check that you access name and price properties correctly in the function',
 	)

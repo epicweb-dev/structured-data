@@ -26,3 +26,15 @@ console.log(`Parsed '42': ${parsed1[0]}, Success: ${parsed1[1]}`)
 
 const parsed2 = parseNumber('hello')
 console.log(`Parsed 'hello': ${parsed2[0]}, Success: ${parsed2[1]}`)
+
+const altMinMax = getMinMax([10, 20, 5, 15])
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		parsed: [parsed1, parsed2],
+		parsedIsNaN: [Number.isNaN(parsed1[0]), Number.isNaN(parsed2[0])],
+		minMax,
+		altMinMax,
+	}),
+)

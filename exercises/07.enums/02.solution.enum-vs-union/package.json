@@ -2,7 +2,7 @@
   "name": "exercises_07.enums_02.solution.enum-vs-union",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "node --experimental-transform-types index.ts",
     "test": "node --experimental-transform-types --test index.test.ts"
   }
 }

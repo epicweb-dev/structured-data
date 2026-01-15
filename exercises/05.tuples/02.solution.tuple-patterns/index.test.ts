@@ -1,15 +1,19 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { parsed, parsedIsNaN, minMax, altMinMax } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('parseNumber should parse valid numbers correctly', () => {
-	function parseNumber(str: string): [number, boolean] {
-		const num = parseInt(str, 10)
-		return [num, !isNaN(num)]
-	}
-	const parsed = parseNumber('42')
-	const num1 = parsed[0]
-	const success1 = parsed[1]
+	const num1 = parsed[0][0]
+	const success1 = parsed[0][1]
 	assert.strictEqual(
 		num1,
 		42,
@@ -23,15 +27,10 @@ await test('parseNumber should parse valid numbers correctly', () => {
 })
 
 await test('parseNumber should handle invalid numbers correctly', () => {
-	function parseNumber(str: string): [number, boolean] {
-		const num = parseInt(str, 10)
-		return [num, !isNaN(num)]
-	}
-	const parsed = parseNumber('hello')
-	const num2 = parsed[0]
-	const success2 = parsed[1]
+	const num2 = parsed[1][0]
+	const success2 = parsed[1][1]
 	assert.strictEqual(
-		isNaN(num2),
+		parsedIsNaN[1],
 		true,
 		'🚨 num2 should be NaN - when parsing "hello", parseInt returns NaN',
 	)
@@ -43,16 +42,6 @@ await test('parseNumber should handle invalid numbers correctly', () => {
 })
 
 await test('getMinMax should return correct min and max values', () => {
-	function getMinMax(nums: Array<number>): [number, number] {
-		let min = nums[0]
-		let max = nums[0]
-		for (const num of nums) {
-			if (num < min) min = num
-			if (num > max) max = num
-		}
-		return [min, max]
-	}
-	const minMax = getMinMax([5, 2, 8, 1, 9])
 	const min = minMax[0]
 	const max = minMax[1]
 	assert.strictEqual(
@@ -68,18 +57,8 @@ await test('getMinMax should return correct min and max values', () => {
 })
 
 await test('getMinMax should work with different number arrays', () => {
-	function getMinMax(nums: Array<number>): [number, number] {
-		let min = nums[0]
-		let max = nums[0]
-		for (const num of nums) {
-			if (num < min) min = num
-			if (num > max) max = num
-		}
-		return [min, max]
-	}
-	const minMax = getMinMax([10, 20, 5, 15])
-	const min = minMax[0]
-	const max = minMax[1]
+	const min = altMinMax[0]
+	const max = altMinMax[1]
 	assert.strictEqual(
 		min,
 		5,

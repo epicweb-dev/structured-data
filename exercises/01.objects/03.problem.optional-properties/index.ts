@@ -22,3 +22,12 @@
 //   console.log(`Email: ${user.email}`)
 //   console.log(`Bio: ${user.bio ?? 'No bio provided'}`)
 // }
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		alice,
+// 		bob,
+// 	}),
+// )

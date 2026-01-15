@@ -1,6 +1,15 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import { name, email, userId, bio, formatUserCard } from './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { name, email, userId, bio, sampleUserCard } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('name should be destructured from user', () => {
 	assert.strictEqual(
@@ -35,14 +44,8 @@ await test('bio should have a default value', () => {
 })
 
 await test('formatUserCard should use parameter destructuring', () => {
-	const user = {
-		id: 'test',
-		name: 'Bob',
-		email: 'bob@test.com',
-		role: 'user' as const,
-	}
 	assert.strictEqual(
-		formatUserCard(user),
+		sampleUserCard,
 		'Bob (user) - bob@test.com',
 		'🚨 formatUserCard should return formatted string with name, role, and email',
 	)

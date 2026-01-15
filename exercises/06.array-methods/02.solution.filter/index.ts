@@ -39,3 +39,13 @@ console.log(
 	available.map((p) => p.name),
 )
 console.log('In-stock Electronics under $500:', inStockElectronicsUnder500)
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		electronics: electronics.map((p) => p.name),
+		affordable: affordable.map((p) => p.name),
+		available: available.map((p) => p.name),
+		inStockElectronicsUnder500,
+	}),
+)

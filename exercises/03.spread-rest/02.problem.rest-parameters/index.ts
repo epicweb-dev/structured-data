@@ -31,3 +31,17 @@
 // logWithPrefix('[INFO]', 'Starting', 'Processing', 'Done')
 // console.log(sum(1, 2, 3, 4)) // 10
 // console.log(mergeArrays([1, 2], [3, 4], [5])) // [1, 2, 3, 4, 5]
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		multiply: [multiply(2, 3, 4), multiply(5), multiply(), multiply(2, 2, 2, 2)],
+// 		sum: [sum(1, 2, 3, 4), sum(5), sum()],
+// 		mergeArrays: [
+// 			mergeArrays([1, 2], [3, 4], [5]),
+// 			mergeArrays([10], [20, 30]),
+// 			mergeArrays(),
+// 		],
+// 	}),
+// )

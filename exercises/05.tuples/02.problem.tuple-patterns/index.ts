@@ -20,3 +20,14 @@
 // const parsed = parseNumber('42')
 // const value = parsed[0]
 // const success = parsed[1]
+
+// 🐨 When you're done, uncomment this:
+// const altMinMax = getMinMax([10, 20, 5, 15])
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		parsed: [parsed1, parsed2],
+// 		minMax,
+// 		altMinMax,
+// 	}),
+// )

@@ -54,3 +54,16 @@ const userConfig: { timeout: number } = {
 // console.log(finalConfig.timeout) // 10000
 // console.log(userWithDarkMode.settings.theme) // 'dark'
 // console.log(user.settings.theme) // 'light' (unchanged!)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		updatedEmail: updatedUser.email,
+// 		originalEmail: user.email,
+// 		finalConfig,
+// 		darkTheme: userWithDarkMode.settings.theme,
+// 		originalTheme: user.settings.theme,
+// 		notifications: userWithDarkMode.settings.notifications,
+// 	}),
+// )

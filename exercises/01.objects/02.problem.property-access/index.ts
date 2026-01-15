@@ -22,3 +22,12 @@ const product = {
 // console.log(product.rating)
 
 // console.log(formatProduct(product))
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		product,
+// 		formatted: formatProduct(product),
+// 	}),
+// )

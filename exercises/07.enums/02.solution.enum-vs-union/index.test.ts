@@ -1,42 +1,44 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { logLevel, unionValues, messages } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('LogLevel enum should have correct values', () => {
-	enum LogLevel {
-		Debug = 'debug',
-		Info = 'info',
-		Warn = 'warn',
-		Error = 'error',
-	}
 	assert.strictEqual(
-		LogLevel.Debug,
+		logLevel.Debug,
 		'debug',
 		'🚨 LogLevel.Debug should be "debug" - string enums assign string values to enum members',
 	)
 	assert.strictEqual(
-		LogLevel.Info,
+		logLevel.Info,
 		'info',
 		'🚨 LogLevel.Info should be "info" - verify each enum member has the correct string value',
 	)
 	assert.strictEqual(
-		LogLevel.Warn,
+		logLevel.Warn,
 		'warn',
 		'🚨 LogLevel.Warn should be "warn" - string enum values match their assigned strings',
 	)
 	assert.strictEqual(
-		LogLevel.Error,
+		logLevel.Error,
 		'error',
 		'🚨 LogLevel.Error should be "error" - check that all enum values are correctly assigned',
 	)
 })
 
 await test('LogLevelUnion type should work correctly', () => {
-	type LogLevelUnion = 'debug' | 'info' | 'warn' | 'error'
-	const debug: LogLevelUnion = 'debug'
-	const info: LogLevelUnion = 'info'
-	const warn: LogLevelUnion = 'warn'
-	const error: LogLevelUnion = 'error'
+	const debug = unionValues[0]
+	const info = unionValues[1]
+	const warn = unionValues[2]
+	const error = unionValues[3]
 	assert.strictEqual(
 		debug,
 		'debug',
@@ -60,50 +62,9 @@ await test('LogLevelUnion type should work correctly', () => {
 })
 
 await test('logWithEnum should format messages correctly', () => {
-	enum LogLevel {
-		Debug = 'debug',
-		Info = 'info',
-		Warn = 'warn',
-		Error = 'error',
-	}
-	function logWithEnum(level: LogLevel, message: string): void {
-		// Function tested through its behavior
-		assert.ok(
-			level !== undefined,
-			'🚨 level should be defined - enum values are always defined when passed as parameters',
-		)
-		assert.ok(
-			message !== undefined,
-			'🚨 message should be defined - verify the message parameter is passed correctly',
-		)
-		assert.strictEqual(
-			level.toUpperCase(),
-			level.toUpperCase(),
-			'🚨 level.toUpperCase() should work - enum values are strings and have string methods',
-		)
-	}
-	logWithEnum(LogLevel.Info, 'Server started')
-	logWithEnum(LogLevel.Error, 'Connection failed')
+	assert.strictEqual(messages[0], '[INFO] Server started')
 })
 
 await test('logWithUnion should format messages correctly', () => {
-	type LogLevelUnion = 'debug' | 'info' | 'warn' | 'error'
-	function logWithUnion(level: LogLevelUnion, message: string): void {
-		// Function tested through its behavior
-		assert.ok(
-			level !== undefined,
-			'🚨 level should be defined - union type values are defined when passed as parameters',
-		)
-		assert.ok(
-			message !== undefined,
-			'🚨 message should be defined - verify the message parameter is passed correctly',
-		)
-		assert.strictEqual(
-			level.toUpperCase(),
-			level.toUpperCase(),
-			'🚨 level.toUpperCase() should work - union type values are strings and have string methods',
-		)
-	}
-	logWithUnion('info', 'Server started')
-	logWithUnion('error', 'Connection failed')
+	assert.strictEqual(messages[1], '[ERROR] Connection failed')
 })

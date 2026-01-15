@@ -1,6 +1,16 @@
 // Product Inventory
 // Arrays of objects
 
+const initialProducts: Array<{
+	name: string
+	price: number
+	inStock: boolean
+}> = [
+	{ name: 'Laptop', price: 999.99, inStock: true },
+	{ name: 'Mouse', price: 29.99, inStock: true },
+	{ name: 'Keyboard', price: 79.99, inStock: false },
+]
+
 const products: Array<{ name: string; price: number; inStock: boolean }> = [
 	{ name: 'Laptop', price: 999.99, inStock: true },
 	{ name: 'Mouse', price: 29.99, inStock: true },
@@ -17,3 +27,12 @@ for (let i = 0; i < products.length; i++) {
 	totalValue += product.price
 }
 console.log(`Total inventory value: $${totalValue.toFixed(2)}`)
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		initialProducts,
+		products,
+		totalValue,
+	}),
+)

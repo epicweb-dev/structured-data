@@ -20,3 +20,13 @@ const products = [
 // console.log('Names:', names)
 // console.log('Prices:', prices)
 // console.log('Summary:', summary)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		names,
+// 		prices,
+// 		summary,
+// 	}),
+// )

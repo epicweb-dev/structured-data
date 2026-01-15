@@ -24,3 +24,23 @@
 
 // console.log(order)
 // console.log(getStatusMessage(order.status))
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		orderStatus: {
+// 			Pending: OrderStatus.Pending,
+// 			Processing: OrderStatus.Processing,
+// 			Shipped: OrderStatus.Shipped,
+// 			Delivered: OrderStatus.Delivered,
+// 		},
+// 		order: { id: order.id, status: order.status, customerName: order.customerName },
+// 		messages: [
+// 			getStatusMessage(OrderStatus.Pending),
+// 			getStatusMessage(OrderStatus.Processing),
+// 			getStatusMessage(OrderStatus.Shipped),
+// 			getStatusMessage(OrderStatus.Delivered),
+// 		],
+// 	}),
+// )

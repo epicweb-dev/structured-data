@@ -1,13 +1,15 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { user, admin } = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
 
 await test('User object should have correct properties', () => {
-	const user: { name: string; age: number; email: string } = {
-		name: 'Alice',
-		age: 30,
-		email: 'alice@example.com',
-	}
 	assert.strictEqual(
 		user.name,
 		'Alice',
@@ -26,11 +28,6 @@ await test('User object should have correct properties', () => {
 })
 
 await test('Admin object should have correct properties', () => {
-	const admin: { name: string; age: number; email: string } = {
-		name: 'Bob',
-		age: 35,
-		email: 'bob@example.com',
-	}
 	assert.strictEqual(
 		admin.name,
 		'Bob',

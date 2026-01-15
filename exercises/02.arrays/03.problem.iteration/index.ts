@@ -20,3 +20,13 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 
 // console.log('In stock:', inStockProducts.length)
 // console.log('Expensive products:', expensiveCount)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		products,
+// 		inStockProducts,
+// 		expensiveCount,
+// 	}),
+// )

@@ -35,3 +35,15 @@ const user: User = {
 // console.log(userId) // 'u123'
 // console.log(bio) // 'No bio provided'
 // console.log(formatUserCard(user))
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		name,
+// 		email,
+// 		userId,
+// 		bio,
+// 		userCard: formatUserCard(user),
+// 	}),
+// )

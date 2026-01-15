@@ -29,3 +29,14 @@ const products = [
 // console.log('Electronics:', electronics)
 // console.log('Affordable:', affordable)
 // console.log('In Stock:', available)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		electronics: electronics.map((p) => p.name),
+// 		affordable: affordable.map((p) => p.name),
+// 		available: available.map((p) => p.name),
+// 		inStockElectronicsUnder500,
+// 	}),
+// )

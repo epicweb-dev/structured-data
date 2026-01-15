@@ -1,15 +1,17 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { names, prices, summary } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('Map should extract product names correctly', () => {
-	const products = [
-		{ name: 'Laptop', price: 999.99, category: 'Electronics' },
-		{ name: 'Coffee Maker', price: 79.99, category: 'Kitchen' },
-		{ name: 'Headphones', price: 149.99, category: 'Electronics' },
-		{ name: 'Blender', price: 49.99, category: 'Kitchen' },
-	]
-	const names = products.map((p) => p.name)
 	assert.deepStrictEqual(
 		names,
 		['Laptop', 'Coffee Maker', 'Headphones', 'Blender'],
@@ -23,13 +25,6 @@ await test('Map should extract product names correctly', () => {
 })
 
 await test('Map should format prices correctly', () => {
-	const products = [
-		{ name: 'Laptop', price: 999.99, category: 'Electronics' },
-		{ name: 'Coffee Maker', price: 79.99, category: 'Kitchen' },
-		{ name: 'Headphones', price: 149.99, category: 'Electronics' },
-		{ name: 'Blender', price: 49.99, category: 'Kitchen' },
-	]
-	const prices = products.map((p) => `$${p.price.toFixed(2)}`)
 	assert.deepStrictEqual(
 		prices,
 		['$999.99', '$79.99', '$149.99', '$49.99'],
@@ -38,16 +33,6 @@ await test('Map should format prices correctly', () => {
 })
 
 await test('Map should create summary objects correctly', () => {
-	const products = [
-		{ name: 'Laptop', price: 999.99, category: 'Electronics' },
-		{ name: 'Coffee Maker', price: 79.99, category: 'Kitchen' },
-		{ name: 'Headphones', price: 149.99, category: 'Electronics' },
-		{ name: 'Blender', price: 49.99, category: 'Kitchen' },
-	]
-	const summary = products.map((p) => ({
-		name: p.name,
-		priceLabel: `$${p.price}`,
-	}))
 	assert.deepStrictEqual(
 		summary,
 		[

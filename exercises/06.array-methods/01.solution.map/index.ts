@@ -20,3 +20,12 @@ const summary = products.map((p) => ({
 console.log('Names:', names)
 console.log('Prices:', prices)
 console.log('Summary:', summary)
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		names,
+		prices,
+		summary,
+	}),
+)

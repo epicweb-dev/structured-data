@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import {
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const {
 	highest,
 	secondHighest,
 	winner,
@@ -10,8 +17,9 @@ import {
 	z,
 	min,
 	max,
-	getMinMax,
-} from './index.ts'
+	testMin,
+	testMax,
+} = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
 
 await test('highest and secondHighest should be destructured', () => {
 	assert.strictEqual(
@@ -57,7 +65,6 @@ await test('getMinMax should return tuple and be destructured', () => {
 		'🚨 max should be 95 - destructure getMinMax result',
 	)
 
-	const [testMin, testMax] = getMinMax([5, 2, 8, 1, 9])
 	assert.strictEqual(
 		testMin,
 		1,

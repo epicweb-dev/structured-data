@@ -28,3 +28,11 @@ function displayUserInfo(user: {
 
 displayUserInfo(alice)
 displayUserInfo(bob)
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		alice,
+		bob,
+	}),
+)

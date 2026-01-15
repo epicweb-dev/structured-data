@@ -1,15 +1,17 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { products, inStockProducts, expensiveCount } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('Products array should have correct structure', () => {
-	const products: { name: string; price: number; inStock: boolean }[] = [
-		{ name: 'Laptop', price: 999.99, inStock: true },
-		{ name: 'Mouse', price: 29.99, inStock: true },
-		{ name: 'Keyboard', price: 79.99, inStock: false },
-		{ name: 'Monitor', price: 299.99, inStock: true },
-		{ name: 'Webcam', price: 49.99, inStock: false },
-	]
 	assert.strictEqual(
 		products.length,
 		5,
@@ -28,46 +30,19 @@ await test('Products array should have correct structure', () => {
 })
 
 await test('In-stock products filtering should work', () => {
-	const products: { name: string; price: number; inStock: boolean }[] = [
-		{ name: 'Laptop', price: 999.99, inStock: true },
-		{ name: 'Mouse', price: 29.99, inStock: true },
-		{ name: 'Keyboard', price: 79.99, inStock: false },
-		{ name: 'Monitor', price: 299.99, inStock: true },
-		{ name: 'Webcam', price: 49.99, inStock: false },
-	]
-	const inStockProducts: { name: string; price: number; inStock: boolean }[] =
-		[]
-	for (const product of products) {
-		if (product.inStock) {
-			inStockProducts.push(product)
-		}
-	}
 	assert.strictEqual(
 		inStockProducts.length,
 		3,
 		'🚨 inStockProducts.length should be 3 - filter products where inStock is true (Laptop, Mouse, Monitor)',
 	)
 	assert.strictEqual(
-		inStockProducts.every((p) => p.inStock),
+		inStockProducts.every((p: { inStock: boolean }) => p.inStock),
 		true,
 		'🚨 All inStockProducts should have inStock === true - verify your filter condition checks inStock property',
 	)
 })
 
 await test('Expensive products count should work', () => {
-	const products: { name: string; price: number; inStock: boolean }[] = [
-		{ name: 'Laptop', price: 999.99, inStock: true },
-		{ name: 'Mouse', price: 29.99, inStock: true },
-		{ name: 'Keyboard', price: 79.99, inStock: false },
-		{ name: 'Monitor', price: 299.99, inStock: true },
-		{ name: 'Webcam', price: 49.99, inStock: false },
-	]
-	let expensiveCount = 0
-	for (const product of products) {
-		if (product.price > 50) {
-			expensiveCount++
-		}
-	}
 	assert.strictEqual(
 		expensiveCount,
 		3,

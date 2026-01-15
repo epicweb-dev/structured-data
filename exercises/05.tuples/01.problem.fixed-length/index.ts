@@ -18,3 +18,14 @@
 // console.log(formatCoordinate(nyc))
 // console.log(formatCoordinate(la))
 // console.log(`Distance: ${getDistance(nyc, la).toFixed(2)}`)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		nyc,
+// 		la,
+// 		formatted: [formatCoordinate(nyc), formatCoordinate(la)],
+// 		distance: getDistance(nyc, la),
+// 	}),
+// )

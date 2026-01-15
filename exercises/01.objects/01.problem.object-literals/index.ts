@@ -13,3 +13,12 @@
 
 // console.log(`User: ${user.name}, Age: ${user.age}`)
 // console.log(`Admin: ${admin.name}, Age: ${admin.age}`)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		user,
+// 		admin,
+// 	}),
+// )

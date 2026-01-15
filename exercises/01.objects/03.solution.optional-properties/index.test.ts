@@ -1,13 +1,15 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { alice, bob } = JSON.parse(jsonLine.replace('Results JSON:', '').trim())
 
 await test('User without optional properties should work', () => {
-	const alice: { name: string; email: string; bio?: string; website?: string } =
-		{
-			name: 'Alice',
-			email: 'alice@example.com',
-		}
 	assert.strictEqual(
 		alice.name,
 		'Alice',
@@ -31,12 +33,6 @@ await test('User without optional properties should work', () => {
 })
 
 await test('User with optional properties should work', () => {
-	const bob: { name: string; email: string; bio?: string; website?: string } = {
-		name: 'Bob',
-		email: 'bob@example.com',
-		bio: 'Software developer and TypeScript enthusiast',
-		website: 'https://bob.dev',
-	}
 	assert.strictEqual(
 		bob.name,
 		'Bob',
@@ -60,31 +56,6 @@ await test('User with optional properties should work', () => {
 })
 
 await test('displayUserInfo should handle optional properties correctly', () => {
-	function displayUserInfo(user: {
-		name: string
-		email: string
-		bio?: string
-		website?: string
-	}): void {
-		// Function implementation tested through its behavior
-		assert.ok(
-			user.name !== undefined,
-			'🚨 user.name should be defined - required properties must always be present',
-		)
-		assert.ok(
-			user.email !== undefined,
-			'🚨 user.email should be defined - required properties must always be present',
-		)
-	}
-	const alice = { name: 'Alice', email: 'alice@example.com' }
-	const bob = {
-		name: 'Bob',
-		email: 'bob@example.com',
-		bio: 'Software developer',
-		website: 'https://bob.dev',
-	}
-	displayUserInfo(alice)
-	displayUserInfo(bob)
 	assert.strictEqual(
 		alice.name,
 		'Alice',
@@ -92,7 +63,7 @@ await test('displayUserInfo should handle optional properties correctly', () => 
 	)
 	assert.strictEqual(
 		bob.bio,
-		'Software developer',
-		'🚨 bob.bio should be "Software developer" - optional properties can be accessed when they exist',
+		'Software developer and TypeScript enthusiast',
+		'🚨 bob.bio should be "Software developer and TypeScript enthusiast" - optional properties can be accessed when they exist',
 	)
 })

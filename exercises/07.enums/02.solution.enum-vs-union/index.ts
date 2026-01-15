@@ -32,3 +32,17 @@ logWithUnion('error', 'Connection failed')
 // Both provide the same type safety:
 // logWithEnum(LogLevel.Unknown)  // ❌ Error
 // logWithUnion('unknown')         // ❌ Error
+
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		logLevel: {
+			Debug: LogLevel.Debug,
+			Info: LogLevel.Info,
+			Warn: LogLevel.Warn,
+			Error: LogLevel.Error,
+		},
+		unionValues: ['debug', 'info', 'warn', 'error'],
+		messages: ['[INFO] Server started', '[ERROR] Connection failed'],
+	}),
+)

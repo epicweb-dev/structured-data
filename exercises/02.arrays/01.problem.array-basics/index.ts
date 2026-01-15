@@ -13,3 +13,14 @@
 // 🐨 Log the total number of products
 
 // console.log('Products:', products)
+
+// 🐨 When you're done, uncomment this:
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		products,
+// 		first: products[0],
+// 		last: products[products.length - 1],
+// 		count: products.length,
+// 	}),
+// )
