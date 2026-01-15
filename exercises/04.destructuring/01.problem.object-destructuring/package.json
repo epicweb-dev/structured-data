@@ -1,5 +1,5 @@
 {
-  "name": "exercises_06.destructuring_01.problem.object-destructuring",
+  "name": "exercises_04.destructuring_01.problem.object-destructuring",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

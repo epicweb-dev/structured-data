@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.enums_02.solution.enum-vs-union",
+  "name": "exercises_07.enums_02.solution.enum-vs-union",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

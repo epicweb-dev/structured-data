@@ -1,5 +1,5 @@
 {
-  "name": "exercises_07.spread-rest_01.problem.object-spread",
+  "name": "exercises_03.spread-rest_01.problem.object-spread",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.tuples_02.problem.tuple-patterns",
+  "name": "exercises_05.tuples_02.problem.tuple-patterns",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

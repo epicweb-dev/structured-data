@@ -1,5 +1,5 @@
 {
-  "name": "exercises_07.spread-rest_02.problem.rest-parameters",
+  "name": "exercises_03.spread-rest_02.problem.rest-parameters",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

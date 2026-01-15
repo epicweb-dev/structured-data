@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.tuples_01.solution.fixed-length",
+  "name": "exercises_05.tuples_01.solution.fixed-length",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

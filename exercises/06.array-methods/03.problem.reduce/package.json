@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.array-methods_04.problem.reduce",
+  "name": "exercises_06.array-methods_03.problem.reduce",
   "type": "module",
   "scripts": {
     "start": "node index.ts",
