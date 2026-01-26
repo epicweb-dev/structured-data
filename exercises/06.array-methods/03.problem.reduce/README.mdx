@@ -22,23 +22,7 @@ Parameters:
 2. Use `reduce` to find the most expensive product
 3. Use `reduce` to count products by category
 
-💰 Reduce syntax:
-
-```ts
-const result = array.reduce((accumulator, current) => newAccumulator, initial)
-```
-
-💰 Counting by category (immutable pattern using spread):
-
-```ts
-const counts = products.reduce(
-	(acc, p) => ({
-		...acc,
-		[p.category]: (acc[p.category] || 0) + 1,
-	}),
-	{} as Record<string, number>,
-)
-```
+💰 `reduce` combines all items into one accumulated result.
 
 Each iteration returns a new object instead of mutating the accumulator. This
 is the functional approach—easier to reason about and debug.

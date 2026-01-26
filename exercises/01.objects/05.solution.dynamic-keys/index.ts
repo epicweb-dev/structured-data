@@ -1,8 +1,8 @@
 // Error Pages
 // Computed property names in object literals
 
-const notFoundKey = '404'
-const serverErrorKey = '500'
+const notFoundKey = '404-status'
+const serverErrorKey = '500-status'
 
 const notFoundPath = '/not-found'
 const serverErrorPath = '/server-error'

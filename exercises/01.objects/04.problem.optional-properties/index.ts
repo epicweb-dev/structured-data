@@ -23,8 +23,7 @@ const bob = {
 
 // 🐨 Create a function that displays user info
 // Handle the optional properties safely
-// 💰 Use optional chaining: user.bio?.toUpperCase()
-// 💰 Or check: if (user.bio !== undefined)
+// 💰 Safely handle missing optional values before using them
 
 // function displayUserInfo(user: { ... }): void {
 //   console.log(`Name: ${user.name}`)

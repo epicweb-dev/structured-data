@@ -16,13 +16,13 @@ const products: Product[] = [
 ]
 
 // 🐨 Use for...of to log each product's name and price
-// 💰 for (const product of products) { ... }
+// 💰 Use a for...of loop to iterate through the array
 
 // 🐨 Create an array of products that are in stock
-// 💰 const inStockProducts: Product[] = []
+// 💰 Create an array to collect the in-stock items
 
 // 🐨 Count how many products cost more than $50
-// 💰 let expensiveCount = 0
+// 💰 Track a count as you loop
 
 // console.log('In stock:', inStockProducts.length)
 // console.log('Expensive products:', expensiveCount)

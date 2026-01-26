@@ -17,16 +17,6 @@ The callback returns `true` to keep the element or `false` to exclude it.
 2. Filter products by price range
 3. Chain `filter` with `map`
 
-💰 Filter syntax:
-
-```ts
-const result = array.filter((element) => condition)
-```
-
-💰 Chaining filter and map:
-
-```ts
-const expensiveNames = products.filter((p) => p.price > 100).map((p) => p.name)
-```
+💰 `filter` keeps items where your callback returns true.
 
 📜 [MDN - Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)

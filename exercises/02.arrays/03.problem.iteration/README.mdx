@@ -9,24 +9,8 @@ iterate over arrays.
 2. Find all products that are in stock
 3. Count products over a certain price
 
-💰 `for...of` with type inference:
+💰 `for...of` loops work well with arrays and preserve item types.
 
-```ts
-for (const product of products) {
-	// TypeScript knows product is Product
-	console.log(product.name)
-}
-```
-
-💰 Building a filtered list:
-
-```ts
-const inStock: Product[] = []
-for (const product of products) {
-	if (product.inStock) {
-		inStock.push(product)
-	}
-}
-```
+💰 Build a filtered list by looping and conditionally pushing.
 
 📜 [MDN - for...of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)

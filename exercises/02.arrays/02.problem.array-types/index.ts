@@ -5,19 +5,19 @@
 // - name: string
 // - price: number
 // - inStock: boolean
-// 💰 type Product = { name: string; price: number; inStock: boolean }
+// 💰 Define a Product type alias with the listed fields
 
 // 🐨 Create a `products` array with `Product` objects
 // Start with 2-3 products
-// 💰 const products: Product[] = [...]
+// 💰 Create an array of Product objects
 
 // 🐨 Add a new product using push
-// 💰 products.push({ name: 'Monitor', price: 299.99, inStock: true })
+// 💰 Push a new Product object into the array
 
 // 🐨 Log the name of the first product from the array
 
 // 🐨 Calculate the total value of all products (sum of prices)
-// 💰 Use a loop to add each price to a total
+// 💰 Use a loop to sum the prices
 
 // 🐨 Export your variables so we can verify your work
 // export { products, totalValue }

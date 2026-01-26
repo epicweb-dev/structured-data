@@ -5,7 +5,7 @@
 // - id: number
 // - title: string
 // - completed: boolean
-// 💰 type Task = { ... }
+// 💰 Define a Task type alias with the listed fields
 
 // 🐨 Create a `firstTask` and `secondTask` using the Task type
 // - firstTask: id 1, title "Write tests", completed false

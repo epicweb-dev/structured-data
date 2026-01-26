@@ -19,23 +19,9 @@ const users: User[] = [
 4. Access a property of a specific product
 5. Calculate the total price using a loop
 
-💰 Adding to an array:
+💰 Use `push` to add objects to arrays.
 
-```ts
-type Item = { name: string; price: number }
-const items: Item[] = [{ name: 'Item', price: 10 }]
-items.push({ name: 'Another', price: 20 })
-```
-
-💰 Summing values with a loop:
-
-```ts
-let total = 0
-for (let i = 0; i < items.length; i++) {
-	const item = items[i]
-	total += item.price
-}
-```
+💰 Use a loop to sum the prices into a total.
 
 <callout-info>
 	There's a more concise way to sum arrays with `reduce`, and we'll cover that

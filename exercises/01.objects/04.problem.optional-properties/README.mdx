@@ -19,15 +19,6 @@ const user: UserProfile = {
 2. Create users with and without the optional properties
 3. Safely access optional properties (check before using!)
 
-💰 Safely accessing optional properties:
-
-```ts
-if (user.bio !== undefined) {
-	console.log(user.bio.toUpperCase()) // Safe!
-}
-
-// Or use optional chaining:
-console.log(user.bio?.toUpperCase()) // Returns undefined if bio is undefined
-```
+💰 Check for missing values before using optional properties.
 
 📜 [TypeScript Handbook - Optional Properties](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties)

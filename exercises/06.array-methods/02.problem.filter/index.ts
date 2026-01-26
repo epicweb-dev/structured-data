@@ -15,16 +15,16 @@ const products = [
 ]
 
 // 🐨 Filter to get only Electronics products
-// 💰 const electronics = products.filter(p => p.category === 'Electronics')
+// 💰 Filter by the category field
 
 // 🐨 Filter to get products under $100
-// 💰 const affordable = products.filter(p => p.price < 100)
+// 💰 Filter by price
 
 // 🐨 Filter to get products that are in stock
-// 💰 const available = products.filter(p => p.inStock)
+// 💰 Filter by the inStock flag
 
 // 🐨 Chain: get names of in-stock Electronics under $500
-// 💰 products.filter(...).filter(...).map(...)
+// 💰 Chain filters, then map to names
 
 // console.log('Electronics:', electronics)
 // console.log('Affordable:', affordable)

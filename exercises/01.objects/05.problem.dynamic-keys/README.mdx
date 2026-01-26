@@ -1,13 +1,13 @@
 # Dynamic Object Keys
 
 👨‍💼 We need to model error pages where the property name isn't a valid
-identifier (like "404").
+identifier (like `status-404`).
 
 When the property name is stored in a variable, you can use a computed property
 name in an object literal:
 
 ```ts
-const key = '404'
+const key = 'status-404'
 const errorPages = {
 	[key]: '/not-found',
 }

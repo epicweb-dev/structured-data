@@ -18,18 +18,6 @@ function divide(a: number, b: number): [number, boolean] {
 2. Create a function that returns `[min, max]` from an array
 3. Access the tuple values by index (no destructuring)
 
-💰 Return tuple pattern:
-
-```ts
-function getMinMax(nums: Array<number>): [number, number] {
-	let min = nums[0]
-	let max = nums[0]
-	for (const num of nums) {
-		if (num < min) min = num
-		if (num > max) max = num
-	}
-	return [min, max]
-}
-```
+💰 Return a tuple with the min and max values you compute.
 
 📜 [TypeScript Handbook - Tuple Types](https://www.typescriptlang.org/docs/handbook/2/objects.html#tuple-types)

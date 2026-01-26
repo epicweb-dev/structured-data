@@ -9,13 +9,13 @@ const products = [
 ]
 
 // 🐨 Use map to extract just the product names
-// 💰 const names = products.map(p => p.name)
+// 💰 Map each product to its name
 
 // 🐨 Use map to create formatted price strings like "$999.99"
-// 💰 const prices = products.map(p => `$${p.price.toFixed(2)}`)
+// 💰 Map each product to a formatted price string
 
 // 🐨 Use map to create objects with just name and priceLabel
-// 💰 const summary = products.map(p => ({ name: p.name, priceLabel: `$${p.price}` }))
+// 💰 Map each product to a summary object
 
 // console.log('Names:', names)
 // console.log('Prices:', prices)

@@ -16,16 +16,6 @@ The callback receives each element and returns the transformed value.
 2. Use `map` to create formatted price strings
 3. Use `map` to transform products into a different shape
 
-💰 Map syntax:
-
-```ts
-const result = array.map((element) => transformedValue)
-```
-
-💰 TypeScript infers the result type from what you return:
-
-```ts
-const names = products.map((p) => p.name) // Array<string>
-```
+💰 `map` returns a new array of whatever your callback returns.
 
 📜 [MDN - Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)

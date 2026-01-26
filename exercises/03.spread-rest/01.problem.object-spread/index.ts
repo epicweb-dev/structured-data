@@ -22,7 +22,7 @@ const user: User = {
 }
 
 // 🐨 Create `updatedUser` - same as user but with email changed to 'alice.new@example.com'
-// 💰 const updatedUser = { ...user, email: 'alice.new@example.com' }
+// 💰 Use object spread to copy and override the email
 
 type Config = {
 	apiUrl: string
@@ -42,11 +42,11 @@ const userConfig: { timeout: number } = {
 }
 
 // 🐨 Merge defaultConfig and userConfig into `finalConfig` (user overrides defaults)
-// 💰 const finalConfig = { ...defaultConfig, ...userConfig }
+// 💰 Spread defaults first, then overrides
 
 // 🐨 Create `userWithDarkMode` - same as user but with settings.theme changed to 'dark'
 // Remember: spread is shallow, so you need to spread the nested settings object too!
-// 💰 const userWithDarkMode = { ...user, settings: { ...user.settings, theme: 'dark' } }
+// 💰 Spread the nested settings object to avoid mutation
 
 // Test - uncomment when ready
 // console.log(updatedUser.email) // 'alice.new@example.com'

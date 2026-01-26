@@ -5,13 +5,12 @@
 // - Takes a string
 // - Returns [number, boolean] where the boolean indicates success
 // - Use parseInt and check for NaN
-// 💰 const num = parseInt(str, 10)
-// 💰 return [num, !isNaN(num)]
+// 💰 Parse the number and return a tuple with a success flag
 
 // 🐨 Create a function `getMinMax` that:
 // - Takes an array of numbers
 // - Returns [min, max] as a tuple
-// 💰 Use a loop to find min and max without spread
+// 💰 Use a loop to find min and max
 
 // 🐨 Use index access to get the values
 // const minMax = getMinMax([5, 2, 8, 1, 9])
