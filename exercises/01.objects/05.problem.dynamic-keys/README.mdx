@@ -1,20 +1,21 @@
 # Dynamic Object Keys
 
-👨‍💼 We need to track page views where the page name is only known at runtime.
+👨‍💼 We need to model error pages where the property name isn't a valid
+identifier (like "404").
 
-When the property name is stored in a variable, you must use bracket notation:
+When the property name is stored in a variable, you can use a computed property
+name in an object literal:
 
 ```ts
-type PageViews = { [page: string]: number }
-const key = 'home'
-const counts: PageViews = {}
-counts[key] = 1
+const key = '404'
+const errorPages = {
+	[key]: '/not-found',
+}
 ```
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a page views type and object with dynamic string keys
-2. Set values using bracket notation and variables
-3. Write a function that updates the count for a dynamic key
+1. Use computed property names in an object literal
+2. Set values alongside those computed keys
 
-📜 [TypeScript Handbook - Index Signatures](https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures)
+📜 [MDN - Computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)

@@ -1,22 +1,15 @@
-// Page Views
-// Working with dynamic object keys
+// Error Pages
+// Computed property names in object literals
 
-type PageViews = { [page: string]: number }
+const notFoundKey = '404'
+const serverErrorKey = '500'
 
-const pageViews: PageViews = {}
+const notFoundPath = '/not-found'
+const serverErrorPath = '/server-error'
 
-const homePage = 'home'
-const aboutPage = 'about'
-
-pageViews[homePage] = 100
-pageViews[aboutPage] = 42
-
-function recordView(views: { [page: string]: number }, page: string): void {
-	const current = views[page] ?? 0
-	views[page] = current + 1
+const errorPages = {
+	[notFoundKey]: notFoundPath,
+	[serverErrorKey]: serverErrorPath,
 }
 
-recordView(pageViews, 'home')
-recordView(pageViews, 'contact')
-
-export { pageViews, recordView }
+export { errorPages }

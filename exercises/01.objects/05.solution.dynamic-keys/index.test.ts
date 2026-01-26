@@ -2,34 +2,22 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import * as solution from './index.ts'
 
-await test('pageViews is exported', () => {
+await test('errorPages is exported', () => {
 	assert.ok(
-		'pageViews' in solution,
-		'🚨 Make sure you export "pageViews" - add: export { pageViews, ... }',
+		'errorPages' in solution,
+		'🚨 Make sure you export "errorPages" - add: export { errorPages }',
 	)
 })
 
-await test('pageViews should include dynamic keys', () => {
+await test('errorPages should include computed keys', () => {
 	assert.strictEqual(
-		solution.pageViews.home,
-		101,
-		'🚨 pageViews.home should be 101 - start at 100 and increment once in recordView',
+		solution.errorPages['404'],
+		'/not-found',
+		'🚨 errorPages["404"] should be "/not-found" - use the computed key',
 	)
 	assert.strictEqual(
-		solution.pageViews.about,
-		42,
-		'🚨 pageViews.about should be 42 - set the about page count with bracket notation',
-	)
-	assert.strictEqual(
-		solution.pageViews.contact,
-		1,
-		'🚨 pageViews.contact should be 1 - recordView should create a new key when missing',
-	)
-})
-
-await test('recordView is exported', () => {
-	assert.ok(
-		'recordView' in solution,
-		'🚨 Make sure you export "recordView" - add: export { pageViews, recordView }',
+		solution.errorPages['500'],
+		'/server-error',
+		'🚨 errorPages["500"] should be "/server-error" - use the computed key',
 	)
 })

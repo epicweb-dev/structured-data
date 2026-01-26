@@ -6,14 +6,15 @@
 // - email: string
 // - bio?: string
 // - website?: string
-// 💰 type UserProfile = { name: string; email: string; bio?: string; website?: string }
 
-const alice: UserProfile = {
+// 🐨 type this as a UserProfile
+const alice = {
 	name: 'Alice',
 	email: 'alice@example.com',
 }
 
-const bob: UserProfile = {
+// 🐨 type this as a UserProfile
+const bob = {
 	name: 'Bob',
 	email: 'bob@example.com',
 	bio: 'Software developer and TypeScript enthusiast',

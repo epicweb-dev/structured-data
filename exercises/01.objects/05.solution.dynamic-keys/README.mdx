@@ -1,15 +1,15 @@
 # Dynamic Object Keys
 
-👨‍💼 Nice work! You used bracket notation to write and read dynamic keys.
+👨‍💼 Nice work! You used computed property names to create keys like "404".
 
-🦉 The key idea is an **index signature**, which lets you say "any string key
-maps to a number value":
+🦉 The key idea is a **computed property name**, which lets you use a variable
+as the key when creating the object:
 
 ```ts
-type PageViews = { [page: string]: number }
-const pageViews: PageViews = {}
-const page = 'home'
-pageViews[page] = 1
+const key = '404'
+const errorPages = {
+	[key]: '/not-found',
+}
 ```
 
-This pattern is common for lookup tables, counts, and dictionaries.
+This pattern is useful when a property name isn't a valid identifier.
