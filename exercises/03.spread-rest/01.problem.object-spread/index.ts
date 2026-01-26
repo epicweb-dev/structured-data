@@ -56,4 +56,4 @@ const userConfig: { timeout: number } = {
 // console.log(user.settings.theme) // 'light' (unchanged!)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { updatedUser, user, finalConfig, userWithDarkMode }
+// export { updatedUser, user, finalConfig, userWithDarkMode }

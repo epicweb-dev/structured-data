@@ -12,4 +12,4 @@
 // console.log(`Admin: ${admin.name}, Age: ${admin.age}`)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { user, admin }
+// export { user, admin }

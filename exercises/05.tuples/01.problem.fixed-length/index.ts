@@ -20,4 +20,4 @@
 // console.log(`Distance: ${getDistance(nyc, la).toFixed(2)}`)
 
 // 🐨 Export your variables and functions so we can verify your work
-// 💰 export { nyc, la, formatCoordinate, getDistance }
+// export { nyc, la, formatCoordinate, getDistance }

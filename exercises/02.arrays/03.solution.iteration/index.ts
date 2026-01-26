@@ -1,7 +1,13 @@
 // Inventory Analysis
 // Iterating and filtering arrays
 
-const products: Array<{ name: string; price: number; inStock: boolean }> = [
+type Product = {
+	name: string
+	price: number
+	inStock: boolean
+}
+
+const products: Array<Product> = [
 	{ name: 'Laptop', price: 999.99, inStock: true },
 	{ name: 'Mouse', price: 29.99, inStock: true },
 	{ name: 'Keyboard', price: 79.99, inStock: false },
@@ -18,11 +24,7 @@ for (const product of products) {
 // Filtering products that are in stock
 // This imperative approach works, but there's a more declarative way
 // using filter() which we'll learn in Exercise 04!
-const inStockProducts: Array<{
-	name: string
-	price: number
-	inStock: boolean
-}> = []
+const inStockProducts: Array<Product> = []
 for (const product of products) {
 	if (product.inStock) {
 		inStockProducts.push(product)

@@ -37,4 +37,4 @@ const user: User = {
 // console.log(formatUserCard(user))
 
 // 🐨 Export your variables and function so we can verify your work
-// 💰 export { name, email, userId, bio, formatUserCard }
+// export { name, email, userId, bio, formatUserCard }

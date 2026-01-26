@@ -1,0 +1,8 @@
+{
+  "name": "exercises_01.objects_04.solution.optional-properties",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

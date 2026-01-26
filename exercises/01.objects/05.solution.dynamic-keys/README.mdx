@@ -1,0 +1,15 @@
+# Dynamic Object Keys
+
+👨‍💼 Nice work! You used bracket notation to write and read dynamic keys.
+
+🦉 The key idea is an **index signature**, which lets you say "any string key
+maps to a number value":
+
+```ts
+type PageViews = { [page: string]: number }
+const pageViews: PageViews = {}
+const page = 'home'
+pageViews[page] = 1
+```
+
+This pattern is common for lookup tables, counts, and dictionaries.

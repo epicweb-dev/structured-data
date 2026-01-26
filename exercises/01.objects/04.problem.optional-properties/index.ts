@@ -1,16 +1,24 @@
 // User Profiles
 // Working with optional properties
 
-// 🐨 Create a user with these properties:
-// - name: string (required)
-// - email: string (required)
-// - bio?: string (optional)
-// - website?: string (optional)
-// 💰 const user: { name: string; email: string; bio?: string; website?: string }
+// 🐨 Create a type alias called `UserProfile` with:
+// - name: string
+// - email: string
+// - bio?: string
+// - website?: string
+// 💰 type UserProfile = { name: string; email: string; bio?: string; website?: string }
 
-// 🐨 Create a user named "Alice" with just name and email
+const alice: UserProfile = {
+	name: 'Alice',
+	email: 'alice@example.com',
+}
 
-// 🐨 Create a user named "Bob" with all properties filled in
+const bob: UserProfile = {
+	name: 'Bob',
+	email: 'bob@example.com',
+	bio: 'Software developer and TypeScript enthusiast',
+	website: 'https://bob.dev',
+}
 
 // 🐨 Create a function that displays user info
 // Handle the optional properties safely
@@ -24,4 +32,4 @@
 // }
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { alice, bob }
+// export { alice, bob }

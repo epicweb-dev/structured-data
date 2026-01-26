@@ -1,0 +1,20 @@
+# Dynamic Object Keys
+
+👨‍💼 We need to track page views where the page name is only known at runtime.
+
+When the property name is stored in a variable, you must use bracket notation:
+
+```ts
+type PageViews = { [page: string]: number }
+const key = 'home'
+const counts: PageViews = {}
+counts[key] = 1
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a page views type and object with dynamic string keys
+2. Set values using bracket notation and variables
+3. Write a function that updates the count for a dynamic key
+
+📜 [TypeScript Handbook - Index Signatures](https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures)

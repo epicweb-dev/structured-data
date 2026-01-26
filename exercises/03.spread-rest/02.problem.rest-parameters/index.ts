@@ -33,4 +33,4 @@
 // console.log(mergeArrays([1, 2], [3, 4], [5])) // [1, 2, 3, 4, 5]
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { multiply, sum, mergeArrays }
+// export { multiply, sum, mergeArrays }

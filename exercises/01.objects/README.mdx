@@ -29,6 +29,19 @@ const user: { name: string; age: number; email: string } = {
 }
 ```
 
+## Naming Object Types
+
+Once you repeat a shape, it helps to name it:
+
+```ts
+type User = { name: string; age: number; email: string }
+const user: User = {
+	name: 'Alice',
+	age: 30,
+	email: 'alice@example.com',
+}
+```
+
 ## Property Access
 
 Access properties with dot notation or bracket notation:
@@ -43,7 +56,8 @@ console.log(user['email']) // "alice@example.com"
 Not every property is always present. Use `?` for optional properties:
 
 ```ts
-const user: { name: string; nickname?: string } = {
+type UserProfile = { name: string; nickname?: string }
+const user: UserProfile = {
 	name: 'Alice',
 	// nickname is optional, so we can omit it
 }

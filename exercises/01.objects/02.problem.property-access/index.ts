@@ -9,10 +9,8 @@ const product = {
 }
 
 // 🐨 Log the product name using dot notation
-// 💰 console.log(product.name)
 
 // 🐨 Log the product price using bracket notation
-// 💰 console.log(product['price'])
 
 // 🐨 Create a function `formatProduct` that takes a product object
 // and returns a string like "TypeScript Handbook - $29.99"
@@ -24,4 +22,4 @@ const product = {
 // console.log(formatProduct(product))
 
 // 🐨 Export your variables and functions so we can verify your work
-// 💰 export { product, formatProduct }
+// export { product, formatProduct }

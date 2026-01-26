@@ -31,4 +31,4 @@ const products = [
 // console.log('In Stock:', available)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { electronics, affordable, available, inStockElectronicsUnder500 }
+// export { electronics, affordable, available, inStockElectronicsUnder500 }

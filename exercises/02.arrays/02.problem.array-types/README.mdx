@@ -4,7 +4,8 @@
 applications.
 
 ```ts
-const users: { name: string; age: number }[] = [
+type User = { name: string; age: number }
+const users: User[] = [
 	{ name: 'Alice', age: 30 },
 	{ name: 'Bob', age: 25 },
 ]
@@ -12,15 +13,17 @@ const users: { name: string; age: number }[] = [
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create an array of product objects with `name`, `price`, and `inStock`
-2. Add a new product using `push`
-3. Access a property of a specific product
-4. Calculate the total price using a loop
+1. Create a `Product` type alias with `name`, `price`, and `inStock`
+2. Create an array of `Product` objects
+3. Add a new product using `push`
+4. Access a property of a specific product
+5. Calculate the total price using a loop
 
 💰 Adding to an array:
 
 ```ts
-const items: { name: string; price: number }[] = [{ name: 'Item', price: 10 }]
+type Item = { name: string; price: number }
+const items: Item[] = [{ name: 'Item', price: 10 }]
 items.push({ name: 'Another', price: 20 })
 ```
 

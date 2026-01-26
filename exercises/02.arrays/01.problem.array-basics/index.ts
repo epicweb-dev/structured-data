@@ -15,4 +15,4 @@
 // console.log('Products:', products)
 
 // 🐨 Export your variable so we can verify your work
-// 💰 export { products }
+// export { products }

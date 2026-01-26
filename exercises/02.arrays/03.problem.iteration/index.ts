@@ -1,7 +1,13 @@
 // Inventory Analysis
 // Iterating and filtering arrays
 
-const products: { name: string; price: number; inStock: boolean }[] = [
+type Product = {
+	name: string
+	price: number
+	inStock: boolean
+}
+
+const products: Product[] = [
 	{ name: 'Laptop', price: 999.99, inStock: true },
 	{ name: 'Mouse', price: 29.99, inStock: true },
 	{ name: 'Keyboard', price: 79.99, inStock: false },
@@ -13,7 +19,7 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 // 💰 for (const product of products) { ... }
 
 // 🐨 Create an array of products that are in stock
-// 💰 const inStockProducts: { name: string; price: number; inStock: boolean }[] = []
+// 💰 const inStockProducts: Product[] = []
 
 // 🐨 Count how many products cost more than $50
 // 💰 let expensiveCount = 0
@@ -22,4 +28,4 @@ const products: { name: string; price: number; inStock: boolean }[] = [
 // console.log('Expensive products:', expensiveCount)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { products, inStockProducts, expensiveCount }
+// export { products, inStockProducts, expensiveCount }

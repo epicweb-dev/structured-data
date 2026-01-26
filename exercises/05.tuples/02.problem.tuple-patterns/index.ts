@@ -22,4 +22,4 @@
 // const success = parsed[1]
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { parseNumber, getMinMax }
+// export { parseNumber, getMinMax }

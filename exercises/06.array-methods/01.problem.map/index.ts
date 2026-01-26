@@ -22,4 +22,4 @@ const products = [
 // console.log('Summary:', summary)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { names, prices, summary }
+// export { names, prices, summary }

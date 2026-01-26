@@ -1,5 +1,5 @@
 {
-  "name": "exercises_01.objects_03.solution.optional-properties",
+  "name": "exercises_01.objects_03.solution.object-types",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

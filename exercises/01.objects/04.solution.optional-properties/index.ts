@@ -1,12 +1,19 @@
 // User Profiles
 // Working with optional properties
 
-const alice: { name: string; email: string; bio?: string; website?: string } = {
+type UserProfile = {
+	name: string
+	email: string
+	bio?: string
+	website?: string
+}
+
+const alice: UserProfile = {
 	name: 'Alice',
 	email: 'alice@example.com',
 }
 
-const bob: { name: string; email: string; bio?: string; website?: string } = {
+const bob: UserProfile = {
 	name: 'Bob',
 	email: 'bob@example.com',
 	bio: 'Software developer and TypeScript enthusiast',

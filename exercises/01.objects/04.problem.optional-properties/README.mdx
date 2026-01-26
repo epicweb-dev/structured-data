@@ -6,7 +6,8 @@ optional data gracefully.
 Use `?` to mark a property as optional:
 
 ```ts
-const user: { name: string; bio?: string } = {
+type UserProfile = { name: string; bio?: string }
+const user: UserProfile = {
 	name: 'Alice',
 	// bio is optional, so we can omit it
 }
@@ -14,7 +15,7 @@ const user: { name: string; bio?: string } = {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `UserProfile` object type with required and optional properties
+1. Create a `UserProfile` type alias with required and optional properties
 2. Create users with and without the optional properties
 3. Safely access optional properties (check before using!)
 

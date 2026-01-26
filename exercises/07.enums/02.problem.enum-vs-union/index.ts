@@ -17,4 +17,4 @@
 // Which do you prefer?
 
 // 🐨 Export your enum and functions so we can verify your work
-// 💰 export { LogLevel, logWithEnum, logWithUnion }
+// export { LogLevel, logWithEnum, logWithUnion }

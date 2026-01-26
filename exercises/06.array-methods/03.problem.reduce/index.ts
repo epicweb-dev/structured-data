@@ -28,4 +28,4 @@ const products = [
 // console.log('By category:', countByCategory)
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { total, mostExpensive, countByCategory }
+// export { total, mostExpensive, countByCategory }

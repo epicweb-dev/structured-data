@@ -1,12 +1,15 @@
 // Product Inventory
 // Arrays of objects
 
-// 🐨 Create a `products` array with objects containing:
+// 🐨 Create a `Product` type alias with:
 // - name: string
 // - price: number
 // - inStock: boolean
+// 💰 type Product = { name: string; price: number; inStock: boolean }
+
+// 🐨 Create a `products` array with `Product` objects
 // Start with 2-3 products
-// 💰 const products: { name: string; price: number; inStock: boolean }[] = [...]
+// 💰 const products: Product[] = [...]
 
 // 🐨 Add a new product using push
 // 💰 products.push({ name: 'Monitor', price: 299.99, inStock: true })
@@ -17,4 +20,4 @@
 // 💰 Use a loop to add each price to a total
 
 // 🐨 Export your variables so we can verify your work
-// 💰 export { products, totalValue }
+// export { products, totalValue }

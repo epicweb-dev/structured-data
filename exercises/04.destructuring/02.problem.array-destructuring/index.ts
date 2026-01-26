@@ -28,4 +28,4 @@ const coordinates: [number, number, number] = [10, 20, 30]
 // console.log(min, max) // 76 95
 
 // 🐨 Export your variables and function so we can verify your work
-// 💰 export { highest, secondHighest, winner, others, x, y, z, min, max, getMinMax }
+// export { highest, secondHighest, winner, others, x, y, z, min, max, getMinMax }

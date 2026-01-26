@@ -1,5 +1,5 @@
 {
-  "name": "exercises_01.objects_03.problem.optional-properties",
+  "name": "exercises_01.objects_05.solution.dynamic-keys",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

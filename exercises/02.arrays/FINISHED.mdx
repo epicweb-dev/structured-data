@@ -10,7 +10,8 @@
 🦉 Array types shine when combined with object types:
 
 ```ts
-const users: Array<{ name: string; age: number }> = [
+type User = { name: string; age: number }
+const users: Array<User> = [
 	{ name: 'Alice', age: 30 },
 	{ name: 'Bob', age: 25 },
 ]

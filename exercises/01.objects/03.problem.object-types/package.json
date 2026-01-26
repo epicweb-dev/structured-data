@@ -1,0 +1,8 @@
+{
+  "name": "exercises_01.objects_03.problem.object-types",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}
