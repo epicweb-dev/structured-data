@@ -47,8 +47,13 @@ const user: User = {
 Access properties with dot notation or bracket notation:
 
 ```ts
+// getting values
 console.log(user.name) // "Alice"
 console.log(user['email']) // "alice@example.com"
+
+// setting values
+user.name = 'Bob'
+user['friendship-status'] = 'friends'
 ```
 
 ## Optional Properties
