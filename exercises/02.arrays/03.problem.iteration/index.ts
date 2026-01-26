@@ -7,7 +7,7 @@ type Product = {
 	inStock: boolean
 }
 
-const products: Product[] = [
+const products: Array<Product> = [
 	{ name: 'Laptop', price: 999.99, inStock: true },
 	{ name: 'Mouse', price: 29.99, inStock: true },
 	{ name: 'Keyboard', price: 79.99, inStock: false },
