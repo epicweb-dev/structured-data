@@ -8,13 +8,10 @@ const priceBySku = {
 }
 
 // 🐨 Use Object.entries to get an array of [sku, price] pairs
-// 💰 Keep each entry as a key/value pair
 
 // 🐨 Create discounted entries with 10% off (rounded to the nearest whole number)
-// 💰 Transform each entry while keeping its key
 
 // 🐨 Use Object.fromEntries to create a discountedPrices object
-// 💰 Convert the transformed entries back into an object
 
 // console.log('Entries:', entries)
 // console.log('Discounted:', discountedPrices)
