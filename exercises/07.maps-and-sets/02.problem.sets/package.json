@@ -1,0 +1,8 @@
+{
+  "name": "exercises_07.maps-and-sets_02.problem.sets",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

@@ -1,0 +1,45 @@
+# Object Methods
+
+Objects are great for grouping related data, but the real power shows up when
+you need to transform that data. JavaScript gives you several built-in methods
+to do exactly that.
+
+## The Core Methods
+
+### `Object.keys` - Get the property names
+
+```ts
+const user = { name: 'Ada', role: 'admin' }
+const keys = Object.keys(user)
+// ['name', 'role']
+```
+
+### `Object.values` - Get the property values
+
+```ts
+const values = Object.values(user)
+// ['Ada', 'admin']
+```
+
+### `Object.entries` - Get key/value pairs
+
+```ts
+const entries = Object.entries(user)
+// [['name', 'Ada'], ['role', 'admin']]
+```
+
+### `Object.fromEntries` - Build an object from entries
+
+```ts
+const pairs = [
+	['name', 'Ada'],
+	['role', 'admin'],
+]
+const rebuilt = Object.fromEntries(pairs)
+```
+
+These methods let you switch between objects and arrays so you can use array
+methods like `map`, `filter`, and `reduce` for transformations.
+
+In this exercise, you'll practice using object methods to read and transform
+object data.

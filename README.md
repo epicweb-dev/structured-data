@@ -4,7 +4,7 @@
     Organize and manipulate data with TypeScript's powerful data structures
   </strong>
   <p>
-    Learn to work with objects, arrays, tuples, and enums—the building blocks for managing real-world data in your applications.
+    Learn to work with objects, arrays, and tuples—the building blocks for managing real-world data in your applications.
   </p>
 </div>
 
