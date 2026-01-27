@@ -8,19 +8,3 @@
    are still references
 2. **Order matters** - Later spreads override earlier properties
 3. **Nested updates need nested spreads** - Each level needs its own `...`
-
-This pattern is fundamental to React:
-
-```ts
-// Updating state immutably
-setState((prev) => ({ ...prev, count: prev.count + 1 }))
-
-// Updating nested state
-setState((prev) => ({
-	...prev,
-	user: { ...prev.user, name: newName },
-}))
-```
-
-Without spread, you'd have to manually copy every property. Spread makes
-immutable updates concise and readable.
