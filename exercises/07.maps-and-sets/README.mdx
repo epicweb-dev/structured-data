@@ -8,6 +8,53 @@ structures for certain jobs:
 
 These are great for lookups, caching, and deduplication.
 
+## `Map` - key/value lookups
+
+```ts
+const byId = new Map<string, { name: string }>()
+byId.set('u1', { name: 'Ava' })
+byId.set('u2', { name: 'Ben' })
+
+const user = byId.get('u1')
+// { name: 'Ava' }
+```
+
+Other useful methods:
+
+```ts
+byId.has('u2')
+// true
+
+byId.delete('u2')
+// true
+
+byId.size
+// 1
+```
+
+## `Set` - unique values
+
+```ts
+const tags = new Set(['typescript', 'data', 'typescript'])
+const uniqueTags = [...tags]
+// ['typescript', 'data']
+```
+
+Other useful methods:
+
+```ts
+tags.has('data')
+// true
+
+tags.add('arrays')
+
+tags.delete('typescript')
+// true
+
+tags.size
+// 2
+```
+
 <callout-info>
 	JavaScript also has **WeakMap** and **WeakSet** for object keys that can be
 	garbage-collected when nothing else references them. We'll just mention them
