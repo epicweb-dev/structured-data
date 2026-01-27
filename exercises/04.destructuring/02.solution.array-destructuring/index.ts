@@ -1,7 +1,7 @@
 // Array Destructuring
 // Extracting values from arrays by position
 
-const scores = [95, 87, 76, 92, 88]
+const scores = [95, 92, 88, 87, 76]
 
 // Destructure first two elements
 const [highest, secondHighest] = scores
@@ -22,8 +22,8 @@ function getMinMax(nums: Array<number>) {
 
 const [min, max] = getMinMax(scores)
 
-console.log(highest, secondHighest) // 95 87
-console.log(winner, others) // 95 [87, 76, 92, 88]
+console.log(highest, secondHighest) // 95 92
+console.log(winner, others) // 95 [92, 88, 87, 76]
 console.log(x, y, z) // 10 20 30
 console.log(min, max) // 76 95
 

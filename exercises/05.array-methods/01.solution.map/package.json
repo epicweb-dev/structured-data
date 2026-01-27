@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.tuples_01.solution.fixed-length",
+  "name": "exercises_05.array-methods_01.solution.map",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

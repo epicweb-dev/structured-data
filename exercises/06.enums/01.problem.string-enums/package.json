@@ -1,5 +1,5 @@
 {
-  "name": "exercises_07.enums_02.problem.enum-vs-union",
+  "name": "exercises_06.enums_01.problem.string-enums",
   "type": "module",
   "scripts": {
     "start": "npx --node-options=\"--experimental-transform-types\" @kentcdodds/log-module@latest ./index.ts",

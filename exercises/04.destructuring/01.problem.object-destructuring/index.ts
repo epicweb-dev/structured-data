@@ -36,5 +36,5 @@ const user: User = {
 // console.log(bio) // 'No bio provided'
 // console.log(formatUserCard(user))
 
-// 🐨 Export your variables and function so we can verify your work
+// 🐨 Export your variables and functi// 💰 exportcan verify your work
 // export { name, email, userId, bio, formatUserCard }

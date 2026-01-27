@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.tuples_02.solution.tuple-patterns",
+  "name": "exercises_05.array-methods_02.problem.filter",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

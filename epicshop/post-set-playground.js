@@ -38,3 +38,19 @@ for (const testFile of testFiles) {
 
 	fs.copyFileSync(src, dest)
 }
+
+const tsconfigPath = path.join(destDir, 'tsconfig.json')
+
+if (!fs.existsSync(tsconfigPath)) {
+	fs.writeFileSync(
+		tsconfigPath,
+		JSON.stringify(
+			{
+				extends: '../tsconfig.json',
+				include: ['**/*.ts', '**/*.tsx'],
+			},
+			null,
+			2,
+		) + '\n',
+	)
+}

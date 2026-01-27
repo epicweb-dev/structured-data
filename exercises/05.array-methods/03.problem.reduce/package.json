@@ -1,5 +1,5 @@
 {
-  "name": "exercises_06.array-methods_01.problem.map",
+  "name": "exercises_05.array-methods_03.problem.reduce",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

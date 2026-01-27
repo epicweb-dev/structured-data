@@ -1,5 +1,5 @@
 {
-  "name": "exercises_06.array-methods_03.solution.reduce",
+  "name": "exercises_05.array-methods_03.solution.reduce",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

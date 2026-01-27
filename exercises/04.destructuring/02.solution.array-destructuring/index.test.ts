@@ -56,8 +56,8 @@ await test('highest and secondHighest should be destructured', () => {
 	)
 	assert.strictEqual(
 		solution.secondHighest,
-		87,
-		'🚨 secondHighest should be 87 - destructure second element from scores',
+		92,
+		'🚨 secondHighest should be 92 - destructure second element from scores',
 	)
 })
 
@@ -69,8 +69,8 @@ await test('winner and others should use rest pattern', () => {
 	)
 	assert.deepStrictEqual(
 		solution.others,
-		[87, 76, 92, 88],
-		'🚨 others should be [87, 76, 92, 88] - use rest pattern',
+		[92, 88, 87, 76],
+		'🚨 others should be [92, 88, 87, 76] - use rest pattern',
 	)
 })
 
