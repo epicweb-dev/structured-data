@@ -2,13 +2,6 @@ import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import * as solution from './index.ts'
 
-await test('initialProducts is exported', () => {
-	assert.ok(
-		'initialProducts' in solution,
-		'🚨 Make sure you export "initialProducts" - add: export { initialProducts, ... }',
-	)
-})
-
 await test('products is exported', () => {
 	assert.ok(
 		'products' in solution,
@@ -25,24 +18,24 @@ await test('totalValue is exported', () => {
 
 await test('Products array should have correct typed structure', () => {
 	assert.strictEqual(
-		solution.initialProducts[0].name,
+		solution.products[0].name,
 		'Laptop',
 		'🚨 products[0].name should be "Laptop" - access nested properties using dot notation after array indexing',
 	)
 	assert.strictEqual(
-		solution.initialProducts[0].price,
+		solution.products[0].price,
 		999.99,
 		'🚨 products[0].price should be 999.99 - access the price property of the first product object',
 	)
 	assert.strictEqual(
-		solution.initialProducts[0].inStock,
+		solution.products[0].inStock,
 		true,
 		'🚨 products[0].inStock should be true - access the inStock property of the first product object',
 	)
 	assert.strictEqual(
-		solution.initialProducts.length,
-		3,
-		'🚨 products.length should be 3 - check that you have three product objects in the array',
+		solution.products.length,
+		4,
+		'🚨 products.length should be 4 - check that you have three starting products then push a fourth',
 	)
 })
 

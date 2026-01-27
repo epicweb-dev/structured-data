@@ -47,31 +47,19 @@ numbers.push(4) // ✅ OK
 numbers.push('five') // ❌ Error: 'string' not assignable to 'number'
 ```
 
-## Adding to Arrays: Two Approaches
+## Adding to Arrays
 
 You can add elements to arrays in two ways:
 
 ```ts
-// Mutation (modifies the original array)
 const numbers: Array<number> = [1, 2, 3]
 numbers.push(4)
-
-// Immutable (creates a new array)
-const numbers: Array<number> = [1, 2, 3]
-const moreNumbers = [...numbers, 4]
 ```
 
 The immutable approach using spread (`...`) is often preferred in modern
 JavaScript because it's easier to reason about—the original array stays
 unchanged. This is especially important when working with shared data or React
-state.
-
-<callout-info>
-	**When is mutation okay?** If you're building an array locally inside a
-	function and not sharing the reference, `push()` is perfectly fine. The
-	immutable pattern matters most when data is shared or returned. Pragmatism
-	over purity—choose the approach that's clearest for your situation.
-</callout-info>
+state. We'll talk about this in more detail in the next exercise.
 
 ## Mixed Arrays
 
