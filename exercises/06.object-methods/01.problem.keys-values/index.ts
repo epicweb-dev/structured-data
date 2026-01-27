@@ -9,13 +9,13 @@ const inventory = {
 }
 
 // 🐨 Use Object.keys to get an array of item names
-// 💰 const itemNames = Object.keys(inventory)
+// 💰 The result should be an array of strings in object key order
 
 // 🐨 Use Object.values to get an array of quantities
-// 💰 const quantities = Object.values(inventory)
+// 💰 The result should be an array of numbers in the same order as the keys
 
 // 🐨 Use the quantities array to compute the total quantity
-// 💰 const totalQuantity = quantities.reduce((total, quantity) => total + quantity, 0)
+// 💰 Reduce the values into a single number
 
 // console.log('Item names:', itemNames)
 // console.log('Quantities:', quantities)

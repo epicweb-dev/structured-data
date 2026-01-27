@@ -14,13 +14,13 @@ const users: Array<User> = [
 ]
 
 // 🐨 Create a Map of users keyed by id
-// 💰 const usersById = new Map(users.map((user) => [user.id, user]))
+// 💰 Start from an array of [id, user] pairs
 
 // 🐨 Read the admin user (id "u1") from the map
-// 💰 const adminUser = usersById.get('u1')
+// 💰 Use the map lookup method
 
 // 🐨 Check whether the map has a user with id "u99"
-// 💰 const hasMissingUser = usersById.has('u99')
+// 💰 Use the map existence check
 
 // console.log('Admin user:', adminUser)
 // console.log('Has missing user:', hasMissingUser)

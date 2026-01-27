@@ -11,13 +11,13 @@ const tags = [
 ]
 
 // 🐨 Create a Set of unique tags
-// 💰 const uniqueTags = new Set(tags)
+// 💰 Sets only store unique values
 
 // 🐨 Check whether the set has the "typescript" tag
-// 💰 const hasTypeScript = uniqueTags.has('typescript')
+// 💰 Use the set lookup method
 
 // 🐨 Convert the set back into an array
-// 💰 const tagList = [...uniqueTags]
+// 💰 Spread the set into a new array
 
 // console.log('Unique tags:', tagList)
 // console.log('Has TypeScript:', hasTypeScript)

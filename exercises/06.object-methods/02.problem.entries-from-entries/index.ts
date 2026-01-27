@@ -8,13 +8,13 @@ const priceBySku = {
 }
 
 // 🐨 Use Object.entries to get an array of [sku, price] pairs
-// 💰 const entries = Object.entries(priceBySku)
+// 💰 Each entry should be a two-item array: [key, value]
 
 // 🐨 Create discounted entries with 10% off (rounded to the nearest whole number)
-// 💰 const discountedEntries = entries.map(([sku, price]) => [sku, Math.round(price * 0.9)])
+// 💰 Map each entry to a new [sku, discountedPrice] pair
 
 // 🐨 Use Object.fromEntries to create a discountedPrices object
-// 💰 const discountedPrices = Object.fromEntries(discountedEntries)
+// 💰 This should rebuild an object from the discounted entries
 
 // console.log('Entries:', entries)
 // console.log('Discounted:', discountedPrices)
