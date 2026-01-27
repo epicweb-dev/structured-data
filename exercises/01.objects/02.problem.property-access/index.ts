@@ -14,7 +14,6 @@ const product = {
 
 // 🐨 Create a function `formatProduct` that takes a product object
 // and returns a string like "TypeScript Handbook - $29.99"
-// 💰 The function should accept a product object and return a string
 
 // 🐨 Try uncommenting this line - what error do you see?
 // console.log(product.rating)

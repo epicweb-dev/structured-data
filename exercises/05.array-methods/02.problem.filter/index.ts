@@ -15,13 +15,10 @@ const products = [
 ]
 
 // 🐨 Filter to get only Electronics products
-// 💰 Filter by the category field
 
 // 🐨 Filter to get products under $100
-// 💰 Filter by price
 
 // 🐨 Filter to get products that are in stock
-// 💰 Filter by the inStock flag
 
 // 🐨 Chain: get names of in-stock Electronics under $500
 // 💰 Chain filters, then map to names

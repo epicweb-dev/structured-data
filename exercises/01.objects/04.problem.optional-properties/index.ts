@@ -23,7 +23,7 @@ const bob = {
 
 // 🐨 Create a function that displays user info
 // Handle the optional properties safely
-// 💰 Safely handle missing optional values before using them
+// 💰 Optional properties may be undefined
 
 // function displayUserInfo(user: { ... }): void {
 //   console.log(`Name: ${user.name}`)

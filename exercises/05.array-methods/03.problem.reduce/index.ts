@@ -10,14 +10,14 @@ const products = [
 ]
 
 // 🐨 Use reduce to sum all prices
-// 💰 Accumulate the prices into a total
+// 💰 Reduce combines array elements into a single value
 
 // 🐨 Use reduce to find the most expensive product
-// 💰 Start with an initial product and compare prices
+// 💰 You'll need an initial value for comparison
 // const mostExpensive = products.reduce((max, p) => p.price > max.price ? p : max, products[0])
 
 // 🐨 Use reduce to count products by category
-// 💰 Return a new accumulator object each iteration to count categories
+// 💰 The accumulator can be an object
 
 // console.log('Total:', total)
 // console.log('Most expensive:', mostExpensive.name)

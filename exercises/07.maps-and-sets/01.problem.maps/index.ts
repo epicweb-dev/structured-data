@@ -14,13 +14,10 @@ const users: Array<User> = [
 ]
 
 // 🐨 Create a Map of users keyed by id
-// 💰 Start from an array of [id, user] pairs
 
 // 🐨 Read the admin user (id "u1") from the map
-// 💰 Use the map lookup method
 
 // 🐨 Check whether the map has a user with id "u99"
-// 💰 Use the map existence check
 
 // console.log('Admin user:', adminUser)
 // console.log('Has missing user:', hasMissingUser)

@@ -2,7 +2,6 @@
 // Working with basic arrays
 
 // 🐨 Create an array of product names
-// 💰 Create an array of strings with a few product names
 
 // 🐨 Add a new product 'Monitor' using push
 
