@@ -26,8 +26,8 @@ await test('summary is exported', () => {
 await test('Map should extract product names correctly', () => {
 	assert.deepStrictEqual(
 		solution.names,
-		['Laptop', 'Coffee Maker', 'Headphones', 'Blender'],
-		'🚨 names should be ["Laptop", "Coffee Maker", "Headphones", "Blender"] - use map() to extract the name property from each product',
+		['Laptop', 'Toaster', 'Headphones', 'Blender'],
+		'🚨 names should be ["Laptop", "Toaster", "Headphones", "Blender"] - use map() to extract the name property from each product',
 	)
 	assert.strictEqual(
 		solution.names.length,
@@ -49,7 +49,7 @@ await test('Map should create summary objects correctly', () => {
 		solution.summary,
 		[
 			{ name: 'Laptop', priceLabel: '$999.99' },
-			{ name: 'Coffee Maker', priceLabel: '$79.99' },
+			{ name: 'Toaster', priceLabel: '$79.99' },
 			{ name: 'Headphones', priceLabel: '$149.99' },
 			{ name: 'Blender', priceLabel: '$49.99' },
 		],

@@ -51,8 +51,8 @@ await test('Filter should filter affordable products correctly', () => {
 	)
 	assert.deepStrictEqual(
 		solution.affordable.map((p) => p.name),
-		['Coffee Maker', 'Blender'],
-		'🚨 affordable should contain ["Coffee Maker", "Blender"] - filter products by price comparison',
+		['Toaster', 'Blender'],
+		'🚨 affordable should contain ["Toaster", "Blender"] - filter products by price comparison',
 	)
 })
 

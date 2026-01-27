@@ -3,7 +3,7 @@
 
 const products = [
 	{ name: 'Laptop', price: 999.99, category: 'Electronics' },
-	{ name: 'Coffee Maker', price: 79.99, category: 'Kitchen' },
+	{ name: 'Toaster', price: 79.99, category: 'Kitchen' },
 	{ name: 'Headphones', price: 149.99, category: 'Electronics' },
 	{ name: 'Blender', price: 49.99, category: 'Kitchen' },
 ]
