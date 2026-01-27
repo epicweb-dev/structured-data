@@ -89,6 +89,40 @@
 	border-radius: 10px;
 }
 
+@media (prefers-color-scheme: dark) {
+	.subtitle {
+		color: #94a3b8;
+	}
+
+	.badge {
+		background: #0f2a4a;
+		color: #7dd3fc;
+	}
+
+	.callout {
+		background: #111827;
+		border-color: #1f2937;
+	}
+
+	.card {
+		background: #16213a;
+		border-color: #1f2937;
+	}
+
+	.muted {
+		color: #94a3b8;
+	}
+
+	.tag {
+		background: #1e293b;
+		color: #e2e8f0;
+	}
+
+	.tag-row {
+		background: #111827;
+	}
+}
+
 .split {
 	display: grid;
 	gap: 1.5rem;
