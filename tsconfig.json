@@ -2,6 +2,6 @@
 	"files": [],
 	"references": [
 		{ "path": "./tsconfig.base.json" },
-		{ "path": "./extra/02.structured-data-spa/tsconfig.json" }
+		{ "path": "./extra/02.maple-street-library/tsconfig.json" }
 	]
 }
