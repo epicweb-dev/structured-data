@@ -65,12 +65,12 @@ await test('winner and others should use rest pattern', () => {
 	assert.strictEqual(
 		solution.winner,
 		95,
-		'🚨 winner should be 95 - use const [winner, ...others] = scores',
+		'🚨 winner should be 95 - first element from scores via rest destructuring',
 	)
 	assert.deepStrictEqual(
 		solution.others,
 		[92, 88, 87, 76],
-		'🚨 others should be [92, 88, 87, 76] - use rest pattern',
+		'🚨 others should be [92, 88, 87, 76] - remaining scores after the first',
 	)
 })
 

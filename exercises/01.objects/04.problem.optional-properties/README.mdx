@@ -17,8 +17,18 @@ const user: UserProfile = {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `UserProfile` type alias with required and optional properties
-2. Create users with and without the optional properties
-3. Safely access optional properties (check before using!)
+1. Create a type alias named `UserProfile` with:
+   - required: `name` (string), `email` (string)
+   - optional: `bio` (string), `website` (string)
+2. Type the provided `alice` and `bob` objects as `UserProfile`
+   - Keep `alice` without `bio` or `website` (they should be omitted)
+   - Keep `bob` with a non-empty `bio` string and a `website` that starts with
+     `http`
+3. Create a `displayUserInfo` function that logs name, email, and safely
+   handles missing `bio` / `website` (for example with `??` defaults)
+4. Export `alice` and `bob` (grading checks these two exports)
+
+You'll know you're done when `alice` has only the required fields and `bob`
+includes both optional fields.
 
 📜 [TypeScript Handbook - Optional Properties](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties)

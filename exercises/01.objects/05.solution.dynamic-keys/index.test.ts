@@ -13,11 +13,11 @@ await test('errorPages should include computed keys', () => {
 	assert.strictEqual(
 		solution.errorPages['404-status'],
 		'/not-found',
-		'🚨 errorPages["404-status"] should be "/not-found" - use the computed key',
+		'🚨 errorPages["404-status"] should be "/not-found"',
 	)
 	assert.strictEqual(
 		solution.errorPages['500-status'],
 		'/server-error',
-		'🚨 errorPages["500-status"] should be "/server-error" - use the computed key',
+		'🚨 errorPages["500-status"] should be "/server-error"',
 	)
 })

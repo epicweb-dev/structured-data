@@ -119,7 +119,9 @@ export function App() {
 			<section className="grid">
 				<div className="card">
 					<h3>Catalog</h3>
-					<p className="muted">Total titles in catalog: {expandedBooks.length}</p>
+					<p className="muted">
+						Total titles in catalog: {expandedBooks.length}
+					</p>
 					<div className="split">
 						<div>
 							<h4>Checked out now</h4>
@@ -153,11 +155,15 @@ export function App() {
 				</div>
 				<div className="card">
 					<h3>Members</h3>
-					<ul>
-						{library.members.map((member) => (
-							<li key={member.id}>{formatMember(member)}</li>
-						))}
-					</ul>
+					{library.members.every((member) => formatMember(member) === '') ? (
+						<p>Member labels are still loading.</p>
+					) : (
+						<ul>
+							{library.members.map((member) => (
+								<li key={member.id}>{formatMember(member)}</li>
+							))}
+						</ul>
+					)}
 					<h4>Checkout activity</h4>
 					{booksByMemberEntries.length === 0 ? (
 						<p>Member checkout activity is updating.</p>

@@ -6,25 +6,26 @@
 an array. This is the opposite of spread—instead of expanding, we're collecting.
 
 ```ts
-function sum(...numbers: Array<number>): number {
-	return numbers.reduce((a, b) => a + b, 0)
+function joinWords(...words: Array<string>): string {
+	return words.join(' ')
 }
 
-sum(1, 2) // 3
-sum(1, 2, 3, 4, 5) // 15
+joinWords('hello', 'world') // "hello world"
 ```
 
 <callout-info>
-	The `.reduce()` method shown above is covered later in Exercise 5. For now,
-	you can use a simple `for` loop instead:
+	If you need to walk every rest argument before we cover `.reduce()` in
+	Exercise 5, a simple `for...of` loop works well:
 
 ```ts
-function sum(...numbers: Array<number>): number {
-	let total = 0
-	for (const n of numbers) {
-		total += n
+function longestWord(...words: Array<string>): number {
+	let maxLength = 0
+	for (const word of words) {
+		if (word.length > maxLength) {
+			maxLength = word.length
+		}
 	}
-	return total
+	return maxLength
 }
 ```
 
@@ -60,9 +61,15 @@ greetAll('Hello', 'Alice', 'Bob', 'Charlie')
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a function using rest parameters to accept variable arguments
-2. Create a function with both regular and rest parameters
-3. Use rest in combination with spread to transform arguments
+1. Create `multiply(...numbers)` that returns the product of all arguments.
+   Edge cases: one number returns that number; no arguments returns `1`
+2. Create `logWithPrefix(prefix, ...messages)` that logs each message with the
+   prefix (practice only — not graded)
+3. Create `sum(...numbers)` that returns the sum of all arguments.
+   Edge cases: one number returns that number; no arguments returns `0`
+4. Create `mergeArrays(...arrays)` that merges any number of number arrays into
+   one array (in argument order). With no arguments, return `[]`
+5. Export the graded functions: `multiply`, `sum`, and `mergeArrays`
 
 💰 Rest parameters collect remaining arguments into an array.
 

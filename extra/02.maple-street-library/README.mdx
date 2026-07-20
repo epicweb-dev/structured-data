@@ -13,3 +13,33 @@ sections all populate with real data.
   dashboard
 - <InlineFile file="src/data/library-data.ts" /> — review the live dataset
 - <InlineFile file="src/app.tsx" /> — confirm the UI renders accurate results
+
+## Required exports (already named in `practice.ts`)
+
+Implement each function to match these observable behaviors against
+`library-data.ts`:
+
+1. `getCheckedOutBooks(books)` → books that have a `checkedOutByMemberId`
+2. `getAvailableBooks(books)` → books that do **not** have a
+   `checkedOutByMemberId`
+3. `getUniqueTags(books)` → a `Set<string>` of every tag across all books
+4. `getTagCounts(books)` → `{ [tag]: count }` for every tag occurrence
+5. `getMemberLookup(members)` → `{ [memberId]: member }`
+6. `getBooksByMemberId(books)` → a `Map<memberId, Book[]>` of checked-out books
+   grouped by the borrowing member (skip books that are not checked out)
+7. `getEventList(eventsById)` → an array of all events from `eventsById`
+8. `getEventSummaries(eventsById)` → an array of `{ id, name }` for each event
+9. `getRoomList(roomsById)` → an array of all rooms from `roomsById`
+10. `addBook(books, newBook)` → a **new** array with `newBook` appended; do not
+    mutate the input array
+11. `mergeTags(...tagLists)` → one unique string array (first-seen order is fine)
+12. `summarizeLibrary(library)` →
+    `{ totalBooks, totalMembers, totalEvents, checkedOut }` where each field
+    reflects the library's books, members, events, and checked-out book count
+13. `formatMember({ name, email })` → the member's name alone when there is no
+    email, otherwise the name with the email in parentheses
+
+Until helpers are implemented, the UI intentionally shows empty/loading states
+(including a "Member labels are still loading." message while `formatMember`
+returns an empty string). You'll know you're done when those placeholders
+disappear and the snapshot counts match the dataset.

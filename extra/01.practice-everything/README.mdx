@@ -1,3 +1,18 @@
 # Practice Everything
 
-Pop open <InlineFile file="index.ts" /> to get started.
+Pop open <InlineFile file="index.ts" /> for a single-file practice set that
+touches every topic from this workshop.
+
+There are no automated tests or solutions here. Use the comments in the file as
+your checklist. A few success criteria to keep the vague spots concrete:
+
+- Keep one `library` object with `name`, `address`, `books`, `members`, and
+  `eventsById`
+- Include 6–8 books and 4–5 members, with at least two books sharing a tag, one
+  book without `checkedOutByMemberId`, and one member without `email`
+- `formatBook({ title, author, publishedYear })` should return
+  `"{title} — {author} ({publishedYear})"` (em dash between title and author)
+- Treat “recent books” as `publishedYear >=` the current calendar year minus `5`
+- `memberNamesSorted` should be alphabetical ascending
+- `mergeTags(...tagLists)` should return unique tags (first-seen order is fine)
+- `findBooksByTags(books, tags)` should require **all** requested tags to match

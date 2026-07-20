@@ -34,12 +34,12 @@ await test('Filter should filter electronics correctly', () => {
 	assert.strictEqual(
 		solution.electronics.length,
 		3,
-		'🚨 electronics.length should be 3 - use filter() to keep only products where category === "Electronics"',
+		'🚨 electronics.length should be 3 (category === "Electronics")',
 	)
 	assert.deepStrictEqual(
 		solution.electronics.map((p) => p.name),
 		['Laptop', 'Headphones', 'Monitor'],
-		'🚨 electronics should contain ["Laptop", "Headphones", "Monitor"] - filter products by category property',
+		'🚨 electronics names should be ["Laptop", "Headphones", "Monitor"]',
 	)
 })
 
@@ -47,12 +47,12 @@ await test('Filter should filter affordable products correctly', () => {
 	assert.strictEqual(
 		solution.affordable.length,
 		2,
-		'🚨 affordable.length should be 2 - use filter() to keep only products where price < 100',
+		'🚨 affordable.length should be 2 (price < 100)',
 	)
 	assert.deepStrictEqual(
 		solution.affordable.map((p) => p.name),
 		['Toaster', 'Blender'],
-		'🚨 affordable should contain ["Toaster", "Blender"] - filter products by price comparison',
+		'🚨 affordable names should be ["Toaster", "Blender"]',
 	)
 })
 
@@ -60,11 +60,11 @@ await test('Filter should filter in-stock products correctly', () => {
 	assert.strictEqual(
 		solution.available.length,
 		4,
-		'🚨 available.length should be 4 - use filter() to keep only products where inStock === true',
+		'🚨 available.length should be 4 (inStock === true)',
 	)
 	assert.ok(
 		solution.available.every((p) => p.inStock),
-		'🚨 All available products should have inStock === true - verify your filter condition checks the inStock property',
+		'🚨 Every available product should have inStock === true',
 	)
 })
 
@@ -72,6 +72,6 @@ await test('Chained filters should work correctly', () => {
 	assert.deepStrictEqual(
 		solution.inStockElectronicsUnder500,
 		['Monitor'],
-		'🚨 inStockElectronicsUnder500 should be ["Monitor"] - chain multiple filters: inStock, then category === "Electronics", then price < 500',
+		'🚨 inStockElectronicsUnder500 should be ["Monitor"] (in-stock Electronics with price < 500, as names)',
 	)
 })

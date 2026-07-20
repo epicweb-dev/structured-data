@@ -41,7 +41,7 @@ await test('name should be destructured from user', () => {
 	assert.strictEqual(
 		solution.name,
 		'Alice Johnson',
-		'🚨 name should be "Alice Johnson" - use const { name } = user',
+		'🚨 name should be "Alice Johnson" after destructuring from user',
 	)
 })
 
@@ -49,7 +49,7 @@ await test('email should be destructured from user', () => {
 	assert.strictEqual(
 		solution.email,
 		'alice@example.com',
-		'🚨 email should be "alice@example.com" - use const { email } = user',
+		'🚨 email should be "alice@example.com" after destructuring from user',
 	)
 })
 
@@ -57,7 +57,7 @@ await test('userId should be renamed from id', () => {
 	assert.strictEqual(
 		solution.userId,
 		'u123',
-		'🚨 userId should be "u123" - use const { id: userId } = user',
+		'🚨 userId should be "u123" (id renamed while destructuring)',
 	)
 })
 
@@ -65,7 +65,7 @@ await test('bio should have a default value', () => {
 	assert.strictEqual(
 		solution.bio,
 		'No bio provided',
-		'🚨 bio should be "No bio provided" - use const { bio = "No bio provided" } = user',
+		'🚨 bio should be "No bio provided" when the property is missing and a default is applied',
 	)
 })
 

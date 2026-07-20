@@ -42,7 +42,7 @@ await test('original user should be unchanged', () => {
 	assert.strictEqual(
 		solution.user.email,
 		'alice@example.com',
-		'🚨 original user.email should still be "alice@example.com" - spread creates a new object',
+		'🚨 original user.email should still be "alice@example.com" (do not mutate user)',
 	)
 })
 
@@ -81,6 +81,6 @@ await test('original user settings should be unchanged', () => {
 	assert.strictEqual(
 		solution.user.settings.theme,
 		'light',
-		'🚨 original user.settings.theme should still be "light" - use nested spread',
+		'🚨 original user.settings.theme should still be "light" (nested update must not mutate user)',
 	)
 })

@@ -4,10 +4,14 @@
 
 👨‍💼 We collect tags from multiple sources and need to remove duplicates.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `tags` fixture:
 
-1. Create a `Set` from the tags array
-2. Check whether "typescript" is present
-3. Convert the set back into an array
+1. Create `uniqueTags` as a `Set` from `tags` (size should be `4`)
+2. Create `hasTypeScript` by checking whether the set has `'typescript'`
+   (expected `true`)
+3. Create `tagList` by converting the set back into an array — preserve
+   insertion order:
+   `['typescript', 'data', 'arrays', 'objects']`
+4. Export `uniqueTags`, `hasTypeScript`, and `tagList`
 
 📜 [MDN - Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)

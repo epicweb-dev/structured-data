@@ -13,14 +13,16 @@ const users: Array<User> = [
 	{ id: 'u3', name: 'Chris', role: 'member' },
 ]
 
-// 🐨 Create a Map of users keyed by id
+// 🐨 Create `usersById`: a Map of users keyed by id (size 3)
 
-// 🐨 Read the admin user (id "u1") from the map
+// 🐨 Create `adminUser` by reading id "u1" from the map
+// Expected: name === 'Ava'
 
-// 🐨 Check whether the map has a user with id "u99"
+// 🐨 Create `hasMissingUser` by checking whether the map has id "u99"
+// Expected: false
 
 // console.log('Admin user:', adminUser)
 // console.log('Has missing user:', hasMissingUser)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export usersById, adminUser, and hasMissingUser
 // export { usersById, adminUser, hasMissingUser }

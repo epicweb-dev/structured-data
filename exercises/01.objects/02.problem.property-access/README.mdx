@@ -9,16 +9,23 @@ There are two ways to access properties:
 
 ```ts
 // Dot notation - most common
-user.name
+product.name
 
 // Bracket notation - useful for dynamic keys
-user['name']
+product['name']
 ```
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Access properties using dot notation
-2. Create a function that takes a product object and returns a formatted string
-3. Try accessing a property that doesn't exist (see the error!)
+1. Log `product.name` with dot notation
+2. Log `product['price']` with bracket notation
+3. Create a function `formatProduct` that takes an object with at least `name`
+   (string) and `price` (number), and returns this exact string for the given
+   product: `'TypeScript Handbook - $29.99'`
+4. Leave `product.rating` commented out so you can see TypeScript's error if you
+   uncomment it
+5. Export `product` and `formatProduct`
+
+The starter already provides the `product` fixture. Do not change its values.
 
 📜 [MDN - Property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)

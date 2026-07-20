@@ -1,23 +1,18 @@
 // Unique Values with Set
 // Removing duplicates
 
-const tags = [
-	'typescript',
-	'data',
-	'typescript',
-	'arrays',
-	'data',
-	'objects',
-]
+const tags = ['typescript', 'data', 'typescript', 'arrays', 'data', 'objects']
 
-// 🐨 Create a Set of unique tags
+// 🐨 Create `uniqueTags`: a Set of unique tags (size 4)
 
-// 🐨 Check whether the set has the "typescript" tag
+// 🐨 Create `hasTypeScript`: whether the set has the "typescript" tag
+// Expected: true
 
-// 🐨 Convert the set back into an array
+// 🐨 Create `tagList` by converting the set back into an array
+// Expected insertion order: ['typescript', 'data', 'arrays', 'objects']
 
 // console.log('Unique tags:', tagList)
 // console.log('Has TypeScript:', hasTypeScript)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export uniqueTags, hasTypeScript, and tagList
 // export { uniqueTags, hasTypeScript, tagList }

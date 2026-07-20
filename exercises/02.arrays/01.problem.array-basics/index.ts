@@ -1,7 +1,8 @@
 // Inventory System
 // Working with basic arrays
 
-// 🐨 Create an array of product names
+// 🐨 Create a `products` array of product names starting with exactly:
+// ['Laptop', 'Mouse', 'Keyboard']
 
 // 🐨 Add a new product 'Monitor' using push
 
@@ -13,5 +14,5 @@
 
 // console.log('Products:', products)
 
-// 🐨 Export your variable so we can verify your work
+// 🐨 Export products so we can verify your work
 // export { products }

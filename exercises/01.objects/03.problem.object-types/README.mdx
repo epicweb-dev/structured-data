@@ -10,7 +10,20 @@ in the Type Safety workshop, but this small intro will make later steps easier.
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `Task` type alias with `id`, `title`, and `completed`
-2. Create two task objects using that type
+1. Create a type alias named `Task` with:
+   - `id`: `number`
+   - `title`: `string`
+   - `completed`: `boolean`
+2. Create `firstTask` typed as `Task` with:
+   - `id`: `1`
+   - `title`: `'Write tests'`
+   - `completed`: `false`
+3. Create `secondTask` typed as `Task` with:
+   - `id`: `2`
+   - `title`: `'Ship release'`
+   - `completed`: `true`
+4. Export both: `export { firstTask, secondTask }`
+
+You'll know you're done when both tasks match those exact values.
 
 📜 [TypeScript Handbook - Type Aliases](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases)
