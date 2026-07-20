@@ -18,15 +18,19 @@ Parameters:
 - **current** (`n`) - The current element
 - **initial value** (`0`) - Starting point
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `products` fixture:
 
-1. Use `reduce` to sum all prices
-2. Use `reduce` to find the most expensive product
-3. Use `reduce` to count products by category
+1. Create `total` with `reduce` — sum of all prices, starting from `0`
+   (expected `1579.95`)
+2. Create `mostExpensive` with `reduce` — the product object with the highest
+   price (expected name `'Laptop'`, price `999.99`)
+3. Create `countByCategory` with `reduce` — an object of category counts
+   (expected `{ Electronics: 3, Kitchen: 2 }`)
+4. Export `total`, `mostExpensive`, and `countByCategory`
 
 💰 `reduce` combines all items into one accumulated result.
 
-Each iteration returns a new object instead of mutating the accumulator. This
-is the functional approach—easier to reason about and debug.
+💰 When counting with an object accumulator, you can either update a single
+object or return a new object each step — choose the approach you find clearer.
 
 📜 [MDN - Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)

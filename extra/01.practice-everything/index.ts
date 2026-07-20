@@ -14,21 +14,20 @@
 //
 // Start by creating these types (or just rely on inference where it makes sense):
 //
-// - Book (with id, title, author, tags, publishedYear, and optional
-//   checkedOutByMemberId)
-// - Member (with id, name, favoriteGenres, optional email)
-// - Event (with id, name, date, attendeeIds)
+// - Book: id, title, author, tags (string[]), publishedYear, optional
+//   checkedOutByMemberId
+// - Member: id, name, favoriteGenres (string[]), optional email
+// - Event: id, name, date, attendeeIds (string[])
 //
-// Create a single object called library with this shape:
+// Create a single object called `library` with this shape:
 //
 // - name (string)
 // - address (object with street, city, state, zip)
 // - books (array of Book)
 // - members (array of Member)
-// - eventsById (object keyed by event id)
+// - eventsById (object keyed by event id → Event)
 //
-// 🐨 Goal: Keep all of your code in a single .ts file (name it anything you
-// want), and run it with node if you'd like.
+// 🐨 Goal: Keep all of your code in this file and run it with node if you'd like.
 //
 // ---
 //
@@ -39,59 +38,63 @@
 // - At least one book with no checkedOutByMemberId
 // - At least one member with no email
 //
-// 🐨 Add a new genre property to each book using a single function (no manual edits).
+// 🐨 Write a function that takes a book and returns a new book with an added
+// `genre` string property (derive it however you like, e.g. from the first tag).
+// Map that function over your books instead of editing each object by hand.
 //
-// 🐨 Create a memberLookup object where the keys are member ids and the values
+// 🐨 Create a `memberLookup` object where the keys are member ids and the values
 // are the member objects.
 //
 // ---
 //
 // ## Arrays + Iteration
 //
-// 🐨 Create a checkedOutBooks array that only includes books that are checked out.
+// 🐨 Create a `checkedOutBooks` array that only includes books that are checked out
+// (checkedOutByMemberId is present).
 //
-// 🐨 Create a bookTitles array containing just the titles.
+// 🐨 Create a `bookTitles` array containing just the titles (same order as books).
 //
-// 🐨 Create an array of book + member pairs for checked out books, e.g.
-// { book, member }.
+// 🐨 Create an array of `{ book, member }` pairs for checked out books
+// (look up the member from checkedOutByMemberId).
 //
-// 🐨 Use a for...of loop to build a tagCounts object (keyed by tag).
+// 🐨 Use a for...of loop to build a `tagCounts` object (keyed by tag → count).
 //
 // ---
 //
 // ## Spread + Rest
 //
-// 🐨 Write a function addBook(library, newBook) that returns a new library
-// object with the book added.
+// 🐨 Write `addBook(library, newBook)` that returns a new library object with the
+// book added (do not mutate the original books array).
 //
-// 🐨 Write a function updateMemberEmail(members, memberId, email) that returns a
-// new members array with the update applied (no mutation).
+// 🐨 Write `updateMemberEmail(members, memberId, email)` that returns a new
+// members array with that member's email updated (no mutation).
 //
-// 🐨 Write a function mergeTags(...tagLists) that combines multiple tag arrays
-// into a single unique list.
+// 🐨 Write `mergeTags(...tagLists)` that combines multiple tag arrays into a
+// single unique list (first-seen order is fine).
 //
 // ---
 //
 // ## Destructuring
 //
-// 🐨 Destructure the library address into city and state, and print them.
+// 🐨 Destructure the library address into `city` and `state`, and print them.
 //
-// 🐨 Destructure the first two books as firstBook and secondBook.
+// 🐨 Destructure the first two books as `firstBook` and `secondBook`.
 //
-// 🐨 Write a function formatBook({ title, author, publishedYear }) that returns
-// "Title — Author (Year)".
+// 🐨 Write `formatBook({ title, author, publishedYear })` that returns
+// "Title — Author (Year)" using an em dash (—) between title and author.
 //
 // ---
 //
 // ## Array Methods (map/filter/reduce)
 //
-// 🐨 Create recentBooks (published in the last 5 years).
+// 🐨 Create `recentBooks`: books with publishedYear >= (current year - 5).
 //
-// 🐨 Create memberNamesSorted in alphabetical order.
+// 🐨 Create `memberNamesSorted`: member names in alphabetical ascending order.
 //
-// 🐨 Use reduce to calculate the average published year.
+// 🐨 Use reduce to calculate the average published year (a number is fine;
+// round only if you want a nicer log message).
 //
-// 🐨 Use reduce to build a booksByAuthor object.
+// 🐨 Use reduce to build a `booksByAuthor` object (author → array of books).
 //
 // ---
 //
@@ -103,7 +106,7 @@
 //
 // 🐨 Use Object.entries to create a list of { id, name } for events.
 //
-// 🐨 Use Object.fromEntries to turn the list back into an object keyed by id.
+// 🐨 Use Object.fromEntries to turn that list back into an object keyed by id.
 //
 // ---
 //
@@ -121,10 +124,10 @@
 //
 // ## Stretch Ideas
 //
-// 🐨 Create a function findBooksByTags(books, tags) that returns books matching
-// all tags.
+// 🐨 Create `findBooksByTags(books, tags)` that returns books matching ALL tags.
 //
-// 🐨 Create a function getMostPopularTag(books) that returns the tag used most.
+// 🐨 Create `getMostPopularTag(books)` that returns the tag used most
+// (if there's a tie, any of the tied tags is fine).
 //
 // 🐨 Build a "book recommendations" list for a member based on their
-// favoriteGenres.
+// favoriteGenres (your matching rule — document it in a comment).

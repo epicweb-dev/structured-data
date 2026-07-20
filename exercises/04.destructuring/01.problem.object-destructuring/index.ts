@@ -17,13 +17,17 @@ const user: User = {
 }
 
 // 🐨 Use object destructuring to extract `name` and `email` from `user`
+// Expected: name === 'Alice Johnson', email === 'alice@example.com'
 
 // 🐨 Use destructuring with renaming to extract `id` as `userId`
+// Expected: userId === 'u123'
 
-// 🐨 Use destructuring with a default value to extract `bio` with a fallback of 'No bio provided'
+// 🐨 Use destructuring with a default value to extract `bio`
+// with a fallback of 'No bio provided'
+// Expected: bio === 'No bio provided'
 
 // 🐨 Create a function `formatUserCard` that uses destructuring in its parameter
-// to extract name, email, and role, then returns a formatted string
+// to extract name, email, and role, then returns a string that includes all three
 
 // Test - uncomment when ready
 // console.log(name) // 'Alice Johnson'
@@ -32,5 +36,5 @@ const user: User = {
 // console.log(bio) // 'No bio provided'
 // console.log(formatUserCard(user))
 
-// 🐨 Export your variables and functi// 💰 exportcan verify your work
+// 🐨 Export your variables and function so we can verify your work
 // export { name, email, userId, bio, formatUserCard }

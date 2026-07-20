@@ -12,15 +12,15 @@ await test('products is exported', () => {
 await test('Products array should have correct initial values', () => {
 	assert.ok(
 		solution.products.includes('Laptop'),
-		'🚨 products should include "Laptop" - make sure you started with the initial products',
+		'🚨 products should include "Laptop"',
 	)
 	assert.ok(
 		solution.products.includes('Mouse'),
-		'🚨 products should include "Mouse" - make sure you started with the initial products',
+		'🚨 products should include "Mouse"',
 	)
 	assert.ok(
 		solution.products.includes('Keyboard'),
-		'🚨 products should include "Keyboard" - make sure you started with the initial products',
+		'🚨 products should include "Keyboard"',
 	)
 })
 
@@ -28,16 +28,16 @@ await test('Products array should have Monitor added via push', () => {
 	assert.strictEqual(
 		solution.products.length,
 		4,
-		'🚨 products.length should be 4 after push - push() adds an element to the end of the array',
+		'🚨 products.length should be 4 after adding Monitor',
 	)
 	assert.ok(
 		solution.products.includes('Monitor'),
-		'🚨 products should include "Monitor" - use push() to add it to the array',
+		'🚨 products should include "Monitor" at the end after adding it',
 	)
 	assert.strictEqual(
 		solution.products[solution.products.length - 1],
 		'Monitor',
-		'🚨 products[products.length - 1] should be "Monitor" - push adds to the end of the array',
+		'🚨 products[products.length - 1] should be "Monitor"',
 	)
 })
 
@@ -45,11 +45,11 @@ await test('Products array should access first and last elements correctly', () 
 	assert.strictEqual(
 		solution.products[0],
 		'Laptop',
-		'🚨 products[0] should be "Laptop" - the first element is at index 0',
+		'🚨 products[0] should be "Laptop"',
 	)
 	assert.strictEqual(
 		solution.products[solution.products.length - 1],
 		'Monitor',
-		'🚨 products[products.length - 1] should be "Monitor" - use length - 1 to get the last element',
+		'🚨 products[products.length - 1] should be "Monitor"',
 	)
 })

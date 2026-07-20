@@ -5,11 +5,16 @@
 👨‍💼 We need to apply a discount to all prices in our catalog and return a new
 object with updated values.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `priceBySku` fixture:
 
-1. Use `Object.entries` to get the catalog entries
-2. Use `map` to apply a 10% discount to each price
-3. Use `Object.fromEntries` to build the discounted object
+1. Create `entries` using `Object.entries` — expected:
+   `[['sku-1', 1299], ['sku-2', 499], ['sku-3', 2500]]`
+2. Create `discountedEntries` by transforming each entry's price to **10% off**,
+   rounded to the nearest whole number. Expected discounted prices:
+   `1169`, `449`, and `2250` (same sku order)
+3. Create `discountedPrices` using `Object.fromEntries` — expected:
+   `{ 'sku-1': 1169, 'sku-2': 449, 'sku-3': 2250 }`
+4. Export `entries`, `discountedEntries`, and `discountedPrices`
 
 - 📜 [MDN - Object.entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
 - 📜 [MDN - Object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)

@@ -45,12 +45,12 @@ await test('In-stock products filtering should work', () => {
 	assert.strictEqual(
 		solution.inStockProducts.length,
 		3,
-		'🚨 inStockProducts.length should be 3 - filter products where inStock is true (Laptop, Mouse, Monitor)',
+		'🚨 inStockProducts.length should be 3 (Laptop, Mouse, Monitor)',
 	)
 	assert.strictEqual(
 		solution.inStockProducts.every((p: { inStock: boolean }) => p.inStock),
 		true,
-		'🚨 All inStockProducts should have inStock === true - verify your filter condition checks inStock property',
+		'🚨 Every item in inStockProducts should have inStock === true',
 	)
 })
 
@@ -58,6 +58,6 @@ await test('Expensive products count should work', () => {
 	assert.strictEqual(
 		solution.expensiveCount,
 		3,
-		'🚨 expensiveCount should be 3 - count products where price > 50 (Laptop, Keyboard, Monitor)',
+		'🚨 expensiveCount should be 3 for products with price > 50 (Laptop, Keyboard, Monitor)',
 	)
 })

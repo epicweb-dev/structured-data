@@ -33,11 +33,16 @@ const { nickname = 'Anonymous' } = user
 // Uses 'Anonymous' if user.nickname is undefined
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `user` fixture:
 
-1. Use object destructuring to extract `name` and `email` from a user object
-2. Rename a property while destructuring (e.g., `id` to `userId`)
-3. Provide a default value for an optional property
+1. Destructure `name` and `email` from `user`
+   (expected: `'Alice Johnson'`, `'alice@example.com'`)
+2. Destructure `id` renamed to `userId` (expected: `'u123'`)
+3. Destructure `bio` with default `'No bio provided'` (expected that string,
+   because `user` has no `bio`)
+4. Create `formatUserCard` that destructures `name`, `email`, and `role` from
+   its parameter and returns a string that includes all three of those values
+5. Export `name`, `email`, `userId`, `bio`, and `formatUserCard`
 
 💰 You can rename fields and provide defaults while destructuring.
 

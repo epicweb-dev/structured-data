@@ -7,13 +7,13 @@
 // - bio?: string
 // - website?: string
 
-// 🐨 type this as a UserProfile
+// 🐨 Type this as a UserProfile (omit bio and website)
 const alice = {
 	name: 'Alice',
 	email: 'alice@example.com',
 }
 
-// 🐨 type this as a UserProfile
+// 🐨 Type this as a UserProfile (keep bio and website)
 const bob = {
 	name: 'Bob',
 	email: 'bob@example.com',
@@ -21,15 +21,9 @@ const bob = {
 	website: 'https://bob.dev',
 }
 
-// 🐨 Create a function that displays user info
-// Handle the optional properties safely
-// 💰 Optional properties may be undefined
+// 🐨 Create a function `displayUserInfo` that logs name and email, and safely
+// handles optional bio/website (they may be undefined — use a default when missing)
+// Then call it for alice and bob
 
-// function displayUserInfo(user: { ... }): void {
-//   console.log(`Name: ${user.name}`)
-//   console.log(`Email: ${user.email}`)
-//   console.log(`Bio: ${user.bio ?? 'No bio provided'}`)
-// }
-
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export alice and bob so we can verify your work
 // export { alice, bob }

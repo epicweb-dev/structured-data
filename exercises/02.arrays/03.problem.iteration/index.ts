@@ -17,12 +17,14 @@ const products: Array<Product> = [
 
 // 🐨 Use for...of to log each product's name and price
 
-// 🐨 Create an array of products that are in stock
+// 🐨 Create `inStockProducts`: an array of products where inStock is true
+// (expected length: 3)
 
-// 🐨 Count how many products cost more than $50
+// 🐨 Create `expensiveCount`: how many products have price > 50
+// (expected count: 3 — Laptop, Keyboard, Monitor)
 
 // console.log('In stock:', inStockProducts.length)
 // console.log('Expensive products:', expensiveCount)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export products, inStockProducts, and expensiveCount
 // export { products, inStockProducts, expensiveCount }

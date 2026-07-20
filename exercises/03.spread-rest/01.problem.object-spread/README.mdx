@@ -38,9 +38,14 @@ const updated = {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Use object spread to create an updated user object
-2. Merge two configuration objects with spread
-3. Update a nested object immutably
+1. Create `updatedUser` by spreading `user` and setting
+   `email` to `'alice.new@example.com'` — leave the original `user` unchanged
+2. Create `finalConfig` by merging `defaultConfig` then `userConfig` so user
+   values win (`timeout` should be `10000`, other fields from defaults)
+3. Create `userWithDarkMode` by immutably updating nested `settings.theme` to
+   `'dark'` while keeping `notifications: true` — leave `user.settings.theme`
+   as `'light'`
+4. Export `updatedUser`, `user`, `finalConfig`, and `userWithDarkMode`
 
 Spread syntax lets you create new objects from existing ones.
 

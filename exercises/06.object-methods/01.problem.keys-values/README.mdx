@@ -5,11 +5,15 @@
 👨‍💼 We have a small inventory object and need to extract the names and
 quantities for reporting.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `inventory` fixture:
 
-1. Use `Object.keys` to get the item names
-2. Use `Object.values` to get the item quantities
-3. Compute the total quantity using the values array
+1. Create `itemNames` using `Object.keys` — expected order:
+   `['apples', 'oranges', 'bananas', 'mangoes']`
+2. Create `quantities` using `Object.values` — expected order:
+   `[12, 8, 0, 4]`
+3. Create `totalQuantity` by summing `quantities` (expected `24`, including the
+   `0` for bananas)
+4. Export `itemNames`, `quantities`, and `totalQuantity`
 
 - 📜 [MDN - Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 - 📜 [MDN - Object.values](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)

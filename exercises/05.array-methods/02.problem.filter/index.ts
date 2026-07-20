@@ -14,18 +14,22 @@ const products = [
 	{ name: 'Monitor', price: 299.99, category: 'Electronics', inStock: true },
 ]
 
-// 🐨 Filter to get only Electronics products
+// 🐨 Create `electronics`: only products where category === 'Electronics'
+// Expected names: Laptop, Headphones, Monitor
 
-// 🐨 Filter to get products under $100
+// 🐨 Create `affordable`: only products where price < 100
+// Expected names: Toaster, Blender
 
-// 🐨 Filter to get products that are in stock
+// 🐨 Create `available`: only products where inStock === true
+// Expected length: 4
 
-// 🐨 Chain: get names of in-stock Electronics under $500
-// 💰 Chain filters, then map to names
+// 🐨 Create `inStockElectronicsUnder500`: names of products that are in stock,
+// Electronics, and price < 500
+// Expected: ['Monitor']
 
 // console.log('Electronics:', electronics)
 // console.log('Affordable:', affordable)
 // console.log('In Stock:', available)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export electronics, affordable, available, and inStockElectronicsUnder500
 // export { electronics, affordable, available, inStockElectronicsUnder500 }

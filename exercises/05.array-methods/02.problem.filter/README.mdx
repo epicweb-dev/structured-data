@@ -13,11 +13,18 @@ const evens = numbers.filter((n) => n % 2 === 0)
 
 The callback returns `true` to keep the element or `false` to exclude it.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `products` fixture:
 
-1. Filter products by category
-2. Filter products by price range
-3. Chain `filter` with `map`
+1. Create `electronics`: products where `category === 'Electronics'`
+   (names: `Laptop`, `Headphones`, `Monitor`)
+2. Create `affordable`: products where `price < 100`
+   (names: `Toaster`, `Blender`)
+3. Create `available`: products where `inStock === true` (length `4`)
+4. Create `inStockElectronicsUnder500`: the **names** of products that are in
+   stock, in the Electronics category, and have `price < 500` — expected
+   `['Monitor']`
+5. Export `electronics`, `affordable`, `available`, and
+   `inStockElectronicsUnder500`
 
 💰 `filter` keeps items where your callback returns true.
 

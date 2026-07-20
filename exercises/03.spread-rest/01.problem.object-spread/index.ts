@@ -21,7 +21,8 @@ const user: User = {
 	},
 }
 
-// 🐨 Create `updatedUser` - same as user but with email changed to 'alice.new@example.com'
+// 🐨 Create `updatedUser` - same as user but with email 'alice.new@example.com'
+// Do not mutate `user` (user.email should stay 'alice@example.com')
 // 💰 Spread syntax creates a new object
 
 type Config = {
@@ -42,11 +43,12 @@ const userConfig: { timeout: number } = {
 }
 
 // 🐨 Merge defaultConfig and userConfig into `finalConfig` (user overrides defaults)
+// Expected: apiUrl from defaults, timeout 10000, retries 3
 // 💰 The order of spread operations matters
 
-// 🐨 Create `userWithDarkMode` - same as user but with settings.theme changed to 'dark'
-// Remember: spread is shallow, so you need to spread the nested settings object too!
-// 💰 Nested objects require special handling
+// 🐨 Create `userWithDarkMode` - same as user but settings.theme is 'dark'
+// Keep notifications true. Do not mutate user.settings.theme (stays 'light')
+// 💰 Nested objects need their own spread
 
 // Test - uncomment when ready
 // console.log(updatedUser.email) // 'alice.new@example.com'
@@ -55,5 +57,5 @@ const userConfig: { timeout: number } = {
 // console.log(userWithDarkMode.settings.theme) // 'dark'
 // console.log(user.settings.theme) // 'light' (unchanged!)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export updatedUser, user, finalConfig, and userWithDarkMode
 // export { updatedUser, user, finalConfig, userWithDarkMode }

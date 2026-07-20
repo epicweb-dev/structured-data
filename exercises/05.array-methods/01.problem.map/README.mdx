@@ -12,11 +12,17 @@ const doubled = numbers.map((n) => n * 2)
 
 The callback receives each element and returns the transformed value.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `products` fixture:
 
-1. Use `map` to extract product names from an array of products
-2. Use `map` to create formatted price strings
-3. Use `map` to transform products into a different shape
+1. Create `names` with `map` — product names in order:
+   `['Laptop', 'Toaster', 'Headphones', 'Blender']`
+2. Create `prices` with `map` — each price formatted as a dollar string with
+   exactly two decimal places (`toFixed(2)`), e.g. `'$999.99'`:
+   `['$999.99', '$79.99', '$149.99', '$49.99']`
+3. Create `summary` with `map` — objects shaped `{ name, priceLabel }` where
+   `priceLabel` is `'$'` plus the price (two decimal places visible), e.g.
+   `{ name: 'Laptop', priceLabel: '$999.99' }`
+4. Export `names`, `prices`, and `summary`
 
 💰 `map` returns a new array of whatever your callback returns.
 

@@ -7,14 +7,18 @@ const priceBySku = {
 	'sku-3': 2500,
 }
 
-// 🐨 Use Object.entries to get an array of [sku, price] pairs
+// 🐨 Create `entries` using Object.entries
+// Expected: [['sku-1', 1299], ['sku-2', 499], ['sku-3', 2500]]
 
-// 🐨 Create discounted entries with 10% off (rounded to the nearest whole number)
+// 🐨 Create `discountedEntries` from those entries:
+// apply a 10% discount to each price and round to the nearest whole number
+// Expected discounted prices (same sku order): 1169, 449, 2250
 
-// 🐨 Use Object.fromEntries to create a discountedPrices object
+// 🐨 Create `discountedPrices` using Object.fromEntries
+// Expected: { 'sku-1': 1169, 'sku-2': 449, 'sku-3': 2250 }
 
 // console.log('Entries:', entries)
 // console.log('Discounted:', discountedPrices)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export entries, discountedEntries, and discountedPrices
 // export { entries, discountedEntries, discountedPrices }

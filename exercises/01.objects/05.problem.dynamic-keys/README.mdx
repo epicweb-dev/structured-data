@@ -17,7 +17,15 @@ const errorPages = {
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Use computed property names in an object literal
-2. Set values alongside those computed keys
+1. Create an `errorPages` object literal that uses the provided key variables
+   (`notFoundKey`, `serverErrorKey`) as computed property names
+2. Assign the matching path variables (`notFoundPath`, `serverErrorPath`) as
+   values — do not hard-code different key strings or paths
+3. Export `errorPages`
+
+When finished, `errorPages` should behave like:
+
+- `errorPages['404-status'] === '/not-found'`
+- `errorPages['500-status'] === '/server-error'`
 
 📜 [MDN - Computed property names](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)

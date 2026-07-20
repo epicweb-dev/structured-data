@@ -7,8 +7,19 @@ objects with proper types.
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `user` object with `name`, `age`, and `email` properties
-2. Create a second user object using the same structure
+1. Create a `user` object with these exact properties:
+   - `name`: `'Alice'`
+   - `age`: `30`
+   - `email`: `'alice@example.com'`
+2. Create a second object named `admin` with the same property names and these
+   exact values:
+   - `name`: `'Bob'`
+   - `age`: `35`
+   - `email`: `'bob@example.com'`
+3. Export both objects: `export { user, admin }`
+
+You'll know you're done when `user` and `admin` are exported with those exact
+property values.
 
 🦺 Object type syntax (we'll name these types in a later step):
 

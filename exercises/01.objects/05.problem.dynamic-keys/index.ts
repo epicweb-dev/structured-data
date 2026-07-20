@@ -9,6 +9,9 @@ const serverErrorPath = '/server-error'
 
 // 🐨 Create an `errorPages` object literal that uses computed property names
 // for the keys above and assigns the matching paths as values
+// Expected lookups:
+// - errorPages['404-status'] === '/not-found'
+// - errorPages['500-status'] === '/server-error'
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export errorPages so we can verify your work
 // export { errorPages }

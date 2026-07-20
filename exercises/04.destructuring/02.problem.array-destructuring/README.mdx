@@ -45,8 +45,15 @@ let b = 2
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Destructure the first and second elements from an array
-2. Use the rest pattern to separate the first item from the rest
-3. Create a function that returns multiple values and destructure the result
+1. From `scores` (`[95, 92, 88, 87, 76]`), destructure `highest` and
+   `secondHighest` (expected `95` and `92`)
+2. Destructure `winner` and `others` with the rest pattern
+   (expected `95` and `[92, 88, 87, 76]`)
+3. Destructure `coordinates` into `x`, `y`, and `z` (expected `10`, `20`, `30`)
+4. Create `getMinMax(nums)` that returns a `[min, max]` tuple for the input
+   array, then destructure `const [min, max] = getMinMax(scores)`
+   (for `scores`, expected `76` and `95`)
+5. Export `highest`, `secondHighest`, `winner`, `others`, `x`, `y`, `z`,
+   `min`, `max`, and `getMinMax`
 
 📜 [MDN - Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)

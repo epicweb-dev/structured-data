@@ -4,10 +4,13 @@
 
 👨‍💼 We need fast lookups by user ID, and `Map` is perfect for that.
 
-🐨 Open <InlineFile file="index.ts" /> and:
+🐨 Open <InlineFile file="index.ts" /> and use the provided `users` fixture:
 
-1. Create a `Map` from the users array
-2. Read a user from the map by ID
-3. Check whether a missing ID exists
+1. Create `usersById` as a `Map` keyed by user `id` (size should be `3`)
+2. Create `adminUser` by reading id `'u1'` from the map
+   (expected name `'Ava'`)
+3. Create `hasMissingUser` by checking whether id `'u99'` exists
+   (expected `false`)
+4. Export `usersById`, `adminUser`, and `hasMissingUser`
 
 📜 [MDN - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)

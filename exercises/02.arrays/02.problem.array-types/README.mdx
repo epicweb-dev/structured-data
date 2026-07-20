@@ -15,11 +15,19 @@ const users: Array<User> = [
 
 🐨 Open <InlineFile file="index.ts" /> and:
 
-1. Create a `Product` type alias with `name`, `price`, and `inStock`
-2. Create an array of `Product` objects
-3. Add a new product using `push`
-4. Access a property of a specific product
-5. Calculate the total price using a loop
+1. Create a `Product` type alias with `name` (string), `price` (number), and
+   `inStock` (boolean)
+2. Create a `products` array typed as `Array<Product>` starting with these three
+   objects (in this order):
+   - `{ name: 'Laptop', price: 999.99, inStock: true }`
+   - `{ name: 'Mouse', price: 29.99, inStock: true }`
+   - `{ name: 'Keyboard', price: 79.99, inStock: false }`
+3. `push` a fourth product:
+   `{ name: 'Monitor', price: 299.99, inStock: true }`
+4. Log the name of the first product (`products[0].name` should be `'Laptop'`)
+5. Calculate `totalValue` by summing every product's `price` with a loop
+   (expected total: `1409.96`)
+6. Export `products` and `totalValue`
 
 💰 Arrays have methods for adding elements.
 

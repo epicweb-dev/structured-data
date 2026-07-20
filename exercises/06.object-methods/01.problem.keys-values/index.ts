@@ -8,15 +8,18 @@ const inventory = {
 	mangoes: 4,
 }
 
-// 🐨 Use Object.keys to get an array of item names
+// 🐨 Create `itemNames` using Object.keys
+// Expected: ['apples', 'oranges', 'bananas', 'mangoes']
 
-// 🐨 Use Object.values to get an array of quantities
+// 🐨 Create `quantities` using Object.values
+// Expected: [12, 8, 0, 4]
 
-// 🐨 Use the quantities array to compute the total quantity
+// 🐨 Create `totalQuantity` by summing the quantities array
+// Expected: 24
 
 // console.log('Item names:', itemNames)
 // console.log('Quantities:', quantities)
 // console.log('Total:', totalQuantity)
 
-// 🐨 Export your variables so we can verify your work
+// 🐨 Export itemNames, quantities, and totalQuantity
 // export { itemNames, quantities, totalQuantity }

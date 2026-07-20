@@ -3,10 +3,7 @@ import { test } from 'node:test'
 import * as solution from './index.ts'
 
 await test('entries are exported', () => {
-	assert.ok(
-		'entries' in solution,
-		'🚨 Make sure you export "entries"',
-	)
+	assert.ok('entries' in solution, '🚨 Make sure you export "entries"')
 })
 
 await test('discountedEntries are exported', () => {
@@ -43,6 +40,6 @@ await test('discountedPrices should apply 10% discount', () => {
 			'sku-2': 449,
 			'sku-3': 2250,
 		},
-		'🚨 discountedPrices should contain 10% off values',
+		'🚨 discountedPrices should be { "sku-1": 1169, "sku-2": 449, "sku-3": 2250 } (10% off, rounded)',
 	)
 })

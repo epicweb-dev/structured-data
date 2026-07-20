@@ -27,20 +27,16 @@ await test('Map should extract product names correctly', () => {
 	assert.deepStrictEqual(
 		solution.names,
 		['Laptop', 'Toaster', 'Headphones', 'Blender'],
-		'🚨 names should be ["Laptop", "Toaster", "Headphones", "Blender"] - use map() to extract the name property from each product',
+		'🚨 names should be ["Laptop", "Toaster", "Headphones", "Blender"] in product order',
 	)
-	assert.strictEqual(
-		solution.names.length,
-		4,
-		'🚨 names.length should be 4 - map() returns an array with the same length as the original',
-	)
+	assert.strictEqual(solution.names.length, 4, '🚨 names.length should be 4')
 })
 
 await test('Map should format prices correctly', () => {
 	assert.deepStrictEqual(
 		solution.prices,
 		['$999.99', '$79.99', '$149.99', '$49.99'],
-		'🚨 prices should be ["$999.99", "$79.99", "$149.99", "$49.99"] - use map() to format each price with a dollar sign and toFixed(2)',
+		'🚨 prices should be ["$999.99", "$79.99", "$149.99", "$49.99"] - each price as a dollar string with two decimal places',
 	)
 })
 
@@ -53,6 +49,6 @@ await test('Map should create summary objects correctly', () => {
 			{ name: 'Headphones', priceLabel: '$149.99' },
 			{ name: 'Blender', priceLabel: '$49.99' },
 		],
-		'🚨 summary should contain objects with name and priceLabel - use map() to transform each product into a new object shape',
+		'🚨 summary should be [{ name, priceLabel }, ...] matching each product in order',
 	)
 })
